@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Labrada&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
+</head>
+
+<body>
+    <section>
+        <div class="img">
+            <img src="https://wallpaperaccess.com/full/87285.jpg">
+        </div>
+        <div class="content">
+            <div class="form">
+                <h2>Registration-Form</h2>
+                <form id="registration-form" onsubmit="return false">
+                    <div class="input-box">
+                        <span>Full Name:</span>
+                        <input type="text" name="" placeholder="ex:John" id="username">
+                    </div>
+
+                    <div class="input-box">
+                        <span>Your E-mail</span>
+                        <input type="text" name="" placeholder="john@gmail.com" id="e-mail">
+                    </div>
+                    <div class="input-box">
+                        <span>Password</span>
+                        <input type="password" name="" id="pass1">
+                    </div>
+                    <div class="input-box">
+                        <span>Confirm-Password</span>
+                        <input type="password" name="" id="pass2">
+                    </div>
+
+                    <div class="remember">
+                        <label><input type="checkbox" name="">By signing up, you agree to the<br />
+                            <a href="">Play terms of services </a>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="Register" name="" id="register" onclick="registerform()">
+                    </div>
+                    <!-- <div class="input-box">
+                        <p>Don't have an account<a href="#">Sign-up</a></p>
+                    </div> -->
+                </form>
+                <!-- <h3>Login with social media</h3> -->
+                <!-- <ul class="sci">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+<script src="../index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,962 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Container Section */
+
+.con {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+/* Start nav bar Section */
+
+header .container .nav {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+
+
+/* End nav bar Section */
+
+
+
+/* Start jouranal Section  */
+header .container .journal {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Journal icons  */
+.journal-icons {
+    column-gap: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Journal search section */
+.jounal-search {
+    margin-top: 4px;
+    display: flex;
+    object-fit: cover;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.journal-login,
+.journal-register,
+.journal-wishlist,
+.journal-compare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* journal-login */
+.journal-login{
+    cursor: pointer;
+}
+.journal-register{
+    cursor:pointer;
+}
+
+
+/* Joirnl search section */
+.journal #search {
+    border: unset;
+    height: 100%;
+}
+
+.search-all {
+    height: 100%;
+    color: white;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* journal search icon */
+.journal #mag-glass {
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.journal .cart {
+    background-color: blue;
+    color: white;
+    padding: 9px;
+    border-radius: 3px;
+}
+
+
+/* Department Section next to journal Section  */
+.department {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    padding: 20px;
+}
+
+.department #num {
+    padding-right: 5px;
+}
+
+.department #yellow {
+    background-color: yellow;
+    padding: 20px;
+    color: black;
+}
+
+.department #sales {
+    position: relative;
+    background-color: rgb(229, 124, 4);
+    color: white;
+    padding: 2px;
+    left: 15px;
+    bottom: 25px;
+}
+
+.department #new {
+    background-color: yellow;
+    position: relative;
+    color: black;
+    bottom: 25px;
+    padding: 2px;
+    right: 140px;
+}
+
+
+
+/* End Department Section  */
+
+
+
+
+/* Start top Section next to Department Section */
+.top {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.tp {
+    height: 450px;
+    margin-top: 12px;
+    margin-left: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tp img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.top-mobile {
+    width: 68vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#text-over-image {
+    position: absolute;
+    bottom: 120px;
+    left: 45px;
+}
+
+#text-over-image #a {
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    border: unset;
+    border-radius: 4px;
+}
+
+#text-over-image h1 {
+    font-size: 43px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#text-over-image #b {
+    padding: 10px;
+}
+
+/* End top-left section of carousel laptop */
+
+
+
+
+
+
+
+
+/* Start top right section of watch and computer */
+.top-watch-com {
+    margin-left: 15px;
+}
+
+.watch {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.watch-pic {
+    height: 220px;
+    width: 360px;
+}
+
+#text-over-watch {
+    position: relative;
+    bottom: 150px;
+    left: 25px;
+}
+
+#text-over-watch a {
+    color: blue;
+}
+
+#text-over-watch h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#text-over-com {
+    position: relative;
+    bottom: 150px;
+    left: 20px;
+}
+
+#text-over-com a {
+    color: blue;
+}
+
+#text-over-com h3 {
+    margin-top: 5px;
+}
+
+
+/* Start top-right second computer section */
+.com-pic {
+    height: 220px;
+    width: 360px;
+}
+
+.com-pic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.watch-pic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.computer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* End top right section here */
+
+
+/* Start free shipping section here */
+
+.free-shipping {
+    display: flex;
+    justify-content: space-between;
+    background-color: #404b62;
+    padding: 20px;
+}
+
+.free-a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.free-b {
+    display: flex;
+    justify-content: space-between;
+}
+
+.free-ship-content {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.fs {
+    font-size: 30px;
+    color: #f0750a;
+    border-radius: 50%;
+    border: 2px solid blue;
+    padding: 8px;
+}
+
+.car,
+.direction,
+.secure,
+.unlimited {
+    display: flex;
+    justify-content: space-between;
+}
+
+.direction {
+    padding-left: 155px;
+}
+
+.secure {
+    padding-right: 155px;
+}
+
+
+
+
+
+/* Start  why buy from us section next to free shipping  */
+.middle {
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* Start mid category section here selective items */
+.mid-category {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.mid-category p {
+    padding: 8px 15px;
+    font-size: 19px;
+}
+
+.mid-category a {
+    border: 0.1px solid grey;
+}
+
+.mid-category #mid-grey {
+    background-color: #bab9b975;
+    ;
+}
+
+#active-why-buy {
+    color: white;
+    background-color: blue;
+}
+
+#active-why-buy::after {
+    transform: rotate(45deg);
+    left:34%;
+    top:31px;
+    content: '';
+    height: 17px;
+    width: 17px;
+    z-index: 10;
+    position: absolute;
+    display: block;
+    background-color: blue;
+}
+
+#top-category {
+    padding: 8px;
+    color: white;
+    background-color: blue;
+}
+
+.trans {
+    padding: 8px;
+    background-color: #D3D3D3;
+}
+
+
+/* Start caraousel section here */
+.caraousel-collections {
+    padding: 20px;
+}
+
+.cm {
+    height: 230px;
+    border-radius: 10px;
+}
+
+
+
+/* start feature product  section here */
+
+.feature-product {
+    text-align: center;
+    background-color: #bab9b975;
+    padding: 30px;
+}
+
+.feature-pt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 20px;
+    background-color: #bab9b975;
+}
+
+.feature-pt #feature-blue {
+    background-color: blue;
+    color: white;
+}
+
+#feature-blue::after {
+    transform: rotate(45deg);
+    left: 34%;
+    content: '';
+    height: 17px;
+    width: 17px;
+    z-index: 10;
+    position: absolute;
+    background-color: blue;
+    display: block;
+}
+
+.feature-pt #feature-grey {
+    background-color: #A9A9A9;
+}
+
+.feature-pt p {
+    padding: 10px 20px;
+}
+
+.feature-pt a {
+    border: 0.1px solid grey;
+}
+
+
+
+
+/* Start carousel-cards section next to feature product section */
+.carousel-cards {
+    padding: 40px;
+    background-color: #bab9b975;
+}
+
+.card-img-top {
+    height: 140px;
+    width: 200px;
+}
+
+.card-img-top img {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    padding: 18px;
+    border: solid grey 1px;
+    width: 15rem;
+    border-radius: 10%;
+}
+
+.carousel-cards .card button {
+    padding: 6px;
+    border-radius: 7px;
+    color: white;
+    text-transform: uppercase;
+    background-color: blue;
+   }
+
+
+/* button next to feature section */
+.button-product {
+    text-align: center;
+    padding: 25px;
+}
+
+.button-product button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+}
+
+
+.features-card {
+    padding: 40px;
+}
+.features-card button{
+    text-transform: uppercase;
+    background-color: blue;
+    color:white;
+    padding:4px;
+    border-radius: 7px;
+}
+.card-img-bottom {
+    height: 150px;
+}
+
+.feature-top-content {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* Start feature category scetion here */
+.feature-category {
+    background-color: #bab9b9b6;
+}
+
+
+/* Start shop by  brand section here next to feature   category section */
+.shop-brand {
+    background-color: #F1F1F1;
+}
+
+.shop-brand h1 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+/* Start section of black  and white images next to shop by brand section here */
+
+.bw {
+    height: 180px;
+    width: 220px;
+    border: solid grey 1px;
+    border-radius: 10%;
+}
+
+.bw img {
+    height: 100%;
+    width: 100%;
+}
+
+.bw-images {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+
+
+
+/* Start gallery modules section here next to black and white images section */
+
+.gallery-modules {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #404b62;
+}
+
+.gallery-content {
+    text-align: center;
+}
+
+.gallery-pics {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gp {
+    height: 160px;
+    width: 190px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+/* Start from our blog section here */
+
+.blog-content {
+    padding-top: 28px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.blog-cards {
+    padding-left: 20px;
+}
+
+.blog-card {
+    height: 300px;
+    border-radius: 10%;
+}
+
+.from-blog {
+    background-color: #bab9b975;
+}
+.from-blog #blog-blue-selector{
+    background-color: blue;
+}
+.from-blog #blog-grey{
+    background-color: #A9A9A9;
+}
+
+.blog-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    position: relative;
+}
+.from-blog p{
+    padding:10px;
+}
+.from-blog .blog-selector a{
+    border:1px solid grey;
+}
+.from-blog #blog-blue-selector::after{
+    height:17px;
+    width:17px;
+    content:'';
+    z-index: 4;
+    transform: rotate(45deg);
+    position: absolute;
+    background-color: blue;
+    top:31px;
+    right:54%;
+}
+
+
+/* Start people saying section here next to from our blog section */
+.people-saying {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.quote-carousel {
+    padding-top: 50px;
+    padding-left: 90px;
+}
+
+.qi {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.qi img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Start most viewed section here */
+
+.most-viewed h2 {
+    padding-top: 40px;
+    color: white;
+}
+
+.most-viewed {
+    background-color: #404b62;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+}
+
+.mv {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.view {
+    height: 100px;
+    width: 90px;
+}
+
+.view img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.sl {
+    display: flex;
+    width: 20vw;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.sl h4 {
+    padding-top: 30px;
+}
+
+
+
+/* Social section icons section next to most viewed section */
+
+.social-icons {
+    padding: 20px;
+    color: #00008B;
+    background-color: #bab9b975;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+
+/*Most last section */
+.footer-last {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer-last ul li {
+    list-style: none;
+    color: blue;
+}
+
+.newsletter input {
+    margin: 5px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Copyright Section here */
+
+.copyright {
+    background-color: #A9A9A9;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.footer-last ul li {
+    padding: 8px;
+}
+
+.footer-last ul li a {
+    text-decoration: none;
+}
+
+.phone-nav {
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* Break points section here */
+
+
+
+
+
+
+/* phone nav bar section */
+@media screen and (min-width:840px) {
+    .phone-nav {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .phone-journal {
+        display: none;
+    }
+
+    .journal {
+        display: block;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .phone-nav {
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .phone-journal {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .journal {
+        display: none !important;
+    }
+}
+
+
+
+/* department section here */
+@media screen and (max-width:883px) {
+    .department {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .free-shipping {
+        flex-direction: column;
+    }
+
+    .free-a,
+    .free-b {
+        padding: 0;
+        justify-content: center;
+    }
+
+}
+
+
+/* top section of mobile watch computer */
+
+@media screen and (max-width:1126px) {
+    .top {
+        flex-direction: column;
+    }
+
+    .top-mobile {
+        width: 100vw;
+    }
+
+    .top-watch-com {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:684px) {
+    .top-watch-com {
+        flex-direction: column;
+    }
+
+    .watch {
+        justify-content: center;
+    }
+
+    .computer {
+        justify-content: center;
+    }
+}
+
+
+/* last footer section */
+
+@media screen and (max-width:700px) {
+    .footer-last {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .shop-brand {
+        font-size: 20px;
+    }
+
+    .bw {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+
+
+/* black and white image  section breakpoints  */
+@media screen and (max-width:700px) {
+    .bw {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width:978px) {
+    .gp {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .gp {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* mid category */
+@media screen and(max-width:472px) {
+    .mid-category {
+        font-size: 8px;
+    }
+
+    .feature-pt {
+        font-size: 8px;
+    }
+}
+
+@media screen and(max-width:1019px) {
+    .gp {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+
+
+
+/* Testing */
+.top-mobile {
+    position: relative;
+}
+
+.top-mobile .owl-theme .owl-dots {
+    position: absolute;
+    bottom: 79px;
+    left: 47px;
+}
+.top-mobile .owl-nav{
+    display: none;
+}

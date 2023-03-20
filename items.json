@@ -1,0 +1,97 @@
+{
+    "product":{
+    "card":[
+        {
+            "title": "Men-shirt",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200",
+            "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSi4O1sWY7ZbFMYdr82kZbNp9LBSm4X0DjcdmsSaemxzKOo6p-u7eMRPHaeWeT-6K7_qoD89ETJf_R5u5AcxeOggO_bOYiANlJpkC4ENPAd7bYm44Yp-xfJqA&usqp=CAc"
+        },
+        {
+            "title": "Women-shirt",
+            "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
+            "price": "300",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhh1i6y4nrDDtW862pCqKW5SeG77V2ePsibg&usqp=CAU"
+        },
+        {
+            "title": "watch",
+            "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
+            "price": "260",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDC1n5j71dlAjX3wlyXiaZAXUH9RUD8dacOQ&usqp=CAU"
+        },
+        {
+            "title": "Shoes",
+            "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
+            "price": "600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuLWRBAXTXrr9IbjJ7HqP9kpl8v5OY1wQpZw&usqp=CAU"
+        },
+        {
+            "title": "books",
+            "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
+            "price": "600",
+            "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3iMR0Vk8Xde9Rr1hS1cZJ8cld1H-hDbJzBgE7Pc-nj1tPiBd1n2Qdya4HaeoVtNQArQ&usqp=CAU"
+        },
+        {
+            "title": "car",
+            "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
+            "price": "600",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxOrCzmtfIjNyvPgS4usRVFZPPYcSku6UOA&usqp=CAU"
+        },
+        {
+            "title": "earphone",
+            "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
+            "price": "600",
+            "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
+        }
+
+    ],
+    "carousel_card": [
+        {
+            "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621",
+            "title": "headphone ",
+            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/7b/6b/86/7b6b86ac143e84c91c6a64824c189fc4.jpg",
+            "title": "Watche",
+            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/6d/bf/d3/6dbfd33940918279ea55bd44df291a07.jpg",
+            "title": "Camera ",
+            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/ec/79/6a/ec796a016136b590d635b46e7fe9e6c7.jpg",
+            "title": "Bag",
+            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/200/200/kdbzqfk0/microphone/y/e/f/ashiv-3-5mm-clip-microphone-for-youtube-collar-mike-for-voice-original-imafu9pjxcsqxwrt.jpeg?q=70",
+            "title": "Microphone",
+            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/200/200/xif0q/shopsy-water-bottle/0/d/e/plastic-water-bottles-for-fridge-office-school-gym-unbreakable-original-imagcu7gdxqsuzzh.jpeg?q=70",
+            "title": "Water Bottle ",
+            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/200/200/kql8sy80/lipstick/7/m/y/21-sara-s-favorite-sensational-liquid-matte-pack-of-3-touch-of-original-imag4kgnbmynydnw.jpeg?q=70",
+            "title": "Makeup ",
+            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/200/200/kqpj4i80/ring/8/1/8/adjustable-cfr-k149-ring-set-karishma-kreations-original-imag4ntug2g26twf.jpeg?q=70",
+            "title": "jewellery ",
+            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        },
+        {
+            "img" : "https://rukminim1.flixcart.com/image/200/200/k59xci80/watch/t/p/9/premium-luxury-business-casual-trendy-water-resistant-original-imafnzmembfxdyhv.jpeg?q=70",
+            "title": "Watch",
+            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+        }
+    ]
+}
+
+}

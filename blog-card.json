@@ -1,0 +1,36 @@
+{
+    "blog_card": [
+        {
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzGxldVm8nwY3HSX9JivFmAMvLc-lP2ZXC2w&usqp=CAU",
+            "title": "Headphones",
+            "content": "dolorLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt s"
+        },
+        {
+            "img": "https://rukminim1.flixcart.com/image/612/612/xif0q/sling-bag/p/w/e/-original-imagg7gfq74hsx8p.jpeg?q=70",
+            "title": "Purse",
+            "content": "doloLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntr s"
+        },
+        {
+            "img": "https://rukminim1.flixcart.com/image/612/612/xif0q/clutch/s/w/o/women-s-and-girls-handclutch-cum-mobile-handpurse-yafc-118-1801-original-imagk49zpeq4feyg.jpeg?q=70",
+            "title": "kit",
+            "content": "dolorLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt s"
+        },
+        {
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM_8VpcDujbNmPu8TuKJby0B4UKQpAD8BvAw&usqp=CAU",
+            "title": "Helmate",
+            "content": "doloLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntr s"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/g/j/q/9-rocky-black-9-kripto-black-original-image3ugbf4zfqxv-bb.jpeg?q=70",
+            "title": "shoes",
+            "content": "doloLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntr s"
+        },
+        {
+            "img":"https://rukminim1.flixcart.com/image/612/612/l58iaa80/car-charger/5/s/b/-original-imagfyf4zxgqnthq.jpeg?q=70",
+            "title": "Electronics",
+            "content": "dolLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntor s"
+        }
+
+
+    ]
+}

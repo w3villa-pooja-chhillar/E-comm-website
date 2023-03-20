@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerece landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Labrada&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--  Start  nav bar Section for phone screen -->
+            <div class="phone-nav">
+                <div class="phn-nav-left">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                    <i class="fa-solid fa-pen"></i>
+                    Register
+                </div>
+                <div class="phn-nav right">
+                    $US Dollar<i class="fa-solid fa-caret-down"></i>
+                    🇦🇺 English<i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <!-- End nav bar section of phone screen -->
+
+
+
+
+
+
+
+
+            <!--  Start nav bar section for laptop view -->
+            <div class="nav">
+                <div class="con">
+                    <div class="nav-left">
+                        <i class="fa-thin fa-house"></i>&nbsp Home&nbsp&nbsp
+                        <i class="fa-sharp fa-regular fa-stars"></i> About us&nbsp&nbsp
+                        <i class="fa-regular fa-envelope"></i>&nbspContact&nbsp&nbsp
+                        <i class="fa-regular fa-circle-question"></i>&nbspFAQ
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="nav-mid">
+                        🇦🇺 English&nbsp<i class="fa-solid fa-caret-down"></i>&nbsp&nbsp&nbsp
+                        $US Dollar&nbsp<i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="nav-right">
+                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-bars"></i>&nbspMore Menus
+                        <i class="fa-solid fa-caret-down"></i>&nbsp&nbsp&nbsp
+                        <i class="fa-solid fa-truck"></i>&nbspDelivery
+                    </div>
+                </div>
+            </div>
+            <!-- End  nav bar Section for laptop view -->
+
+
+
+
+
+            <!-- Start journal Section of laptop view -->
+
+            <div class="journal">
+                <div class="con">
+                    <div class="journal-logo">
+                        <h1>JOURNAL</h1>
+                    </div>
+                    <div class="jounal-search">
+                        <div class="search-all">All
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <input id="search" type="text" placeholder="Search here...">
+                        <i id="mag-glass" class="fa-solid fa-magnifying-glass" onclick="searching()"></i>
+                    </div>
+                    <div class="journal-icons">
+                        <div class="journal-login">
+                            <div class="journal-login-a">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="journal-login-b" id="login-form" onclick="login()">
+                                Login
+                            </div>
+                        </div>
+                        <div class="journal-register">
+                            <div class="journal-register-a">
+                                <i class="fa-regular fa-pen-circle"></i>
+                            </div>
+                            <div class="journal-register-b" id="register-form" onclick="register()">
+                                Register
+                            </div>
+                        </div>
+                        <div class="journal-wishlist">
+                            <div class="journal-wishlist-a">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="journal-wishlist-b">
+                                Wishlist
+                            </div>
+                        </div>
+                        <div class="journal-compare">
+                            <div class="journal-compare-a">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                            </div>
+                            <div class="journal-compare-b">
+                                Compare
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journal-items">
+                        0 item(s) -&nbsp$0.00 <i class="fa-solid fa-cart-shopping cart"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- End Journal Section for laptop view -->
+
+
+
+
+
+            <!-- Start  journal section  for phone view -->
+            <div class="phone-journal">
+                <div class="journal-logo">
+                    <h2>JOURNAL</h2>
+                </div>
+                <div class="phn-journal-content">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+            <div class="department">
+                <div class="con">
+                    <div class="department-row-align">
+                        <span id="yellow"><i class="fa-regular fa-bars"></i>&nbspALL DEPARTMENTS
+                            <span id="sales">Sales</span> </span>
+                        &nbsp&nbsp MULTILEVEL &nbsp&nbsp MEGA MENU &nbsp&nbsp FULLWIDTH
+                        <span id="new">New</span>
+                    </div>
+                    <div class="department-call">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span id="num">1.800.55.6625</span>
+                        <span id="yellow"><i class="fa-solid fa-message"></i>&nbsp&nbsp BLOG
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- End journal section of phone view -->
+
+
+
+
+
+            <!-- Start top section -->
+            <div class="top ">
+
+
+                <!-- Start top-mobile Section -->
+                <div class="top-mobile">
+                    <div id="top-owl" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="tp">
+                                <img
+                                    src="https://previews.123rf.com/images/saamxvr/saamxvr1812/saamxvr181200174/115499607-white-office-desk-with-laptop-watch-notebook-with-pen-top-view-with-copy-space-flat-lay.jpg">
+                            </div>
+                            <span id="text-over-image">
+                                <button id="a"><b>MOBILE</b></button>
+                                <br />
+                                <h1>Best Mobile options <br />at any resolutions</h1>
+                                <br />
+                                <button id="b">LEARN MORE ➡ </button>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <div class="tp">
+                                <img
+                                    src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/03/best-phone-2022.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tp">
+                                <img src="https://i.pinimg.com/236x/81/13/52/811352bf8edcc3d9c7cc15051fa1339e.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End top-mobile Section -->
+
+
+
+
+
+                <!-- Start right top section of watches -->
+                <div class="top-watch-com">
+                    <!-- Start watch Section of top-right -->
+                    <div class="watch">
+                        <div class="watch-pic">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi8K_ZhH_6f4LrCpf2Huc99qmb6cWxzRoy4A&usqp=CAU">
+                            <span id="text-over-watch"> <a>WEARABLES</a>
+                                <h3>Intelligent <br />& Durable <br />
+                                    Design</h3>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End watch Section of top-right -->
+
+
+                    <!-- Start computer Section of top-right -->
+                    <div class="computer">
+                        <div class="com-pic">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi8K_ZhH_6f4LrCpf2Huc99qmb6cWxzRoy4A&usqp=CAU">
+                            <span id="text-over-com"><a>COMPUTERS</a>
+                                <h3>Build your <br />own high<br /> powered PC</h3>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End computer Section of top-right -->
+                </div>
+            </div>
+
+
+
+
+            <!-- Start Free shipping -->
+            <div class="free-shipping">
+                <div class="con">
+                    <div class="free-a">
+                        <div class="car">
+                            <div class="car-icon">
+                                <i class="fa-solid fa-truck-fast  fs"></i>
+                            </div>
+                            <div class="free-ship-content">
+                                Free-shipping<br />
+                                Free delivery over $100
+                            </div>
+                        </div>
+                        <div class="direction">
+                            <div class="direction-icon">
+                                <i class="fa-solid fa-arrow-rotate-left fs"></i>
+                            </div>
+                            <div class="free-ship-content">
+                                Free Returns<br />
+                                Hassle free returns
+                            </div>
+                        </div>
+                    </div>
+                    <div class="free-b">
+                        <div class="secure">
+                            <div class="secure-icon">
+                                <i class="fa-solid fa-shield-halved fs"></i>
+                            </div>
+                            <div class="free-ship-content">
+                                Secure Shopping<br />
+                                Best security Feature
+                            </div>
+                        </div>
+                        <div class="unlimited">
+                            <div class="unlimited-icon">
+                                <i class="fa-regular fa-cube fs"></i>
+                            </div>
+                            <div class="free-ship-content">
+                                Unlimited Blocks<br />
+                                Any content any page
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Section of free shipping Section  -->
+        </div>
+    </header>
+
+
+
+
+    <section class="hero">
+        <div class="container">
+
+
+
+
+
+            <!-- Start why buy from us Section -->
+            <div class="middle">
+                <h1>Why buy from us?</h1>
+                <p>Pellentesque faucibus tempus ex, quis vulputate elit consectetur eget.Interdum<br />
+                    fames ac ante bus. Maecenas facilisis, enim at volutpat.
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+            <!-- End  why from us section -->
+
+
+
+
+            <!-- Start  mid category Section  of select Items -->
+            <div class="mid-category">
+                <a id="active-why-buy">
+                    <p>TOP-CATEGORIES</p>
+                </a>
+                <a>
+                    <p id="mid-grey">ELECTRONICS</p>
+                </a>
+                <a>
+                    <p id="mid-grey">BEAUTY</p>
+                </a>
+                <a>
+                    <p id="mid-grey">FASHION</p>
+                </a>
+            </div>
+            <!-- End mid category Section  of select Items -->
+
+
+
+
+            <!-- Start carousel Collection  -->
+
+            <div id="carous-coll" class="caraousel-collections">
+                <div id="mid-owl" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz6ptUF4hDA1gFtsIFTjirPI44Q1NwU8vH_vaIJFti&s">
+
+                    </div>
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtpAcSonlJdxueC2YkyVBgFA1oLPQWpiiy1g&usqp=CAU">
+                    </div>
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6HPSDMjczZOlKTF14k5ovC56ODmgi6g9aJwg-kHkU52ZzazvpPwQeI0gi2Ncv_1VfjSY&usqp=CAU">
+                    </div>
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpkbJec6yBaEFkcnJaD46gDOFs-C_c5pIPDA&usqp=CAU">
+                    </div>
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_gkwr9lZOhqe1NmyFX4aK3a5ksuEn5NDvQ&usqp=CAU">
+                    </div>
+                    <div class="item">
+                        <img class="cm"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr0CIufyWsNBmR9Ic5uPF7fSNnjFujo6JdFA&usqp=CAU">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- End carousel Collection   -->
+
+
+
+
+
+        <!-- Start  Feature Section of products -->
+        <div class="feature-product">
+            <h1>Featured Products</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut
+            labore
+            nisi ut <br /> aliquip ex ea commodo consequat. Duis aute irure.
+        </div>
+
+        <!-- End feature Section of Products -->
+
+
+
+
+
+
+
+
+        <!-- Start feature select items Sections -->
+        <div class="feature-pt">
+            <a>
+                <p id="feature-blue">FEATURED</p>
+            </a>
+            <a>
+                <p id="feature-grey">LATESTS</p>
+            </a>
+            <a>
+                <p id="feature-grey">BESTSELLERS</p>
+            </a>
+            <a>
+                <p id="feature-grey">SPECIALS</p>
+            </a>
+        </div>
+
+        <!-- End feature select items section  -->
+
+
+
+
+
+        <!-- Start  Carousel card Container of Add to Cart  -->
+
+        <div id="carousel-card-container" class="carousel-cards">
+            <div id="carousel-card" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Head phones</h2>
+                            $999.00
+                            <p class="card-text">Some quick example text to build on thecard title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFYZZaLYgC8QQz7WeVyVG20jEOKkQHH69Jw&usqp=CAU"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Women maria pump</h2>
+                            $990.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoxBsHjfwrRxuQ3pfsMeQxmbjMyYnZOwjAQ&usqp=CAU"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Latest Digital Camera</h2>
+                            $1,189.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkhaHxPyV3UUQUZPO5xBeAdtZGRAWB8Ekdw&usqp=CAU"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Shopping Bag</h2>
+                            $109.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kdbzqfk0/microphone/y/e/f/ashiv-3-5mm-clip-microphone-for-youtube-collar-mike-for-voice-original-imafu9pjxcsqxwrt.jpeg?q=70"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Microphones</h2>
+                            $90.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/shopsy-water-bottle/0/d/e/plastic-water-bottles-for-fridge-office-school-gym-unbreakable-original-imagcu7gdxqsuzzh.jpeg?q=70"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Water Bottle</h2>
+                            $170.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kql8sy80/lipstick/7/m/y/21-sara-s-favorite-sensational-liquid-matte-pack-of-3-touch-of-original-imag4kgnbmynydnw.jpeg?q=70"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Makeup-Essential</h2>
+                            $200.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/kqpj4i80/ring/8/1/8/adjustable-cfr-k149-ring-set-karishma-kreations-original-imag4ntug2g26twf.jpeg?q=70"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Jewellery</h2>
+                            $125.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-img-top">
+                            <img src="https://rukminim1.flixcart.com/image/200/200/k59xci80/watch/t/p/9/premium-luxury-business-casual-trendy-water-resistant-original-imafnzmembfxdyhv.jpeg?q=70"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">Samrt Watch</h2>
+                            $205.00
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p><br />
+                            <button>Add to
+                                Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End carousel-card container of Add to Cart -->
+            <div class="button-product">
+                <button>
+                    <h4>SEE ALL PRODUCTS → </h4>
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Start feature section  -->
+
+        <div class="feature-category">
+
+
+            <!-- Feature Content -->
+            <div class="feature-top-content">
+                <h1>Feature Category</h1>
+                <p>ypesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                    release of Letraset <br />sheets containing Lorem Ipshing software like
+                    Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <!-- End feature content -->
+
+
+
+
+
+
+            <!-- Start  feature section of carousel card -->
+            <div id="features-card-container" class="features-card">
+                <div id="features-card" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/kyrlifk0/sweatshirt/7/5/8/s-szf-wb-sweat-yellow-prette-original-imagaxbphtxntgyf.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtrdH-cAFtBZVRYcIVh6FhO9mFU5mjwhpEhTeTUuhrA&s"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/l2rwzgw0/key-holder/k/a/t/6-czdmskh01-allah-brown-craftzo-original-imagefn6egnfrcgc.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/k12go7k0/sticker/w/y/e/wall-stickers-wallpaper-happy-winter-trees-and-frames-home-diy-original-imafknv4vc3xf4wm.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/l4n2oi80/wall-clock/0/k/m/sk-multistoreworld-analog-31-cm-x-31-cm-wall-clock-taitanic-best-original-imagfht2bcxxjnyw.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/kg8avm80-0/watch/2/f/c/vh000008c-van-heusen-original-imafwgaaukt5qyc8.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/xif0q/lehenga-choli/9/h/s/free-sleeveless-atllgkgl1896-logo-of-alphabet-a-original-imaggeb2qzwgnbqa.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 12rem;">
+                            <img class="card-img-bottom"
+                                src="https://rukminim1.flixcart.com/image/612/612/l0cr4i80/shirt/1/t/8/m-sh-53-getchi-original-imagc5xphrdk5xyr.jpeg?q=70"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h3 class="card-title">Card title</h3>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.</p><br />
+                                <button>Add to Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End feature Section of carousel car container -->
+
+
+
+
+
+
+
+
+        <!-- Start shop-brand section -->
+        <div class="shop-brand">
+            <h1>Shop by brand</h1>
+            <div class="bw-images con">
+                <img class="bw"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdGzc-UtKh_-Xe0Zb95CR_LF_kGg2w1NYRpg&usqp=CAU">
+                <img class="bw" src="https://i.pinimg.com/736x/57/83/2f/57832f497beecfba5c70a22e33b16a97.jpg">
+                <img class="bw"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAk5aphmVnwAhXMATnXRHUresXpoMYAIzTyQ&usqp=CAU">
+                <img class="bw"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzzMpTNSLNTbTj2bpgCJcatAi_iSrXrx1IjA&usqp=CAU">
+                <img class="bw"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQzXbM9H9uEtRuwDbmcI_iJWYueThztybZQ&usqp=CAU">
+            </div>
+        </div>
+        <!-- End shop-brand section -->
+
+
+
+
+
+        <!-- Start gallery Modules Section -->
+        <div class="gallery-modules">
+
+            <!-- Gallery content -->
+            <div class="gallery-content">
+                <h1>Improved Gallery Module</h1>
+                The PowerShell Gallery is a package repository containing scripts, modules,
+                and DSC resources you can download <br />and leverage. You use the cmdlets in the
+                PowerShellGet module to install packages from the PowerShell Gallery.
+            </div>
+
+            <!-- gallery content end -->
+
+
+            <!-- Start gallery pic section here -->
+            <div class="gallery-pics">
+                <div class="con">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/200/200/kb9ou4w0/shoe/j/g/6/11391306-40-u-s-polo-assn-white-original-imafsnetwnyzu8x2.jpeg?q=70">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/312/312/kddf6a80/mobile/g/y/v/samsung-m01-core-b089mv96rw-original-imafuaghffexhag6.jpeg?q=70">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/6/x/d/6-9633-flexifeet-black-original-imag79a4chzyka5m-bb.jpeg?q=70">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/612/612/l0tweq80/earring/s/6/n/na-cwe-067-vembley-original-imagcj67wshfrdf6.jpeg?q=70">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/612/612/l1l1rww0/perfume/f/x/y/-original-imagd46phnmxyksb.jpeg?q=70">
+                    <img class="gp"
+                        src="https://rukminim1.flixcart.com/image/612/612/kpsnzww0/album/q/m/s/currency-note-collection-album-currencyalbum1-mahogany-original-imag3yfsyqchq4wg.jpeg?q=70">
+                </div>
+            </div>
+        </div>
+
+        <!-- End gallery sections here -->
+
+
+        <!-- Start  from blog section here -->
+        <div class="from-blog">
+            <div class="blog-content">
+                <h1>From our blog</h1>
+                <br />
+                <p> Next ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                    make a type</p>
+                <div class="blog-selector"> <a>
+                        <p id="blog-blue-selector">LATESTS</p>
+                    </a>
+                    <a>
+                        <p id="blog-grey">MOST RATED</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- End blog container section here -->
+
+
+
+
+            <!-- Start blog card container section here -->
+            <div id="blog-card-container" class="blog-cards con">
+                <div id="blog-carousel-cards" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzGxldVm8nwY3HSX9JivFmAMvLc-lP2ZXC2w&usqp=CAU"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to buildthe more obscure Latin words,
+                                    consectetur, <br />
+                                    from a Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, <br />
+                                    discovered the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/sling-bag/p/w/e/-original-imagg7gfq74hsx8p.jpeg?q=70"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's <br />
+                                    the more obscure Latin words, consectetur, from a Lorem Ipsum <br />passage, and
+                                    going through the cites of the word .</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/clutch/s/w/o/women-s-and-girls-handclutch-cum-mobile-handpurse-yafc-118-1801-original-imagk49zpeq4feyg.jpeg?q=70"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's <br />
+                                    the more obscure Latin words, consectetur, from a Lorem Ipsum <br />passage, and
+                                    going through the cites of the word .</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/kwgpz0w0/helmet/r/z/1/sba-7-7wings-isi-certified-flip-up-helmet-for-men-and-women-1-original-imag94sgnz8c9tnx.jpeg?q=70"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's <br />
+                                    the more obscure Latin words, consectetur, from a Lorem Ipsum <br />passage, and
+                                    going through the cites of the word .</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/l58iaa80/car-charger/5/s/b/-original-imagfyf4zxgqnthq.jpeg?q=70"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's <br />
+                                    the more obscure Latin words, consectetur, from a Lorem Ipsum <br />passage, and
+                                    going through the cites of the word .</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog" style="width: 24rem;">
+                            <div class="blog-card">
+                                <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/kids-shoe/l/p/e/-original-imagg7hwmwj86wt6.jpeg?q=70"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Card title</h2>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the card's <br />
+                                    the more obscure Latin words, consectetur, from a Lorem Ipsum <br />passage, and
+                                    going through the cites of the word .</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End blog card container section here -->
+
+
+
+
+
+    <section class="footer">
+        <div class="container">
+
+
+            <!-- Start people saying section here -->
+            <div class="people-saying">
+                <h1>What are people saying about us</h1>
+
+
+                <!-- Start quotes card carousel Section here -->
+                <div id="quote-conatiner" class="quote-carousel con">
+                    <div id="quotes-carousel" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="quotes" style="width: 18rem;">
+                                <div class="qi">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KGNJNntXlWASx7j4oXZx6cYkJqPft71wgw&usqp=CAU"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card title</h2>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.The PowerShell Gallery is a package
+                                        repository containing scripts, modules, and DSC resources you can download
+                                        and leverage. You use the cmdlets in the PowerShellGet module to install
+                                        packages from the PowerShell Gallery.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End quotes card carousle Section here -->
+
+
+
+
+            <!-- Start most  viewed section here -->
+            <div class="most-viewed">
+                <div class="con">
+                    <h2>MOST VIEWED</h2>
+                </div>
+                <div id="mview" class="mv con">
+
+                    <div class="sl">
+                        <div class="view">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBkeHxR3cyLAzpYMo0Tt9t4Zf__TUjuVaYw&usqp=CAU">
+                        </div>
+                        <h4>
+                            Oversized sunglasses from<br /> London<br />
+                            $397.00
+                        </h4>
+                    </div>
+                    <div class="sl">
+                        <div class="view">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9tNkX8fYTD78kLGG1fQpcSwq6munJGoquAg&usqp=CAU">
+                        </div>
+                        <h4>
+                            Newly Headphones made from<br />London<br />
+                            $500.00
+                        </h4>
+                    </div>
+                    <div class="sl">
+                        <div class="view">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaowdyN4ydDsKaG7D4jZBoqmKcPZhvgTJKWg&usqp=CAU">
+                        </div>
+                        <h4>
+                            women's footwear from<br /> London<br />
+                            $200.00
+                        </h4>
+                    </div>
+                    <div class="sl">
+                        <div class="view">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROSl4zof5YsgmqyJ2sTZ64Oi3NaNnQcUzB_g&usqp=CAU">
+                        </div>
+                        <h4>
+                            Smart watch from<br /> London<br />
+                            $290.00
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- End most-viewed section here -->
+
+
+
+
+
+
+
+            <!-- Start social icons section here -->
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-google-plus-g"></i>
+            </div>
+
+
+
+            <!-- End social icons section here -->
+            <div class="footer-last">
+                <div class="con">
+                    <!-- Start about us last Section here -->
+                    <div class="about-us">
+                        <h2>About us</h2>
+                        <ul>
+                            <li><a href="#">About-us</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Privacy-policy</a></li>
+                            <li><a href="#">Terms and Condition</a></li>
+                            <li><a href="#">Custom links</a></li>
+                        </ul>
+                    </div>
+                    <div class="customer-service">
+                        <h2>Customer Service</h2>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Return</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Unlimited Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <h2>My-account</h2>
+                        <ul>
+                            <li><a href="#">My account</a></li>
+                            <li><a href="#">order history</a></li>
+                            <li><a href="#">Affialiate</a></li>
+                            <li><a href="#">newsletter</a></li>
+                            <li><a href="#">Gift Certificate</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h2>Newsletter</h2>
+                        Stay up to date with news and promotions<br /> by signing up your news letter<br />
+                        <input type="text" placeholder="Enter your mail">
+                        <br />
+                        <input type="checkbox">I have read and agree to<a href="#">Privacy and policy</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- End about us section here -->
+
+
+
+
+
+            <!-- Start copyright Section here -->
+            <div class="copyright">
+                <div class="con">
+                    Copyright@2014,Your store All right Reserved.
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./index.js"></script>
+
+    <script type="text/javascript">
+        $('#quotes-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        $('#blog-carousel-cards').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                700: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        $('#features-card').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                800: {
+                    items: 3
+                },
+                1100: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        $('#top-owl').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+
+    <script type="text/javascript">
+        $('#carousel-card').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                700: {
+                    items: 2
+                },
+                900: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+
+    <script type="text/javascript">
+        $('#mid-owl').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
