@@ -315,7 +315,7 @@ function register() {
 
 // store the registration form value in variable by targeting id
 const form = document.getElementById('registration-form');
-const username = document.getElementById('username')
+const username = document.getElementById('username');
 const mail = document.getElementById('e-mail');
 const pass1 = document.getElementById('pass1');
 const pass2 = document.getElementById('pass2');
