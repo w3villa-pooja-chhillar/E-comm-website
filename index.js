@@ -302,12 +302,12 @@ async function searching() {
 
 // ***************** show a new tab of login page 
 function login() {
-    window.location = './Login-page/index.html';
+    window.location = './Login-page/login.html';
 }
 
 // ****************show a new  tab of register page
 function register() {
-    window.location = './Registration/index.html';
+    window.location = './Registration/register.html';
 }
 
 
