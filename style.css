@@ -4,7 +4,6 @@
 }
 
 
-
 /* Container Section */
 
 .con {
@@ -18,9 +17,9 @@
 /* Start nav bar Section */
 
 header .container .nav {
-    display: flex;
+    /* display: flex; */
     font-size: 18px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 20px;
     background-color: white;
 }
@@ -162,6 +161,13 @@ header .container .journal {
     margin-bottom: 5px;
 }
 
+.common{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90vw;
+    margin:auto;
+}
 .tp {
     height: 450px;
     margin-top: 12px;
@@ -374,13 +380,14 @@ header .container .journal {
 
 #active-why-buy {
     color: white;
+    position:relative;
     background-color: blue;
 }
 
 #active-why-buy::after {
     transform: rotate(45deg);
     left:34%;
-    top:31px;
+    top:30px;
     content: '';
     height: 17px;
     width: 17px;
@@ -434,6 +441,7 @@ header .container .journal {
 .feature-pt #feature-blue {
     background-color: blue;
     color: white;
+    position:relative;
 }
 
 #feature-blue::after {
@@ -467,6 +475,12 @@ header .container .journal {
 .carousel-cards {
     padding: 40px;
     background-color: #bab9b975;
+}
+.carousel-cards .card{
+    margin-left:auto !important;
+    margin-top:auto !important;
+    margin-bottom:auto !important;
+    margin-right:auto !important;
 }
 
 .card-img-top {
@@ -511,6 +525,9 @@ header .container .journal {
 
 .features-card {
     padding: 40px;
+}
+.features-card .card{
+    margin:auto !important;
 }
 .features-card button{
     text-transform: uppercase;
@@ -605,10 +622,16 @@ header .container .journal {
 .blog-cards {
     padding-left: 20px;
 }
-
+.blog-cards .blog{
+    margin:auto;
+}
 .blog-card {
     height: 300px;
     border-radius: 10%;
+}
+.blog-card img{
+    height:100%;
+    width:100%;
 }
 
 .from-blog {
@@ -616,6 +639,7 @@ header .container .journal {
 }
 .from-blog #blog-blue-selector{
     background-color: blue;
+    position:relative;
 }
 .from-blog #blog-grey{
     background-color: #A9A9A9;
@@ -657,7 +681,9 @@ header .container .journal {
     padding-top: 50px;
     padding-left: 90px;
 }
-
+.quote-carousel .quotes{
+    margin:auto;
+}
 .qi {
     width: 100px;
     height: 100px;
@@ -774,9 +800,15 @@ header .container .journal {
     justify-content: space-between;
 }
 
+/* shop-block */
 
-
-
+.shop-block button{
+    text-transform: uppercase;
+    background-color: blue;
+    color:white;
+    padding:4px;
+    border-radius: 7px;
+}
 
 /* Break points section here */
 
@@ -944,9 +976,6 @@ header .container .journal {
     }
 }
 
-
-
-
 /* Testing */
 .top-mobile {
     position: relative;
@@ -959,4 +988,24 @@ header .container .journal {
 }
 .top-mobile .owl-nav{
     display: none;
+}
+
+/* Pagination links */
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  /* Style the active/current link */
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
 }

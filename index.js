@@ -2,10 +2,10 @@ async function readdata() {
     const res1 = await fetch('./items.json');
     const data1 = await res1.json();
     // feature card container data on html file (Add to cart)
-    showCard(data1.product.card);
+    showfeatureCard(data1);
     const res2 = await fetch('./items.json');
     const data2 = await res2.json();
-    showcarousel(data2.product.carousel_card);
+    showcarousel(data2);
     // carousel card container data on html file (Add to Cart)
     const res3 = await fetch('./blog-card.json');
     const data3 = await res3.json();
@@ -22,30 +22,33 @@ async function readdata() {
 }
 readdata();
 
-
-
 // Show Card Data on HTML file
-function showCard(arrayOfData) {
+function showfeatureCard(Data) {
     let featuresCard = document.getElementById("features-card-container");
-    let html = ` <div id="features-card" class="owl-carousel owl-theme">`;
-    arrayOfData.forEach(element => {
-        html += ` <div class="item">
-        <div class="card" style="width: 12rem;">
-            <img class="card-img-bottom"
-                src="${element.img}
-                alt="Card image cap">
-            <div class="card-body">
-                <h3 class="card-title">${element.title}</h3>
-                <p class="card-text">${element.content}</p><br />
-                <button>Add to
-                    Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-light fa-route-interstate"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-        </div>
-    </div>`
-    });
+    let html = `<div id="features-card" class="owl-carousel owl-theme">`
+    Data.products.forEach((element) => {
+        if (element.type == "card") {
+            html += `
+            <div class="item">
+                <div class="card" style="width: 12rem;">
+                    <img class="card-img-bottom"
+                        src="${element.img}
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">${element.title}</h3>
+                      $${element.price}
+                        <p class="card-text">${element.content}</p><br />
+                        <button>Add to
+                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-light fa-route-interstate"></i>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div> `
+        }
+    })
+    document.getElementById("features-card").innerHTML = html;
     html += `</div>`;
     featuresCard.innerHTML = html;
     $('#features-card').owlCarousel({
@@ -72,11 +75,7 @@ function showCard(arrayOfData) {
             }
         }
     })
-}
-
-
-
-
+};
 
 // show blog card data on html file 
 function showblog(arrayOfData) {
@@ -127,25 +126,28 @@ function showblog(arrayOfData) {
 function showcarousel(arrayOfData) {
     let carouselcard = document.getElementById("carousel-card-container");
     let carousel = `<div id="carousel-card" class="owl-carousel owl-theme">`;
-    arrayOfData.forEach(element => {
-        carousel += `<div class="item">
-        <div class="card" style="width: 15rem;">
-            <div class="card-img-top">
-                <img src="${element.img}"
-                    alt="Card image cap">
+    // console.log(arrayOfData.products)
+    arrayOfData.products.forEach((element) => {
+        if (element.type == "carousel_card") {
+            carousel += `<div class="item">
+            <div class="card" style="width: 15rem;">
+                <div class="card-img-top">
+                    <img src="${element.img}"
+                        alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">${element.title}</h2>
+                    $${element.price}
+                    <p class="card-text">${element.content}</p><br />
+                    <button onclick="addToCart(${element.id})">Add to Cart</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-light fa-route-interstate"></i>
+                </div>
             </div>
-            <div class="card-body">
-                <h2 class="card-title">${element.title}</h2>
-                $999.00
-                <p class="card-text">${element.content}</p><br />
-                <button>Add to
-                    Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-light fa-route-interstate"></i>
-            </div>
-        </div>
-    </div>`
-    });
+        </div>`
+        }
+    })
     carousel += `</div>`;
     carouselcard.innerHTML = carousel;
     $('#carousel-card').owlCarousel({
@@ -221,7 +223,7 @@ function showquote(arrayOfData) {
 function showcollections(arrayOfData) {
     let carouselcoll = document.getElementById("carous-coll");
     let coll = `<div id="mid-owl" class="owl-carousel owl-theme">`;
-    arrayOfData.forEach(element => {
+    arrayOfData.forEach((element) => {
         coll += `<div class="item">
          <img class="cm"
              src="${element.img}">
@@ -248,9 +250,6 @@ function showcollections(arrayOfData) {
         }
     })
 }
-
-
-
 // show most view section on html page 
 
 function showmostview(arrayOfData) {
@@ -270,39 +269,93 @@ function showmostview(arrayOfData) {
     // view+=`</div>`;
     mostview.innerHTML = view;
 }
-
-
-
 // working search function 
-
+// show search items
 async function searching() {
+    const searchItems = []
     let searchdata = document.getElementById("search").value;
     let fetchsearch = await fetch('./items.json');
     let fetchres = await fetchsearch.json();
-    let arr = []
-    for (let key in fetchres) {
-        for (let i in fetchres[key]) {
-            arr.push(fetchres[key][i])
+    fetchres.products.forEach((element) => {
+        if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
+            searchItems.push(element)
         }
     }
-    console.log(arr);
-    let product = [];
-    arr.flat().forEach((element) => {
-        if (element.title.toLowerCase().includes(searchdata.toLowerCase())) {
-            product.push(element)
+    )
+    let arr = []
+    let paginationContainer = document.getElementById("search-pagination")
+    let mypagei = `<div class="pagination">
+    <a href="#">&laquo;</a>`
+    const page = Math.ceil(searchItems.length / 4);
+    localStorage.setItem("pages", page);
+    for (let i = 1; i <= page; i++) {
+        let pageProductPagination = {
+            page: i, 
+            pageProduct: searchItems.slice(i * 4 - 4, i * 4)
         }
-    })
-
-    console.log(product);
+        arr.push(pageProductPagination)
+        localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
+        mypagei += `
+        <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
+    }
+    mypagei += `<a href="#">&raquo;</a>
+    </div>`;
+    paginationContainer.innerHTML = mypagei
+    showPaginationProduct("page-1")
 }
+function showPaginationProduct(id) {
+    let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
+    console.log(paginationProducts)
+    let html = ""
+    let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
+    console.log(itemsArr)
+    itemsArr.pageProduct.forEach((element) => {
+        html += `<div class="item">
+                       <div class="card" style="width: 15rem;">
+                            <div class="card-img-top">
+                               <img src="${element.img}"
+                                   alt="Card image cap">
+                         </div>
+                           <div class="card-body">
+                               <h2 class="card-title">${element.title}</h2>
+                                ${element.price}
+                                <p class="card-text">${element.content}</p><br />
+                               <button>Add to
+                                  Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                               <i class="fa-regular fa-heart"></i>
+                            <i class="fa-light fa-route-interstate"></i>
+                         </div>
+                        </div>
+               </div> `
+    })
+    document.getElementById("shop-block").innerHTML = html;
+    if (html != '') {
+        document.getElementById("shop-block").style.display = "flex";
+        document.getElementById('section-hide').style.display = "none";
+        document.getElementById('main-hide').style.display = "none";
+        document.getElementById('shop-hide').style.display = "none";
+        document.getElementById('people-saying-hide').style.display = "none";
+        document.getElementById('feature-pro').style.display = "none";
+        document.getElementById('carousel-card-container').style.display = "none";
+        document.getElementById('feature-category-hide').style.display = "none";
+    }
+    else {
+        document.getElementById('section-hide').style.display = "block";
+        document.getElementById('main-hide').style.display = "block";
+        document.getElementById('shop-hide').style.display = "block";
+        document.getElementById('people-saying-hide').style.display = "block";
+        document.getElementById('feature-pro').style.display = "block";
+        document.getElementById('carousel-card-container').style.display = "block";
+        document.getElementById('feature-category-hide').style.display = "block";
+    }
 
-
+}
 // ************Login-Register-Logout Section
 
 
 // ***************** show a new tab of login page 
 function login() {
-    window.location = './Login-page/login.html';
+    window.location = './Login/login.html';
 }
 
 // ****************show a new  tab of register page
@@ -319,6 +372,8 @@ const username = document.getElementById('username');
 const mail = document.getElementById('e-mail');
 const pass1 = document.getElementById('pass1');
 const pass2 = document.getElementById('pass2');
+
+
 
 // after click on register button
 
@@ -357,6 +412,7 @@ let registerform = () => {
     else {
         setSucess('You are successfully registered!!');
     }
+    window.location = '../index.html';
 
     const registerdata = {
         username: usernameValue,
@@ -390,22 +446,73 @@ const isValidEmail = email => {
 let loginform = () => {
     const username = document.getElementById('user').value.trim();
     const password = document.getElementById('password').value.trim();
+    const registeruser = JSON.parse(window.localStorage.getItem('registerdata'));
+    console.log(registeruser.pass1);
     if (username === '' && password === '') {
-        setError('All fields are required');
+        alert('All fields are required');
     }
     else if (username === '') {
-        setError('username is required');
+        alert('username is required');
     }
     else if (password === '') {
-        setError('password is required');
+        alert('password is required');
     }
-    else if(username === window.localStorage.getItem('registerdata.username') && password === window.localStorage.getItem('registerdata.pass1')) {
-        setSucess('welcome!! you are sucessfully login');
+    else if (username === registeruser.username && password === registeruser.pass1) {
+        alert('welcome!! you are sucessfully login');
     }
+    window.location = '../index.html';
+
+}
+
+
+// Add to cart section 
+function addToCart(id){
+    alert("you are going to add to cart");
+    let cartData={
+        cartarr:[]
+    };
+    
 }
 
 
 
+// function addToCart(id){
+//     alert("you are going to add to cart")
+//     localStorage.setItem("cartData","");
+//     cartData=JSON.parse(localStorage.getItem("cartData"));
+//     console.log(cartData);
+//     if(cartData.cartarray.includes(id)){
+//         alert("items is already in cart");
+//     }
+//     else{
+//         if(cartData){
+//             cartData.cartarray.push(id);
+//             localStorage.setItem("cartData",JSON.stringify(cartData));
+//         }
+//         else{
+//             let cartData={
+//                 cartarray:[],
+//             };
+//             cartData.cartarray.push(id);
+//             localStorage.setItem("cartData",JSON.stringify(cartData));
+//         }
+//         alert("item is added");
+//     }
+// }
 
 
-// after sucessful login 
+
+//   function addToCart(id){
+//     alert("you are going to add to cart");
+//     let cartData={
+//         cartArray:[]
+//     };
+//     localStorage.setItem("cartData","");
+    
+//     if(cartData.cartArray.includes(id)){
+//         alert("item is already exist");
+//     }
+//     else{
+//         alert("item is added");
+//     }
+//   }
