@@ -62,7 +62,7 @@
             "title": "headphone",
             "price": "200.00",
             "type": "carousel_card",
-            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "9",
@@ -70,7 +70,7 @@
             "title": "Watch",
             "price": "300.00",
             "type": "carousel_card",
-            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "10",
@@ -78,7 +78,7 @@
             "title": "Camera",
             "price": "300.00",
             "type": "carousel_card",
-            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "11",
@@ -86,7 +86,7 @@
             "title": "Bag",
             "price": "560.00",
             "type": "carousel_card",
-            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "12",
@@ -94,7 +94,7 @@
             "title": "Microphone",
             "price": "210.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "13",
@@ -102,7 +102,7 @@
             "title": "Water Bottle",
             "price": "210.00",
             "type": "carousel_card",
-            "content": "xyz Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "14",
@@ -110,7 +110,7 @@
             "title": "Makeup",
             "price": "22.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "15",
@@ -118,7 +118,7 @@
             "title": "jewellery",
             "price": "970.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "16",
@@ -126,7 +126,7 @@
             "title": "Watch",
             "price": "120.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "17",
@@ -134,7 +134,7 @@
             "title": "pen",
             "price": "10.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "18",
@@ -142,7 +142,7 @@
             "title": "Perfume",
             "price": "100.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "19",
@@ -150,15 +150,15 @@
             "title": "Food",
             "price": "100.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
-            "id": "220",
+            "id": "20",
             "img": "https://i.pinimg.com/236x/b9/73/78/b97378a7be1a414985b68d6d98d8c71d.jpg",
             "title": "Cap",
             "price": "100.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "21",
@@ -166,7 +166,7 @@
             "title": "Laptop",
             "price": "100.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "22",
@@ -174,7 +174,7 @@
             "title": "Cake",
             "price": "100.00",
             "type": "carousel_card",
-            "content": "xyzLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         }
 
         

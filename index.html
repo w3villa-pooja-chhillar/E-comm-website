@@ -58,7 +58,7 @@
             <div class="nav common">
                 <div class="con">
                     <div class="nav-left">
-                        <i class="fa-thin fa-house"></i>&nbsp Home&nbsp&nbsp
+                        <i class="fa-thin fa-house"></i>&nbsp <a href='./index.html'>Home</a>&nbsp&nbsp
                         <i class="fa-sharp fa-regular fa-stars"></i> About us&nbsp&nbsp
                         <i class="fa-regular fa-envelope"></i>&nbspContact&nbsp&nbsp
                         <i class="fa-regular fa-circle-question"></i>&nbspFAQ
@@ -115,7 +115,7 @@
                         </div>
                         <div class="journal-wishlist">
                             <div class="journal-wishlist-a">
-                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-heart"  id="heart" onclick="showWishlist()"></i>
                             </div>
                             <div class="journal-wishlist-b">
                                 Wishlist
@@ -131,7 +131,8 @@
                         </div>
                     </div>
                     <div class="journal-items">
-                        0 item(s) -&nbsp$0.00 <i class="fa-solid fa-cart-shopping cart"></i>
+                        <span id="items-counter">0</span>&nbspitem(s) -&nbsp$
+                        <span id="total-price">0.00</span>&nbsp<i class="fa-solid fa-cart-shopping cart" onclick="showCart()"></i>
                     </div>
                 </div>
             </div>
@@ -215,8 +216,8 @@
                                 <img
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi8K_ZhH_6f4LrCpf2Huc99qmb6cWxzRoy4A&usqp=CAU">
                                 <span id="text-over-watch"> <a>WEARABLES</a>
-                                    <h3>Intelligent <br />& Durable <br />
-                                        Design</h3>
+                                  <span><h3>Intelligent <br />& Durable <br />
+                                        Design</h3></span>
                                 </span>
                             </div>
                         </div>
@@ -399,7 +400,8 @@
         </div>
         <div class="search-pagination" id="search-pagination"></div>
     </div>
-
+   <div class="show-cart" id="show-cart"></div>
+   <div id="wishlist"></div>
     <!-- Start  Carousel card Container of Add to Cart  -->
 <!-- <section class="common"> -->
     <div id="carousel-card-container" class="carousel-cards">
@@ -1382,7 +1384,7 @@
                     items: 1
                 },
                 600: {
-                    items: 2
+                    items: 1
                 },
                 1000: {
                     items: 1

@@ -38,9 +38,8 @@ function showfeatureCard(Data) {
                         <h3 class="card-title">${element.title}</h3>
                       $${element.price}
                         <p class="card-text">${element.content}</p><br />
-                        <button>Add to
-                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
+                        <button onclick="addToCart(${element.id})">Add to Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
                         <i class="fa-light fa-route-interstate"></i>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -141,7 +140,7 @@ function showcarousel(arrayOfData) {
                     <p class="card-text">${element.content}</p><br />
                     <button onclick="addToCart(${element.id})">Add to Cart</button>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
                     <i class="fa-light fa-route-interstate"></i>
                 </div>
             </div>
@@ -270,38 +269,43 @@ function showmostview(arrayOfData) {
     mostview.innerHTML = view;
 }
 // working search function 
+
 // show search items
 async function searching() {
     const searchItems = []
     let searchdata = document.getElementById("search").value;
-    let fetchsearch = await fetch('./items.json');
-    let fetchres = await fetchsearch.json();
-    fetchres.products.forEach((element) => {
-        if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
-            searchItems.push(element)
+    if (searchdata) {
+        let fetchsearch = await fetch('./items.json');
+        let fetchres = await fetchsearch.json();
+        fetchres.products.forEach((element) => {
+            if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
+                searchItems.push(element)
+            }
         }
-    }
-    )
-    let arr = []
-    let paginationContainer = document.getElementById("search-pagination")
-    let mypagei = `<div class="pagination">
+        )
+        let arr = []
+        let paginationContainer = document.getElementById("search-pagination")
+        let mypagei = `<div class="pagination">
     <a href="#">&laquo;</a>`
-    const page = Math.ceil(searchItems.length / 4);
-    localStorage.setItem("pages", page);
-    for (let i = 1; i <= page; i++) {
-        let pageProductPagination = {
-            page: i, 
-            pageProduct: searchItems.slice(i * 4 - 4, i * 4)
-        }
-        arr.push(pageProductPagination)
-        localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
-        mypagei += `
+        const page = Math.ceil(searchItems.length / 4);
+        localStorage.setItem("pages", page);
+        for (let i = 1; i <= page; i++) {
+            let pageProductPagination = {
+                page: i,
+                pageProduct: searchItems.slice(i * 4 - 4, i * 4)
+            }
+            arr.push(pageProductPagination)
+            localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
+            mypagei += `
         <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
-    }
-    mypagei += `<a href="#">&raquo;</a>
+        }
+        mypagei += `<a href="#">&raquo;</a>
     </div>`;
-    paginationContainer.innerHTML = mypagei
-    showPaginationProduct("page-1")
+        paginationContainer.innerHTML = mypagei
+        showPaginationProduct("page-1")
+    }else{
+        location.reload()
+    }
 }
 function showPaginationProduct(id) {
     let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
@@ -326,7 +330,7 @@ function showPaginationProduct(id) {
                             <i class="fa-light fa-route-interstate"></i>
                          </div>
                         </div>
-               </div> `
+               </div>`
     })
     document.getElementById("shop-block").innerHTML = html;
     if (html != '') {
@@ -338,6 +342,8 @@ function showPaginationProduct(id) {
         document.getElementById('feature-pro').style.display = "none";
         document.getElementById('carousel-card-container').style.display = "none";
         document.getElementById('feature-category-hide').style.display = "none";
+        document.getElementById('show-cart').style.display = "none";
+        document.getElementById('wishlist').style.display = "none";
     }
     else {
         document.getElementById('section-hide').style.display = "block";
@@ -459,60 +465,189 @@ let loginform = () => {
     }
     else if (username === registeruser.username && password === registeruser.pass1) {
         alert('welcome!! you are sucessfully login');
+        window.location = '../index.html';
     }
-    window.location = '../index.html';
+    else {
+        alert("plase check your username and password");
+    }
+
+}
+
+// Add to cart Section here
+
+function addToCart(id) {
+    const arr = JSON.parse(localStorage.getItem("cartItems")) || []
+    if (arr.includes(id)) {
+        alert("items is alreday in cart");
+    }
+    else {
+        arr.push(id);
+        localStorage.setItem("cartItems", JSON.stringify(arr));
+        alert("item is added");
+        document.getElementById('items-counter').innerText = arr.length;
+        localStorage.setItem("item-counter", arr.length);
+    }
+}
+// Add to wishlist Section
+function addtoWishlist(id) {
+    const arr = JSON.parse(localStorage.getItem("wishlistItems")) || []
+    if (arr.includes(id)) {
+        alert("item is already in wishlist");
+    }
+    else {
+        arr.push(id);
+        localStorage.setItem("wishlistItems", JSON.stringify(arr));
+        alert("item is added in wishlist");
+
+    }
+}
+
+
+
+// Show Cart Section here
+async function showCart() {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    console.log(cartItems);
+    //  Sort the  store id of cartitems
+    cartItems.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+    let z = 0;
+    const data7 = await fetch('./items.json');
+    const res7 = await data7.json();
+    let html = "";
+    res7.products.forEach((element) => {
+        if (element.id == cartItems[z]) {
+            html += `
+            <div class="item">
+                <div class="card" style="width: 12rem;">
+                    <img class="card-img-bottom"
+                        src="${element.img}
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">${element.title}</h3>
+                      $${element.price}
+                        <p class="card-text">${element.content}</p><br />
+                        <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-light fa-route-interstate"></i>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div> `
+            z++;
+        }
+    })
+    document.getElementById('show-cart').innerHTML = html;
+    if (html != '') {
+        document.getElementById("show-cart").style.display = "flex";
+        document.getElementById('section-hide').style.display = "none";
+        document.getElementById('main-hide').style.display = "none";
+        document.getElementById('shop-hide').style.display = "none";
+        document.getElementById('people-saying-hide').style.display = "none";
+        document.getElementById('feature-pro').style.display = "none";
+        document.getElementById('carousel-card-container').style.display = "none";
+        document.getElementById('feature-category-hide').style.display = "none";
+        document.getElementById('wishlist').style.display = "none";
+    }
+    else {
+        document.getElementById('section-hide').style.display = "block";
+        document.getElementById('main-hide').style.display = "block";
+        document.getElementById('shop-hide').style.display = "block";
+        document.getElementById('people-saying-hide').style.display = "block";
+        document.getElementById('feature-pro').style.display = "block";
+        document.getElementById('carousel-card-container').style.display = "block";
+        document.getElementById('feature-category-hide').style.display = "block";
+    }
 
 }
 
 
-// Add to cart section 
-function addToCart(id){
-    alert("you are going to add to cart");
-    let cartData={
-        cartarr:[]
-    };
-    
+// Remove from Cart Section here
+function removefromCart(id) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    const index = cartItems.indexOf(id);
+    cartItems.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
 }
 
 
+// Wishlist Section
+async function showWishlist() {
+    document.getElementById('heart').style.color = "red";
+    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    wishItems.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+    let index = 0;
+    const data8 = await fetch('./items.json');
+    const res8 = await data8.json();
+    let html = ""
+    res8.products.forEach((element) => {
+        if (element.id == wishItems[index]) {
+            html += `
+        <div class="item">
+            <div class="card" style="width: 12rem;">
+                <img class="card-img-bottom"
+                    src="${element.img}
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">${element.title}</h3>
+                  $${element.price}
+                    <p class="card-text">${element.content}</p><br />
+                    <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
+                    <i class="fa-light fa-route-interstate"></i>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+        </div> `
+            index++;
+        }
+    })
+    document.getElementById('wishlist').innerHTML = html;
+    if (html != '') {
+        document.getElementById("wishlist").style.display = "flex";
+        document.getElementById('section-hide').style.display = "none";
+        document.getElementById('main-hide').style.display = "none";
+        document.getElementById('shop-hide').style.display = "none";
+        document.getElementById('people-saying-hide').style.display = "none";
+        document.getElementById('feature-pro').style.display = "none";
+        document.getElementById('carousel-card-container').style.display = "none";
+        document.getElementById('feature-category-hide').style.display = "none";
+        document.getElementById('shop-block').style.display = "none";
+    }
+    else {
+        document.getElementById('section-hide').style.display = "block";
+        document.getElementById('main-hide').style.display = "block";
+        document.getElementById('shop-hide').style.display = "block";
+        document.getElementById('people-saying-hide').style.display = "block";
+        document.getElementById('feature-pro').style.display = "block";
+        document.getElementById('carousel-card-container').style.display = "block";
+        document.getElementById('feature-category-hide').style.display = "block";
+    }
+}
 
-// function addToCart(id){
-//     alert("you are going to add to cart")
-//     localStorage.setItem("cartData","");
-//     cartData=JSON.parse(localStorage.getItem("cartData"));
-//     console.log(cartData);
-//     if(cartData.cartarray.includes(id)){
-//         alert("items is already in cart");
-//     }
-//     else{
-//         if(cartData){
-//             cartData.cartarray.push(id);
-//             localStorage.setItem("cartData",JSON.stringify(cartData));
-//         }
-//         else{
-//             let cartData={
-//                 cartarray:[],
-//             };
-//             cartData.cartarray.push(id);
-//             localStorage.setItem("cartData",JSON.stringify(cartData));
-//         }
-//         alert("item is added");
-//     }
-// }
+//  remove from Wishlist section 
+function removefromWishlist(id) {
+    let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    const index = wishlistItems.indexOf(id);
+    wishlistItems.splice(index, 1);
+    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
 
-
-
-//   function addToCart(id){
-//     alert("you are going to add to cart");
-//     let cartData={
-//         cartArray:[]
-//     };
-//     localStorage.setItem("cartData","");
-    
-//     if(cartData.cartArray.includes(id)){
-//         alert("item is already exist");
-//     }
-//     else{
-//         alert("item is added");
-//     }
-//   }
+}
+function removefromCart(id) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    const index = cartItems.indexOf(id);
+    cartItems.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}

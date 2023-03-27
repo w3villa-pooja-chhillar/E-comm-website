@@ -23,7 +23,10 @@ header .container .nav {
     padding: 20px;
     background-color: white;
 }
-
+.nav-left a{
+    text-decoration: none;
+    color:black;
+}
 
 /* End nav bar Section */
 
@@ -232,13 +235,14 @@ header .container .journal {
 }
 
 .watch-pic {
+    position:relative;
     height: 220px;
     width: 360px;
 }
 
 #text-over-watch {
-    position: relative;
-    bottom: 150px;
+    position: absolute;
+    bottom: 62px;
     left: 25px;
 }
 
@@ -252,8 +256,8 @@ header .container .journal {
 }
 
 #text-over-com {
-    position: relative;
-    bottom: 150px;
+    position: absolute;
+    bottom: 62px;
     left: 20px;
 }
 
@@ -268,6 +272,7 @@ header .container .journal {
 
 /* Start top-right second computer section */
 .com-pic {
+    position:relative;
     height: 220px;
     width: 360px;
 }
@@ -679,7 +684,6 @@ header .container .journal {
 
 .quote-carousel {
     padding-top: 50px;
-    padding-left: 90px;
 }
 .quote-carousel .quotes{
     margin:auto;
@@ -801,7 +805,9 @@ header .container .journal {
 }
 
 /* shop-block */
-
+.shop-block{
+    background-color: wheat;
+}
 .shop-block button{
     text-transform: uppercase;
     background-color: blue;
@@ -810,12 +816,49 @@ header .container .journal {
     border-radius: 7px;
 }
 
+.shop-block .item{
+    margin:20px;
+}
+
+.show-cart{
+    flex-wrap: wrap;
+    background-color: wheat;
+    justify-content: space-between;
+}
+.show-cart .item{
+    margin:10px;
+}
+.show-cart .card-img-bottom{
+    width:200px;
+    height:180px;
+}
+.show-cart button{
+    padding: 6px;
+    border-radius: 7px;
+    color: white;
+    text-transform: uppercase;
+    background-color: red;
+}
+
+/* wishlist Styling */
+#wishlist{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:wheat;
+    /* margin:10px; */
+}
+#wishlist .item{
+    margin:10px;
+}
+#wishlist button{
+    padding: 6px;
+    border-radius: 7px;
+    color: white;
+    text-transform: uppercase;
+    background-color: red;
+}
+
 /* Break points section here */
-
-
-
-
-
 
 /* phone nav bar section */
 @media screen and (min-width:840px) {
@@ -866,6 +909,9 @@ header .container .journal {
     .department {
         display: none !important;
     }
+    .sl{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:900px) {
@@ -878,7 +924,40 @@ header .container .journal {
         padding: 0;
         justify-content: center;
     }
+}
+@media screen and (max-width:468px){
+    .sl{
+        display: flex;
+    }
+}
+@media screen and (max-width: 372px){
+.bw {
+    height: 45px !important;
+    width: 45px !important;
+}
+}
 
+@media screen and (max-width:395px){
+    .free-a,.free-b{
+        flex-direction: column;
+        align-items:center;
+    }
+    .direction{
+        padding-left:0px;
+    }
+    .secure{
+        padding-right:0px;
+    }
+}
+@media screen and (max-width:673px){
+    .watch-pic,.com-pic{
+      width: 520px;
+    }
+}
+@media screen and (max-width:900px){
+    .free-shipping .con{
+        flex-direction:column !important;
+    }
 }
 
 
@@ -895,7 +974,10 @@ header .container .journal {
 
     .top-watch-com {
         display: flex;
-        justify-content: space-between;
+        padding-bottom:15px;
+        justify-content: space-around;
+        width:90vw;
+        margin:auto;
     }
 }
 
@@ -928,8 +1010,8 @@ header .container .journal {
     }
 
     .bw {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 }
 
@@ -943,20 +1025,56 @@ header .container .journal {
     }
 }
 
-@media screen and (max-width:978px) {
+@media screen and (max-width:1030px) {
     .gp {
         height: 80px;
         width: 80px;
     }
 }
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:558px) {
     .gp {
-        width: 40px;
-        height: 40px;
+        width: 58px;
+        height: 58px;
     }
 }
-
+@media screen and (max-width:435px){
+    .gp{
+        width:30px;
+        height:30px;
+    }
+}
+@media screen and (max-width:474px){
+    #mview{
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        font-size:5px;
+    }
+    #mview .sl{
+        margin-top: 5px;
+        margin-bottom:5px;
+    }
+    .sl h4 {
+        font-size: 8px !important;
+    }
+}
+@media screen and (max-width:448px){
+    #mview .view{
+        height:50px;
+        width:50px;
+    }
+}
+@media screen and (max-width:683px){
+    .sl h4{
+        font-size:12px;
+    }
+}
+@media screen and (max-width: 457px){
+    .footer-last .con{
+        flex-direction: column;
+    }
+}
 
 /* mid category */
 @media screen and(max-width:472px) {
@@ -975,6 +1093,12 @@ header .container .journal {
         width: 90px;
     }
 }
+@media screen and (max-width:578px){
+    .mid-category,.feature-pt{
+        flex-direction: column;
+    }
+}
+
 
 /* Testing */
 .top-mobile {
