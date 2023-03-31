@@ -87,9 +87,9 @@ function showblog(arrayOfData) {
                 src="${element.img}"
                 alt="Card image cap">
             <div class="card-body">
-                <h2 class="card-title">${element.title}</h2>
+                <h4 class="card-title">${element.title}</h4>
                 <p class="card-text">${element.content}</p>
-                <a href="#" class="btn btn-primary">${element.href}</a>
+                <a><h3> Read More →</h3></a>
             </div>
         </div>
     </div>`
@@ -189,8 +189,8 @@ function showquote(arrayOfData) {
             <div class="card-body">
                 <h2 class="card-title">${element.title}</h2>
                 <p class="card-text">${element.content}
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </p><br />
+                <a><h3> "-chalibaltimore"</h3></a>
             </div>
         </div>
     </div>`
@@ -250,6 +250,19 @@ function showcollections(arrayOfData) {
     })
 }
 // show most view section on html page 
+// arrayOfData.forEach(element => {
+//     view += ` <div class="sl">
+//     <div class="view">
+//         <img
+//             src="${element.img}">
+//     </div>
+//     <h4>
+//         ${element.content}
+//     </h4>
+// </div>`
+// });
+
+
 
 function showmostview(arrayOfData) {
     let mostview = document.getElementById("mview");
@@ -260,10 +273,16 @@ function showmostview(arrayOfData) {
             <img
                 src="${element.img}">
         </div>
-        <h4>
-            ${element.content}
-        </h4>
-    </div>`
+        <div>
+            <h4>
+              ${element.content}
+            </h4>
+            <a><i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </a>
+        </div>
+    </div> `
     });
     // view+=`</div>`;
     mostview.innerHTML = view;
@@ -303,7 +322,7 @@ async function searching() {
     </div>`;
         paginationContainer.innerHTML = mypagei
         showPaginationProduct("page-1")
-    }else{
+    } else {
         location.reload()
     }
 }
@@ -390,7 +409,12 @@ let registerform = () => {
     const pass2Value = pass2.value.trim();
 
     // condition check for all the fields 
-
+    const registerdata = {
+        username: usernameValue,
+        mail: mailValue,
+        pass1: pass1Value,
+        pass2: pass2Value
+    };
     if (usernameValue === '' && mailValue === '' && pass1Value === '' && pass2.value === '') {
         setError('All fields are required');
     }
@@ -415,19 +439,15 @@ let registerform = () => {
     else if (pass2Value != pass1Value) {
         setError('password does not match');
     }
-    else {
-        setSucess('You are successfully registered!!');
+    else if (localStorage.getItem('registerdata')) {
+        setError('user already exist');
     }
-    window.location = '../index.html';
-
-    const registerdata = {
-        username: usernameValue,
-        mail: mailValue,
-        pass1: pass1Value,
-        pass2: pass2Value
-    };
-    window.localStorage.setItem("registerdata", JSON.stringify(registerdata));
-    console.log(window.localStorage.getItem('registerdata'));
+    else {
+        localStorage.setItem("registerdata", JSON.stringify(registerdata));
+        setSucess('You are successfully registered!!');
+        window.location = '../index.html';
+    }
+    // console.log(window.localStorage.getItem('registerdata'));
 
 };
 
@@ -470,12 +490,11 @@ let loginform = () => {
     else {
         alert("plase check your username and password");
     }
-
 }
 
 // Add to cart Section here
 
-function addToCart(id) {
+async function addToCart(id) {
     const arr = JSON.parse(localStorage.getItem("cartItems")) || []
     if (arr.includes(id)) {
         alert("items is alreday in cart");
@@ -486,8 +505,22 @@ function addToCart(id) {
         alert("item is added");
         document.getElementById('items-counter').innerText = arr.length;
         localStorage.setItem("item-counter", arr.length);
+        // adding price of cart items
+        let totalprice=0;
+        const res8 = await fetch('./items.json');
+        const data8 = await res8.json();
+        localStorage.setItem('')
+        data8.products.forEach((element) => {
+            totalprice = parseInt(JSON.parse(localStorage.getItem('item-price')));
+            if (element.id == id) {
+                totalprice =totalprice+element.price;
+            }
+            localStorage.setItem('item-price', JSON.stringify(totalprice));
+        })
+        console.log(totalprice);
     }
 }
+
 // Add to wishlist Section
 function addtoWishlist(id) {
     const arr = JSON.parse(localStorage.getItem("wishlistItems")) || []
@@ -507,7 +540,9 @@ function addtoWishlist(id) {
 // Show Cart Section here
 async function showCart() {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    console.log(cartItems);
+    if (cartItems == null) {
+        alert('nothing to see in cart');
+    }
     //  Sort the  store id of cartitems
     cartItems.sort((a, b) => {
         if (a > b) {
@@ -555,6 +590,7 @@ async function showCart() {
         document.getElementById('wishlist').style.display = "none";
     }
     else {
+        alert('nothing to see in cart');
         document.getElementById('section-hide').style.display = "block";
         document.getElementById('main-hide').style.display = "block";
         document.getElementById('shop-hide').style.display = "block";
@@ -565,22 +601,28 @@ async function showCart() {
     }
 
 }
-
-
-// Remove from Cart Section here
+// remove from cart section here
 function removefromCart(id) {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
     const index = cartItems.indexOf(id);
-    cartItems.splice(index, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
+    if (index >= 0) {
+        cartItems.splice(index, 1);
+        console.log(cartItems)
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+    alert('item is removed from cart');
+    if (JSON.parse(localStorage.getItem('item-counter')) > 0) {
+        let totalItem = JSON.parse(localStorage.getItem('item-counter')) - 1;
+        localStorage.setItem('item-counter', JSON.stringify(totalItem));
+        document.getElementById('items-counter').innerText = totalItem;
+    }
 }
-
-
 // Wishlist Section
 async function showWishlist() {
-    document.getElementById('heart').style.color = "red";
     let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    if (wishItems == null) {
+        alert('nothing to see in wishlist');
+    }
     wishItems.sort((a, b) => {
         if (a > b) {
             return 1
@@ -616,6 +658,7 @@ async function showWishlist() {
     })
     document.getElementById('wishlist').innerHTML = html;
     if (html != '') {
+        document.getElementById('heart').style.color = "red";
         document.getElementById("wishlist").style.display = "flex";
         document.getElementById('section-hide').style.display = "none";
         document.getElementById('main-hide').style.display = "none";
@@ -625,8 +668,12 @@ async function showWishlist() {
         document.getElementById('carousel-card-container').style.display = "none";
         document.getElementById('feature-category-hide').style.display = "none";
         document.getElementById('shop-block').style.display = "none";
+        document.getElementById("show-cart").style.display = "none";
+        document.getElementById('search-pagination').style.display = "none";
+
     }
     else {
+        alert('nothing to see in wishlist');
         document.getElementById('section-hide').style.display = "block";
         document.getElementById('main-hide').style.display = "block";
         document.getElementById('shop-hide').style.display = "block";
@@ -634,20 +681,26 @@ async function showWishlist() {
         document.getElementById('feature-pro').style.display = "block";
         document.getElementById('carousel-card-container').style.display = "block";
         document.getElementById('feature-category-hide').style.display = "block";
+        document.getElementById('heart').style.color = "black";
+        document.getElementById('shop-block').style.display = "none";
+        document.getElementById('search-pagination').style.display = "none";
     }
 }
 
 //  remove from Wishlist section 
 function removefromWishlist(id) {
+    alert('item is removed from wishlist');
     let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
     const index = wishlistItems.indexOf(id);
     wishlistItems.splice(index, 1);
     localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
-
 }
-function removefromCart(id) {
-    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    const index = cartItems.indexOf(id);
-    cartItems.splice(index, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+// on load function
+function onload() {
+    // alert('page is loaded');
+    let items = JSON.parse(localStorage.getItem("item-counter"));
+    if (items) {
+        document.getElementById('items-counter').innerHTML = items;
+    }
 }

@@ -27,6 +27,10 @@ header .container .nav {
     text-decoration: none;
     color:black;
 }
+.faq-drop-down{
+    border:unset;
+    background-color:white;
+}
 
 /* End nav bar Section */
 
@@ -49,10 +53,10 @@ header .container .journal {
 
 /* Journal search section */
 .jounal-search {
-    margin-top: 4px;
+    margin-top: 7px;
     display: flex;
     object-fit: cover;
-    height: 25px;
+    height: 30px;
     border: 1px solid grey;
     border-radius: 3px;
 }
@@ -66,10 +70,19 @@ header .container .journal {
     justify-content: center;
     align-items: center;
 }
+.journal-wishlist{
+    cursor:pointer;
+}
 
 /* journal-login */
 .journal-login{
     cursor: pointer;
+}
+.journal-icons i{
+        background-color: blue;
+        color: white;
+        padding: 8px;
+        border-radius: 50%;
 }
 .journal-register{
     cursor:pointer;
@@ -80,6 +93,7 @@ header .container .journal {
 .journal #search {
     border: unset;
     height: 100%;
+    width:185px;
 }
 
 .search-all {
@@ -120,7 +134,7 @@ header .container .journal {
     display: flex;
     justify-content: space-between;
     background-color: blue;
-    padding: 20px;
+    padding: 15px;
 }
 
 .department #num {
@@ -129,7 +143,7 @@ header .container .journal {
 
 .department #yellow {
     background-color: yellow;
-    padding: 20px;
+    padding: 15px;
     color: black;
 }
 
@@ -420,8 +434,9 @@ header .container .journal {
 }
 
 .cm {
+    object-fit:cover;
     height: 230px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 
@@ -489,20 +504,21 @@ header .container .journal {
 }
 
 .card-img-top {
-    height: 140px;
-    width: 200px;
+    height: 220px;
+    width: 238px;
 }
 
 .card-img-top img {
+    object-fit:cover;
     height: 100%;
     width: 100%;
 }
 
 .card {
-    padding: 18px;
+    padding: 10px;
     border: solid grey 1px;
     width: 15rem;
-    border-radius: 10%;
+    border-radius: 8px;
 }
 
 .carousel-cards .card button {
@@ -542,7 +558,13 @@ header .container .journal {
     border-radius: 7px;
 }
 .card-img-bottom {
-    height: 150px;
+    height: 180px;
+    width: 100px;
+    object-fit:cover;
+}
+.card-img-bottom img{
+    height:100%;
+    width:100%;
 }
 
 .feature-top-content {
@@ -574,7 +596,7 @@ header .container .journal {
     height: 180px;
     width: 220px;
     border: solid grey 1px;
-    border-radius: 10%;
+    border-radius: 8px;
 }
 
 .bw img {
@@ -613,7 +635,8 @@ header .container .journal {
     height: 160px;
     width: 190px;
     padding: 10px;
-    border-radius: 10%;
+    border-radius: 12px;
+    object-fit:cover;
 }
 
 /* Start from our blog section here */
@@ -623,16 +646,25 @@ header .container .journal {
     padding-bottom: 40px;
     text-align: center;
 }
+.blog-content h1{
+    font-size:33px;
+}
 
 .blog-cards {
     padding-left: 20px;
 }
 .blog-cards .blog{
     margin:auto;
+    background-color: white;
+    padding: 14px;
+    width: 24rem;
+    border-radius: 5px;
 }
 .blog-card {
+    object-fit:cover;
     height: 300px;
-    border-radius: 10%;
+    border-radius:  6px;
+    position:relative;
 }
 .blog-card img{
     height:100%;
@@ -644,12 +676,22 @@ header .container .journal {
 }
 .from-blog #blog-blue-selector{
     background-color: blue;
+    color:white;
     position:relative;
 }
 .from-blog #blog-grey{
-    background-color: #A9A9A9;
+    color:#404040;
+    background-color: #BEBEBE;
 }
-
+.from-blog .owl-nav{
+    display:none;
+}
+.blog-selector a{
+    border-radius: 2px;
+}
+.from-blog .owl-dots{
+    margin-top:17px;
+}
 .blog-selector {
     display: flex;
     justify-content: center;
@@ -663,6 +705,10 @@ header .container .journal {
 .from-blog .blog-selector a{
     border:1px solid grey;
 }
+.from-blog .card-text{
+    padding-left:0px!important;
+    text-align:center;
+}
 .from-blog #blog-blue-selector::after{
     height:17px;
     width:17px;
@@ -673,6 +719,27 @@ header .container .journal {
     background-color: blue;
     top:31px;
     right:54%;
+}
+.blog .card-title{
+         margin-top:8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.blog .card-body a{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.blog-admin-row{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left:90px;
+    padding-right:70px;
+    column-gap:12px;
+    position:absolute;
+    bottom:-4px;
 }
 
 
@@ -687,6 +754,12 @@ header .container .journal {
 }
 .quote-carousel .quotes{
     margin:auto;
+}
+.quote-carousel .owl-nav{
+    display:none;
+}
+.quote-carousel .owl-dots{
+    margin-top:20px;
 }
 .qi {
     width: 100px;
@@ -715,6 +788,15 @@ header .container .journal {
     padding-right: 20px;
     padding-bottom: 60px;
 }
+.most-viewed hr{
+    width: 160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+    margin-left:40px;
+}
 
 .mv {
     padding-top: 40px;
@@ -724,10 +806,11 @@ header .container .journal {
 
 .view {
     height: 100px;
-    width: 90px;
+    width: 155px;
 }
 
 .view img {
+    object-fit:cover;
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -741,7 +824,17 @@ header .container .journal {
 }
 
 .sl h4 {
-    padding-top: 30px;
+    padding-top: 14px;
+    padding-left:10px;
+}
+.sl a{
+        padding-right: 50px;
+        padding-left: 28px;
+        color:grey;
+        display: flex;
+        justify-content: space-between;
+        /* column-gap: 65px; */
+        padding-top: 17px;
 }
 
 
@@ -755,7 +848,13 @@ header .container .journal {
     text-align: center;
     font-size: 40px;
 }
-
+.social-icons i {
+        background-color: blue;
+        color: white;
+        padding: 9px;
+        border-radius:50%;
+        font-size:36px;
+}
 
 
 
@@ -770,6 +869,14 @@ header .container .journal {
     list-style: none;
     color: blue;
 }
+.footer-last hr{
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
 
 .newsletter input {
     margin: 5px;
@@ -777,18 +884,33 @@ header .container .journal {
     border-radius: 5px;
 }
 
-
+.about-us,.customer-service,.my-account{
+    width:20vw;
+    border-right:2px solid grey;
+}
 
 
 
 /* Copyright Section here */
 
 .copyright {
+    display:flex;
+    justify-content:space-between;
     background-color: #A9A9A9;
     padding: 20px;
     font-size: 20px;
 }
-
+.copyright-img{
+    height:50px;
+    width:450px;
+}
+.copyright-img img{
+    width:100%;
+    height:100%;
+}
+.copyright-text{
+    padding-top:15px;
+}
 .footer-last ul li {
     padding: 8px;
 }
@@ -805,6 +927,15 @@ header .container .journal {
 }
 
 /* shop-block */
+.search-container{
+    position:relative;
+}
+.search-pagination{
+        left: 620px;
+        position: absolute;
+        bottom: -6px;
+    
+}
 .shop-block{
     background-color: wheat;
 }
@@ -817,7 +948,8 @@ header .container .journal {
 }
 
 .shop-block .item{
-    margin:20px;
+    margin:25px;
+    padding-bottom:30px;
 }
 
 .show-cart{
@@ -857,7 +989,10 @@ header .container .journal {
     text-transform: uppercase;
     background-color: red;
 }
-
+#wishlist img{
+    height:200px;
+    width:200px;
+}
 /* Break points section here */
 
 /* phone nav bar section */
