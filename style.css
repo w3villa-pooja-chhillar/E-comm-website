@@ -23,12 +23,20 @@ header .container .nav {
     padding: 20px;
     background-color: white;
 }
+.nav{
+    color: rgba(105, 105, 115, 1);;
+}
+.nav-mid a{
+    opacity: 0.5;
+}
 .nav-left a{
     text-decoration: none;
-    color:black;
+    color: rgba(105, 105, 115, 1);
 }
 .faq-drop-down{
+    width:16px;
     border:unset;
+    color:rgba(105, 105, 115, 1);
     background-color:white;
 }
 
@@ -50,6 +58,9 @@ header .container .journal {
     display: flex;
     justify-content: space-between;
 }
+.journal-items{
+    margin-top:6px;
+}
 
 /* Journal search section */
 .jounal-search {
@@ -70,6 +81,11 @@ header .container .journal {
     justify-content: center;
     align-items: center;
 }
+.journal-logo h1{
+    font-family: 'roboto';
+    font-weight: 900;
+    font-size: 40px;
+}
 .journal-wishlist{
     cursor:pointer;
 }
@@ -79,7 +95,7 @@ header .container .journal {
     cursor: pointer;
 }
 .journal-icons i{
-        background-color: blue;
+        background-color: rgba(13, 82, 214, 1);;
         color: white;
         padding: 8px;
         border-radius: 50%;
@@ -93,13 +109,13 @@ header .container .journal {
 .journal #search {
     border: unset;
     height: 100%;
-    width:185px;
+    width: 270px;
 }
 
 .search-all {
     height: 100%;
     color: white;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +126,7 @@ header .container .journal {
 
 /* journal search icon */
 .journal #mag-glass {
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     color: white;
     display: flex;
     justify-content: center;
@@ -121,7 +137,7 @@ header .container .journal {
 
 
 .journal .cart {
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     color: white;
     padding: 9px;
     border-radius: 3px;
@@ -133,7 +149,7 @@ header .container .journal {
     color: white;
     display: flex;
     justify-content: space-between;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);
     padding: 15px;
 }
 
@@ -212,7 +228,7 @@ header .container .journal {
 }
 
 #text-over-image #a {
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     color: white;
     padding: 6px;
     border: unset;
@@ -261,7 +277,7 @@ header .container .journal {
 }
 
 #text-over-watch a {
-    color: blue;
+    color: rgba(13, 82, 214, 1);;
 }
 
 #text-over-watch h3 {
@@ -276,7 +292,7 @@ header .container .journal {
 }
 
 #text-over-com a {
-    color: blue;
+    color: rgba(13, 82, 214, 1);;
 }
 
 #text-over-com h3 {
@@ -340,7 +356,7 @@ header .container .journal {
     font-size: 30px;
     color: #f0750a;
     border-radius: 50%;
-    border: 2px solid blue;
+    border: 2px solid rgba(13, 82, 214, 1);;
     padding: 8px;
 }
 
@@ -393,14 +409,14 @@ header .container .journal {
 }
 
 .mid-category #mid-grey {
-    background-color: #bab9b975;
-    ;
+    color:#404040;
+    background-color: #BEBEBE;
 }
 
 #active-why-buy {
     color: white;
     position:relative;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
 }
 
 #active-why-buy::after {
@@ -413,7 +429,7 @@ header .container .journal {
     z-index: 10;
     position: absolute;
     display: block;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
 }
 
 #top-category {
@@ -431,6 +447,12 @@ header .container .journal {
 /* Start caraousel section here */
 .caraousel-collections {
     padding: 20px;
+}
+.caraousel-collections  .owl-nav{
+    display:none;
+}
+.caraousel-collections  .owl-dots{
+margin-top:10px;
 }
 
 .cm {
@@ -459,7 +481,7 @@ header .container .journal {
 }
 
 .feature-pt #feature-blue {
-    background-color: blue;
+    background-color:  rgba(13, 82, 214, 1);;
     color: white;
     position:relative;
 }
@@ -472,12 +494,13 @@ header .container .journal {
     width: 17px;
     z-index: 10;
     position: absolute;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     display: block;
 }
 
 .feature-pt #feature-grey {
-    background-color: #A9A9A9;
+    color:#404040;
+    background-color: #BEBEBE;
 }
 
 .feature-pt p {
@@ -526,7 +549,7 @@ header .container .journal {
     border-radius: 7px;
     color: white;
     text-transform: uppercase;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
    }
 
 
@@ -552,7 +575,7 @@ header .container .journal {
 }
 .features-card button{
     text-transform: uppercase;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     color:white;
     padding:4px;
     border-radius: 7px;
@@ -625,10 +648,32 @@ header .container .journal {
     text-align: center;
 }
 
+.gallery-content h1{
+    color: rgba(230, 230, 230, 1);
+    font-size:30px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.gallery-content hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
+#improve-gallery-line{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
 .gallery-pics {
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
+}
+.gallery-content a{
+    color:rgba(139, 145, 152, 1);
 }
 
 .gp {
@@ -647,7 +692,22 @@ header .container .journal {
     text-align: center;
 }
 .blog-content h1{
-    font-size:33px;
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.blog-content p{
+    color:grey;
+}
+.blog-content hr{
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+
 }
 
 .blog-cards {
@@ -675,7 +735,7 @@ header .container .journal {
     background-color: #bab9b975;
 }
 .from-blog #blog-blue-selector{
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     color:white;
     position:relative;
 }
@@ -716,9 +776,15 @@ header .container .journal {
     z-index: 4;
     transform: rotate(45deg);
     position: absolute;
-    background-color: blue;
+    background-color: rgba(13, 82, 214, 1);;
     top:31px;
     right:54%;
+}
+#from-blog-line{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
 }
 .blog .card-title{
          margin-top:8px;
@@ -748,7 +814,26 @@ header .container .journal {
     text-align: center;
     padding-top: 40px;
 }
+.people-saying h1{
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.people-saying hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
+#why-people-say{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+/* quote-carousel */
 .quote-carousel {
     padding-top: 50px;
 }
@@ -849,7 +934,7 @@ header .container .journal {
     font-size: 40px;
 }
 .social-icons i {
-        background-color: blue;
+        background-color: rgba(13, 82, 214, 1);;
         color: white;
         padding: 9px;
         border-radius:50%;

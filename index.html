@@ -27,6 +27,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body onload="onload()">
@@ -65,20 +68,35 @@
                         <a>FAQ
                             <select class="faq-drop-down">
                                 <option></option>
-                                <option>a</option>
-                                <option>b</option>
+                                <option>question</option>
+                                <option>about-us</option>
                             </select>
                             <!-- <i class="fa-solid fa-caret-down"></i> -->
                         </a>
                     </div>
                     <div class="nav-mid">
-                        🇦🇺 English&nbsp<i class="fa-solid fa-caret-down"></i>&nbsp&nbsp&nbsp
-                        $US Dollar&nbsp<i class="fa-solid fa-caret-down"></i>
+                      <a> 🇦🇺 </a>English&nbsp  <select class="faq-drop-down">
+                            <option></option>
+                            <option>question</option>
+                            <option>about-us</option>
+                        </select>
+                        &nbsp&nbsp&nbsp
+                        $US Dollar&nbsp
+                        <select class="faq-drop-down">
+                            <option></option>
+                            <option>question</option>
+                            <option>about-us</option>
+                        </select>
                     </div>
                     <div class="nav-right">
                         <i class="fa-regular fa-user"></i>
                         <i class="fa-solid fa-bars"></i>&nbspMore Menus
-                        <i class="fa-solid fa-caret-down"></i>&nbsp&nbsp&nbsp
+                        <select class="faq-drop-down">
+                            <option></option>
+                            <option>a</option>
+                            <option>b</option>
+                        </select>
+                        &nbsp&nbsp&nbsp
                         <i class="fa-solid fa-truck"></i>&nbspDelivery
                     </div>
                 </div>
@@ -892,10 +910,13 @@
 
             <!-- Gallery content -->
             <div class="gallery-content">
-                <h1>Improved Gallery Module</h1>
+              <div id="improve-gallery-line"><h1>Improved Gallery Module</h1>
+                <hr>
+                </div>
+                <a>
                 The PowerShell Gallery is a package repository containing scripts, modules,
                 and DSC resources you can download <br />and leverage. You use the cmdlets in the
-                PowerShellGet module to install packages from the PowerShell Gallery.
+                PowerShellGet module to install packages from the PowerShell Gallery.</a>
             </div>
 
             <!-- gallery content end -->
@@ -928,7 +949,9 @@
         <!-- Start  from blog section here -->
         <div class="from-blog">
             <div class="blog-content">
-                <h1>From our blog</h1>
+                <div id="from-blog-line"><h1>From our blog</h1>
+                <hr>
+                </div>
                 <br />
                 <p> Next ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                     make a type</p>
@@ -1078,7 +1101,10 @@
         <!-- Start people saying section here -->
         <section id="people-saying-hide">
             <div class="people-saying">
+                <div id="why-people-say">
                 <h1>What are people saying about us</h1>
+                <hr>
+                </div>
 
 
                 <!-- Start quotes card carousel Section here -->
