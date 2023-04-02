@@ -106,10 +106,10 @@ function showblog(arrayOfData) {
             0: {
                 items: 1
             },
-            700: {
+            1390: {
                 items: 2
             },
-            1200: {
+            1440: {
                 items: 3
             }
         }

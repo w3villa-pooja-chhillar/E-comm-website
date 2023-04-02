@@ -82,6 +82,7 @@ header .container .journal {
     align-items: center;
 }
 .journal-logo h1{
+    opacity:0.9;
     font-family: 'roboto';
     font-weight: 900;
     font-size: 40px;
@@ -97,7 +98,7 @@ header .container .journal {
 .journal-icons i{
         background-color: rgba(13, 82, 214, 1);;
         color: white;
-        padding: 8px;
+        padding: 6px;
         border-radius: 50%;
 }
 .journal-register{
@@ -210,6 +211,7 @@ header .container .journal {
 }
 
 .tp img {
+    object-fit:cover;
     height: 100%;
     border-radius: 5px;
 }
@@ -311,12 +313,14 @@ header .container .journal {
     height: 100%;
     width: 100%;
     border-radius: 8px;
+    object-fit:cover;
 }
 
 .watch-pic img {
     height: 100%;
     width: 100%;
     border-radius: 8px;
+    object-fit:cover;
 }
 
 .computer {
@@ -404,16 +408,34 @@ header .container .journal {
     font-size: 19px;
 }
 
-.mid-category a {
-    border: 0.1px solid grey;
-}
-
 .mid-category #mid-grey {
     color:#404040;
     background-color: #BEBEBE;
+    border-right:2px solid grey;
+    border-radius:2px;
+}
+#why-buy-line{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'roboto';
+    font-size:22px;
+}
+#why-buy-line hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
+#why-buy-grey-text{
+    color:grey;
 }
 
 #active-why-buy {
+    border-radius:2px;
     color: white;
     position:relative;
     background-color: rgba(13, 82, 214, 1);;
@@ -460,15 +482,56 @@ margin-top:10px;
     height: 230px;
     border-radius: 4px;
 }
-
+#feature-category-grey-text{
+    color:grey;
+}
 
 
 /* start feature product  section here */
-
+#feature-line{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#feature-line h1{
+font-family:'roboto';
+font-size:29px;
+}
+#feature-line hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
 .feature-product {
     text-align: center;
     background-color: #bab9b975;
     padding: 30px;
+}
+#feature-product-line{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+#feature-product-line h1{
+    font-family: 'roboto';
+    font-size:29px;
+}
+#feature-product-line hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1.3px;
+    background-color: #e74a0a;
+    border: none;
+}
+#feature-product-grey-text{
+color:grey;
 }
 
 .feature-pt {
@@ -505,11 +568,10 @@ margin-top:10px;
 
 .feature-pt p {
     padding: 10px 20px;
+    border-right:2px solid grey;
+    border-radius:2px;
 }
 
-.feature-pt a {
-    border: 0.1px solid grey;
-}
 
 
 
@@ -538,7 +600,7 @@ margin-top:10px;
 }
 
 .card {
-    padding: 10px;
+    padding: 28px;
     border: solid grey 1px;
     width: 15rem;
     border-radius: 8px;
@@ -608,16 +670,33 @@ margin-top:10px;
 }
 
 .shop-brand h1 {
+    font-family:'roboto';
+    font-size:36px;
     padding-top: 30px;
     text-align: center;
+}
+.shop-brand hr{
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1px;
+    background-color: #e74a0a;
+    border: none;
+}
+#shop-brand-heading{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 /* Start section of black  and white images next to shop by brand section here */
 
 .bw {
-    height: 180px;
-    width: 220px;
+    height: 160px;
+    width: 200px;
     border: solid grey 1px;
     border-radius: 8px;
 }
@@ -677,10 +756,10 @@ margin-top:10px;
 }
 
 .gp {
-    height: 160px;
-    width: 190px;
+    height: 150px;
+    width: 185px;
     padding: 10px;
-    border-radius: 12px;
+    border-radius: 15px;
     object-fit:cover;
 }
 
@@ -693,7 +772,7 @@ margin-top:10px;
 }
 .blog-content h1{
     color: black;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 700;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -704,7 +783,7 @@ margin-top:10px;
     width: 80px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 1px;
+    padding: 1.3px;
     background-color: #e74a0a;
     border: none;
 
@@ -738,10 +817,20 @@ margin-top:10px;
     background-color: rgba(13, 82, 214, 1);;
     color:white;
     position:relative;
+    font-family: 'roboto';
+    font-size: 16px;
+    padding:12px;
+    font-weight: bold;
+    border-radius:2px;
 }
 .from-blog #blog-grey{
     color:#404040;
     background-color: #BEBEBE;
+    font-family: 'roboto';
+    font-size: 16px;
+    font-weight: bold;
+    padding:12px;
+    border-radius:2px;
 }
 .from-blog .owl-nav{
     display:none;
@@ -761,9 +850,6 @@ margin-top:10px;
 }
 .from-blog p{
     padding:10px;
-}
-.from-blog .blog-selector a{
-    border:1px solid grey;
 }
 .from-blog .card-text{
     padding-left:0px!important;
@@ -880,7 +966,7 @@ margin-top:10px;
     padding: 1px;
     background-color: #e74a0a;
     border: none;
-    margin-left:40px;
+    margin-left:53px;
 }
 
 .mv {
@@ -949,8 +1035,13 @@ margin-top:10px;
     justify-content: space-between;
     padding: 30px;
 }
+.footer-last h2{
+    font-family:'roboto';
+    font-size:25px;
+}
 
 .footer-last ul li {
+    font-size:19px;
     list-style: none;
     color: blue;
 }
@@ -973,7 +1064,23 @@ margin-top:10px;
     width:20vw;
     border-right:2px solid grey;
 }
-
+.enter-mail{
+    margin-top:15px;
+    position:relative;
+}
+.enter-mail input{
+        width: 178px;
+        height: 22px;    
+}
+.enter-mail button{
+    position:absolute;
+    color:white;
+    background-color: rgba(13, 82, 214, 1);
+    padding: 9px;
+    border-radius: 2px;
+    left: 129px;
+    top: 5px;
+}
 
 
 /* Copyright Section here */
@@ -981,9 +1088,11 @@ margin-top:10px;
 .copyright {
     display:flex;
     justify-content:space-between;
-    background-color: #A9A9A9;
+    background-color: #404b62;
     padding: 20px;
-    font-size: 20px;
+    font-family:'roboto';
+    color:white;
+    font-size: 21px;
 }
 .copyright-img{
     height:50px;
@@ -1122,7 +1231,12 @@ margin-top:10px;
     }
 }
 
-
+@media screen and (max-width:1048px){
+    .about-us,.customer-service,.my-account{
+        border-right: unset !important;
+        width: unset !important;
+    }
+}
 
 /* department section here */
 @media screen and (max-width:883px) {
@@ -1220,7 +1334,7 @@ margin-top:10px;
 
 @media screen and (max-width:700px) {
     .footer-last {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 }
 
