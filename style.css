@@ -393,19 +393,21 @@ header .container .journal {
 
 /* Start mid category section here selective items */
 .mid-category {
+    font-weight: bold;
+    font-family: 'roboto';
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: auto;
-    font-size: 16px;
+    font-size: 12px;
     padding-bottom: 20px;
 }
 
 .mid-category p {
     padding: 8px 15px;
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .mid-category #mid-grey {
@@ -444,7 +446,7 @@ header .container .journal {
 #active-why-buy::after {
     transform: rotate(45deg);
     left:34%;
-    top:30px;
+    top:27px;
     content: '';
     height: 17px;
     width: 17px;
@@ -533,8 +535,16 @@ font-size:29px;
 #feature-product-grey-text{
 color:grey;
 }
+#features-card .owl-dots{
+    margin-top:10px;
+}
 
+#features-card .owl-nav{
+    display:none;
+}
 .feature-pt {
+    font-weight: bold;
+    font-family: 'roboto';
     display: flex;
     justify-content: center;
     text-align: center;
@@ -580,6 +590,12 @@ color:grey;
 .carousel-cards {
     padding: 40px;
     background-color: #bab9b975;
+}
+#carousel-card .owl-nav{
+display:none;
+}
+#carousel-card .owl-dots{
+    margin-top:19px;
 }
 .carousel-cards .card{
     margin-left:auto !important;
