@@ -1,0 +1,76 @@
+{
+    "items":[
+        {
+            "id": "1",
+            "title": "Headphones",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/f1/0c/30/f10c3094d3f3e1d7cc30f753b76cd157.jpg"
+        },
+        {
+            "id": "2",
+            "title": "Purse",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/23/8e/1f/238e1f5349d3fc02e80741612986f365.jpg"
+        },
+        {
+            "id": "3",
+            "title": "Make-up",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/09/24/b1/0924b160f2778323244206da6b8edcfd.jpg"
+        },
+        {
+            "id": "4",
+            "title": "Watch",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/32/77/1d/32771dd81388387885c8ff29c1fe5268.jpg"
+        },
+        {
+            "id": "5",
+            "title": "Shoes",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/eb/ce/ab/ebceabdc1cee337ec2a7c03024720760.jpg"
+        },
+        {
+            "id": "6",
+            "title": "Earings",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/8e/81/54/8e815425a6500fdd0884c53ff137bbaa.jpg"
+        },
+        {
+            "id": "7",
+            "title": "Jacket",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/564x/c7/d2/c7/c7d2c708ce85fb4ddd066577cc35d3d6.jpg"
+        },
+        {
+            "id": "8",
+            "title": "Sun-glasses",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/c7/fd/36/c7fd362b1e1b3b17b719f54817ede150.jpg"
+        },
+        {
+            "id": "9",
+            "title": "Perfumes",
+            "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
+            "price": "200.00",
+            "type": "card",
+            "img": "https://i.pinimg.com/236x/e0/11/a4/e011a4bb8f70cee5bcbe8c1ab5c6be40.jpg"
+        }
+    ]
+}
