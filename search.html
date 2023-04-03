@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-comm Search page</title>
+    
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Labrada&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--  desktop navbar section start here -->
+            <div class="navbar">
+                <div class="nav-left">
+                    <div class="home">
+                        <a><i class="fa-thin fa-house"></i>
+                            Home
+                        </a>
+                    </div>
+                    <div class="about-us">
+                        <a><i class="fa-sharp fa-regular fa-stars"></i>
+                            About-us
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <a> <i class="fa-regular fa-envelope"></i>
+                            Contact-us
+                        </a>
+                    </div>
+                    <div class="faq">
+                        <a><i class="fa-regular fa-circle-question"></i>
+                            FAQ
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-mid">
+                    <div class="english">
+                        <a>
+                            🇦🇺 English
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div class="euro">
+                        <a> $ Euro
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="menu">
+                        <a> <i class="fa-regular fa-user"></i>
+                            <i class="fa-solid fa-bars"></i> More Menus
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div class="delivery">
+                        <a><i class="fa-solid fa-truck"></i>
+                            Delivery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- phone navbar section start here -->
+    <section class="phone-navbar">
+        <div class="container">
+            <div class="phone-nav">
+                <div class="phn-nav-left">
+                    <div class="phon-login">
+                        <i class="fa-solid fa-user"></i>
+                        Login
+                    </div>
+                    <div class="phon-register">
+                        <i class="fa-solid fa-pen"></i>
+                        Register
+                    </div>
+                </div>
+                <div class="phn-nav-right">
+                    <div class="dollar">
+                        $US Dollar<i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="phn-eng">
+                        🇦🇺 English<i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- journal for phone view start here -->
+    <section class="phn-journal-section">
+        <div class="container">
+            <div class="phn-journal">
+                <div class="journal-logo">
+                    <h2>JOURNAL</h2>
+                </div>
+                <div class="phn-journal-items">
+                    <i class="fa-solid fa-bars"></i>&nbsp&nbsp
+                    <i class="fa-solid fa-magnifying-glass"></i>&nbsp&nbsp
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp&nbsp
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- journal  for desktop section start here -->
+    <section class="journal-section">
+        <div class="container">
+            <div class="journal">
+                <div class="journal-logo">
+                    JOURNAL
+                </div>
+                <div class="journal-search">
+                    <div class="search-all">
+                        <a>All
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <input id="search" type="text" placeholder="Search here...">
+                    <i id="mag-glass" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="journal-icon">
+                    <div class="journal-login">
+                        <div class="journal-login-a">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="journal-login-b" id="login-form">
+                            Login
+                        </div>
+                    </div>
+                    <div class="journal-register">
+                        <div class="journal-register-a">
+                            <i class="fa-regular fa-pen-circle"></i>
+                        </div>
+                        <div class="journal-register-b" id="register-form">
+                            Register
+                        </div>
+                    </div>
+                    <div class="journal-wishlist">
+                        <div class="journal-wishlist-a">
+                            <i class="fa-regular fa-heart" id="heart"></i>
+                        </div>
+                        <div class="journal-wishlist-b">
+                            Wishlist
+                        </div>
+                    </div>
+                    <div class="journal-compare">
+                        <div class="journal-compare-a">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                        </div>
+                        <div class="journal-compare-b">
+                            Compare
+                        </div>
+                    </div>
+                </div>
+                <div class="journal-items">
+                    <span>0</span>&nbspitem(s) -&nbsp$
+                    <span>0.00</span>&nbsp
+                    <a id="journal-cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="department-section">
+        <div class="container">
+            <div class="department">
+                <div class="department-row-align">
+                    <span id="yellow"><i class="fa-regular fa-bars"></i>&nbspALL DEPARTMENTS
+                        <span id="sales">Sales
+                        </span>
+                    </span>
+                    &nbsp&nbsp MULTILEVEL &nbsp&nbsp MEGA MENU &nbsp&nbsp FULLWIDTH
+                    <span id="new">New</span>
+                </div>
+                <div class="department-call">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span id="num">1.800.55.6625 &nbsp</span>
+                    <span id="yellow"><i class="fa-solid fa-message"></i>&nbsp&nbsp BLOG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="search-section">
+        <div class="container">
+            <div class="search-emoji">
+                <i class="fa-thin fa-house"></i>&nbsp → &nbsp Search
+            </div>
+        </div>
+    </section>
+    <section id="search-page">
+        <div class="container">
+            <div class="search-page">
+                <div class="search-logo">
+                    <h1>Search-camera</h1>
+                    <hr>
+                </div>
+                <hr>
+                <div class="search-view">
+                    <div class="search-filter">
+                        <div class="filter-clear">
+                            <div class="filter">
+                                <h5>Filter</h5>
+                            </div>
+                            <div class="clear">
+                                <button> ✖ &nbspclear</button>
+                            </div>
+                        </div>
+                        <div class="price-section">
+                            <div class="price">
+                                Price
+                            </div>
+                            <div class="avail-add" onclick="addpart_price()">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            <input id="range" type="range" min="1" max="100" value="50">
+                        </div>
+                        <hr>
+                        <div class="price-section">
+                            <div class="avail">
+                                Avaialbility
+                            </div>
+                            <div class="avail-add" onclick="addpart_availbility()">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part-avail">
+                        <div id="stock">  <input type="checkbox" > In Stock
+                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                          <input type="checkbox"> Out of stock
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Sub category
+                            </div>
+                            <div class="avail-add" onclick="addpart_subcategory()">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part-subcat">
+                          <div class="sub-img">
+                            <img src="https://i.pinimg.com/236x/f2/25/dc/f225dcadb6f08f49e6246d94bf0e1572.jpg">
+                            <a>Electronics</a>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Brands
+                            </div>
+                            <div class="avail-add" onclick="addpart_brand()">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part-brand">
+                            <div class="brand-img">
+                                <div class="brand-img-a">
+                                    <img src="https://i.pinimg.com/236x/b1/61/7d/b1617dde668db5f425a27c16f29a035e.jpg">
+                                </div>
+                                <div class="brand-img-b">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpMxOHwxHlcXUUwTSnHkfTOwSys4G4qqb0Bg&usqp=CAU">
+                                </div>
+                                <div class="brand-img-c">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPbN1R3Ov7WefjSbQolctq0F6xUtLVH1TrfA&usqp=CAU">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Select
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Radio
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Color
+                            </div>
+                            <div class="avail-add" onclick="addpart_color()">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part-color">
+                            <div class="color-img">
+                                <div class="color-a"></div>
+                                <div class="color-b"></div>
+                                <div class="color-c"></div>
+                                <div class="color-d"></div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Clockspeed
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Test-1
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                No. of Cores
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Style
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Features
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                        <hr>
+                        <div class="avail-section">
+                            <div class="avail">
+                                Test-2
+                            </div>
+                            <div class="avail-add">
+                                +
+                            </div>
+                        </div>
+                        <div class="add-part">
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud exercitation 
+                        </div>
+                    </div>
+                    <div class="search-items">
+                        <div class="camera-category">
+                            <div class="camera">
+                                <input type="text" placeholder="Camera">
+                            </div>
+                            <div class="all-category">
+                                <input type="text" placeholder="All categories">
+                            </div>
+                        </div>
+                        <div class="search-in-sub">
+                            <input type="checkbox">&nbspSearch in Subcategories
+                        </div>
+                        <div class="search-description">
+                            <input type="checkbox"> &nbspSearch in product Descriptions
+                        </div>
+                        <div class="search-line">Search
+                        </div>
+                        <div class="product-meet">
+                            Products meeting the search criteria
+                        </div>
+                        <div class="product-compare">
+                            <div>
+                            <span class="btn" onclick="gridview()"><i class="fa-solid fa-grid"></i></span>
+                            <span class="btn" onclick="listview()"><i class="fa-solid fa-list"></i></span>
+                            &nbsp&nbsp <i class="fa-regular fa-diamond-turn-right"></i>
+                            <a>Product compare</a>
+                            </div>
+                            <div class="product-compare-default">
+                                <a id="sort-default"><button id="sort-by">Sort By</button><input type="text" id="default" placeholder="Default"></a>
+                                <a id="show"><button id="show">Show</button><input type="text" id="show-12"placeholder="12"></a>
+                            </div>
+                        </div>
+                        <div class="cart-items">
+                            <div class="carts">
+                                <div class="cart-image">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMecTs8xdG_oE-szYsMG7aPIG5A_FcPvkQdms9o2PVMGUm8iUtYODX1wbRGkF1BokRuvw&usqp=CAU">
+                                    <button id="carts-sticker-a">-10%</button>
+                                    <button id="carts-sticker-b">HOT</button>
+                                </div>
+                                <div class="cart-grey">
+                                    <div class="apple">Apple</div>
+                                    <div class="product-15">Product-15</div>
+                                </div>
+                                <div class="cart-content">
+                                    <h2>Apple Cinema 30'</h2><br />
+                                    <a>70.61$</a><br />
+                                    <div class="add-cart-line">
+                                        <div class="add-cart">
+                                            <input type="number" value="1">
+                                            <button> ADD TO CART</button>
+                                        </div>
+                                        <div class="add-cart-icons">
+                                            <i class="fa-light fa-heart"></i>
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-grey">
+                                    <div class="buy-now">
+                                        <i class="fa-solid fa-dollar-sign"></i> Buy-now
+                                    </div>
+                                    <div class="question">
+                                        <i class="fa-solid fa-question"></i>&nbspQuestion
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carts">
+                                <div class="cart-image red-line">
+                                    <img src="https://i.pinimg.com/236x/f0/00/82/f00082cbf93827dd5bc34bb97fc767d5.jpg">
+                                    <!-- <button id="cart-red-sticker">PRE-ORDER</button> -->
+                                    <button id="carts-sticker-b">HOT</button>
+                                    <button id="cart-b-red-line">PRE-ORDER</button>
+                                </div>
+                                <div class="cart-grey">
+                                    <div class="apple">Apple</div>
+                                    <div class="product-15">Product-15</div>
+                                </div>
+                                <div class="cart-content">
+                                    <h2>Apple Cinema 30'</h2><br />
+                                    <a>70.61$</a><br />
+                                    <div class="add-cart-line">
+                                        <div class="add-cart">
+                                            <input type="number" value="1">
+                                            <button> ADD TO CART</button>
+                                        </div>
+                                        <div class="add-cart-icons">
+                                            <i class="fa-light fa-heart"></i>
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-grey">
+                                    <div class="buy-now">
+                                        <i class="fa-solid fa-dollar-sign"></i> Buy-now
+                                    </div>
+                                    <div class="question">
+                                        <i class="fa-solid fa-question"></i> &nbspQuestion
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carts">
+                                <div class="cart-image">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKViRrbCk9bLV2gjLlc1OnmD0hat2CIeHlhg&usqp=CAU">
+                                        <button id="carts-sticker-c">-56%</button>
+                                    </div>
+                                <div class="cart-grey">
+                                    <div class="apple">Apple</div>
+                                    <div class="product-15">Product-15</div>
+                                </div>
+                                <div class="cart-content">
+                                    <h2>Apple Cinema 30'</h2><br />
+                                    <a>70.61$</a><br />
+                                    <div class="add-cart-line">
+                                        <div class="add-cart">
+                                            <input type="number" value="1">
+                                            <button> ADD TO CART</button>
+                                        </div>
+                                        <div class="add-cart-icons">
+                                            <i class="fa-light fa-heart"></i>
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-grey">
+                                    <div class="buy-now">
+                                        <i class="fa-solid fa-dollar-sign"></i> Buy-now
+                                    </div>
+                                    <div class="question">
+                                        <i class="fa-solid fa-question"></i>&nbsp Question
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-items">
+                            <hr>
+                            <div class="list-cart">
+                                <div class="list-cart-img">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMecTs8xdG_oE-szYsMG7aPIG5A_FcPvkQdms9o2PVMGUm8iUtYODX1wbRGkF1BokRuvw&usqp=CAU">
+                                </div>
+                                <div class="list-cart-content">
+                                    <div class="list-brand">
+                                        Brand: <a>Apple</a>&nbsp&nbsp Model: product 15
+                                    </div>
+                                    <div class="list-cart-cinema">
+                                        <h2>Apple-Cinema 30"</h2>
+                                    </div>
+                                    <div class="list-cart-description">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incidid <br />unt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis
+                                        nostrud exercitation <br />ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </div>
+                                    <div class="list-cart-price">
+                                        <a id="list-dollar">70.61$</a>
+                                        <a>Ex tax : 70.61$</a>
+                                    </div>
+                                    <div class="list-add-cart">
+                                        <input type="number" value="2">
+                                        <button id="list-cart-btn"><i class="fa-regular fa-cart-shopping"></i>ADD TO
+                                            CART</button>
+                                        <button id="list-heart"><i class="fa-regular fa-heart"></i></button>
+                                        <button id="list-direction"><i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                    <div class="list-buy-now">
+                                        <a id="list-green-dollar"> <i class="fa-solid fa-dollar-sign"></i></a>&nbsp Buy
+                                        Now&nbsp&nbsp
+                                        <a id="list-red-ques"><i class="fa-solid fa-question"></i></a>&nbsp Question
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="list-cart">
+                                <div class="list-cart-img">
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKViRrbCk9bLV2gjLlc1OnmD0hat2CIeHlhg&usqp=CAU">
+                                </div>
+                                <div class="list-cart-content">
+                                    <div class="list-brand">
+                                        Brand: <a>Apple</a>&nbsp&nbsp Model: product 15
+                                    </div>
+                                    <div class="list-cart-cinema">
+                                        <h2>Apple-Cinema 30"</h2>
+                                    </div>
+                                    <div class="list-cart-description">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incidid <br />unt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis
+                                        nostrud exercitation <br />ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </div>
+                                    <div class="list-cart-price">
+                                        <a id="list-dollar">70.61$</a>
+                                        <a>Ex tax : 70.61$</a>
+                                    </div>
+                                    <div class="list-add-cart">
+                                        <input type="number" value="2">
+                                        <button id="list-cart-btn"><i class="fa-regular fa-cart-shopping"></i>ADD TO
+                                            CART</button>
+                                        <button id="list-heart"><i class="fa-regular fa-heart"></i></button>
+                                        <button id="list-direction"><i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                    <div class="list-buy-now">
+                                        <a id="list-green-dollar"> <i class="fa-solid fa-dollar-sign"></i></a>&nbsp Buy
+                                        Now&nbsp&nbsp
+                                        <a id="list-red-ques"><i class="fa-solid fa-question"></i></a>&nbsp Question
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="list-cart">
+                                <div class="list-cart-img">
+                                    <img src="https://i.pinimg.com/236x/f0/00/82/f00082cbf93827dd5bc34bb97fc767d5.jpg">
+                                </div>
+                                <div class="list-cart-content">
+                                    <div class="list-brand">
+                                        Brand: <a>Apple</a>&nbsp&nbsp Model: product 15
+                                    </div>
+                                    <div class="list-cart-cinema">
+                                        <h2>Apple-Cinema 30"</h2>
+                                    </div>
+                                    <div class="list-cart-description">
+                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incidid <br />unt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis
+                                        nostrud exercitation <br />ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </div>
+                                    <div class="list-cart-price">
+                                        <a id="list-dollar">70.61$</a>
+                                        <a>Ex tax : 70.61$</a>
+                                    </div>
+                                    <div class="list-add-cart">
+                                        <input type="number" value="2">
+                                        <button id="list-cart-btn"><i class="fa-regular fa-cart-shopping"></i>ADD TO
+                                            CART</button>
+                                        <button id="list-heart"><i class="fa-regular fa-heart"></i></button>
+                                        <button id="list-direction"><i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                    <div class="list-buy-now">
+                                        <a id="list-green-dollar"> <i class="fa-solid fa-dollar-sign"></i></a>&nbsp Buy
+                                        Now&nbsp&nbsp
+                                        <a id="list-red-ques"><i class="fa-solid fa-question"></i></a>&nbsp Question
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <a id="list-end">You have reached the end of list</a>
+                        </div>
+                        <a id="end-line">
+                            <hr>
+                        </a>
+                        <a id="end-list">You have reached the end of list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="most-view">
+        <div class="container">
+            <div class="most-view-content">
+                <a id="most-view-white">RECENTLY VIEWED</a>
+                <a id="most-view-grey">MOST-VIEWED</a>
+            </div>
+            <hr>
+            <div class="most-view-cards">
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekEsoRJObMAEhfXlLziOW45lwCQbUf-Dj7g&usqp=CAU">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera<br />
+                        1,717.49$<br />
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="social">
+        <div class="container">
+            <div class="social-icons">
+                <div class="round-icon"><a><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="round-icon"><a> <i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-google-plus-g"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="footer-last">
+                <div class="footer-left">
+                    <div class="about-us">
+                        <h2>About us</h2><hr>
+                        <ul>
+                            <li><a href="#">About-us</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Privacy-policy</a></li>
+                            <li><a href="#">Terms and Condition</a></li>
+                            <li><a href="#">Custom links</a></li>
+                        </ul>
+                    </div>
+                    <div class="customer-service">
+                        <h2>Customer Service</h2><hr>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Return</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Unlimited Links</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="my-account">
+                        <h2>My-account</h2><hr>
+                        <ul>
+                            <li><a href="#">My account</a></li>
+                            <li><a href="#">order history</a></li>
+                            <li><a href="#">Affialiate</a></li>
+                            <li><a href="#">newsletter</a></li>
+                            <li><a href="#">Gift Certificate</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h2>Newsletter</h2><hr>
+                       <a>Stay up to date with news and promotions<br /> by signing up your news letter<br /></a>
+                        <input type="text" placeholder="Enter your mail">
+                        <br />
+                        <input type="checkbox">I have read and agree to<a href="#">Privacy and policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <div class="container">
+            Copyright@2014,Your store All right Reserved.
+        </div>
+    </div>
+    <script src="search.js">
+
+    </script>
+</body>
+
+</html>
