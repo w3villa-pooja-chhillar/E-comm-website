@@ -487,7 +487,10 @@ margin-top:10px;
 #feature-category-grey-text{
     color:grey;
 }
-
+.features-card .card-title{
+    font-size:26px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 /* start feature product  section here */
 #feature-line{
@@ -593,6 +596,10 @@ color:grey;
 }
 #carousel-card .owl-nav{
 display:none;
+}
+.carousel-cards .card-title{
+    font-size:26px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 #carousel-card .owl-dots{
     margin-top:19px;

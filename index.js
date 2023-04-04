@@ -2,7 +2,7 @@ async function readdata() {
     const res1 = await fetch('./items.json');
     const data1 = await res1.json();
     // feature card container data on html file (Add to cart)
-    showfeatureCard(data1);
+    // showfeatureCard(data1);
     const res2 = await fetch('./items.json');
     const data2 = await res2.json();
     showcarousel(data2);
@@ -290,40 +290,50 @@ function showmostview(arrayOfData) {
 // working search function 
 
 // show search items
-async function searching() {
-    const searchItems = []
-    let searchdata = document.getElementById("search").value;
-    if (searchdata) {
-        let fetchsearch = await fetch('./items.json');
-        let fetchres = await fetchsearch.json();
-        fetchres.products.forEach((element) => {
-            if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
-                searchItems.push(element)
-            }
-        }
-        )
-        let arr = []
-        let paginationContainer = document.getElementById("search-pagination")
-        let mypagei = `<div class="pagination">
-    <a href="#">&laquo;</a>`
-        const page = Math.ceil(searchItems.length / 4);
-        localStorage.setItem("pages", page);
-        for (let i = 1; i <= page; i++) {
-            let pageProductPagination = {
-                page: i,
-                pageProduct: searchItems.slice(i * 4 - 4, i * 4)
-            }
-            arr.push(pageProductPagination)
-            localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
-            mypagei += `
-        <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
-        }
-        mypagei += `<a href="#">&raquo;</a>
-    </div>`;
-        paginationContainer.innerHTML = mypagei
-        showPaginationProduct("page-1")
-    } else {
-        location.reload()
+// async function searching() {
+//     const searchItems = []
+//     let searchdata = document.getElementById("search").value;
+//     if (searchdata) {
+//         let fetchsearch = await fetch('./items.json');
+//         let fetchres = await fetchsearch.json();
+//         fetchres.products.forEach((element) => {
+//             if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
+//                 searchItems.push(element)
+//             }
+//         }
+//         )
+//         let arr = []
+//         let paginationContainer = document.getElementById("search-pagination")
+//         let mypagei = `<div class="pagination">
+//     <a href="#">&laquo;</a>`
+//         const page = Math.ceil(searchItems.length / 4);
+//         localStorage.setItem("pages", page);
+//         for (let i = 1; i <= page; i++) {
+//             let pageProductPagination = {
+//                 page: i,
+//                 pageProduct: searchItems.slice(i * 4 - 4, i * 4)
+//             }
+//             arr.push(pageProductPagination)
+//             localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
+//             mypagei += `
+//         <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
+//         }
+//         mypagei += `<a href="#">&raquo;</a>
+//     </div>`;
+//         paginationContainer.innerHTML = mypagei
+//         showPaginationProduct("page-1")
+//     } else {
+//         location.reload()
+//     }
+// }
+async function searching(){
+    let search_data =document.getElementById('search').value;
+    if(!search_data.length){
+        
+    }
+    else{
+        localStorage.setItem('search_data', search_data);
+    window.location = './search.html';
     }
 }
 function showPaginationProduct(id) {
@@ -509,7 +519,6 @@ async function addToCart(id) {
         let totalprice=0;
         const res8 = await fetch('./items.json');
         const data8 = await res8.json();
-        localStorage.setItem('')
         data8.products.forEach((element) => {
             totalprice = parseInt(JSON.parse(localStorage.getItem('item-price')));
             if (element.id == id) {
