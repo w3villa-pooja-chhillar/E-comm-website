@@ -2,178 +2,200 @@
     "products": [
         {
             "id": "1",
-            "title": "Men-shirt",
+            "title": "Shoes",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
-            "price": "200.00",
+            "price": "$200.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSi4O1sWY7ZbFMYdr82kZbNp9LBSm4X0DjcdmsSaemxzKOo6p-u7eMRPHaeWeT-6K7_qoD89ETJf_R5u5AcxeOggO_bOYiANlJpkC4ENPAd7bYm44Yp-xfJqA&usqp=CAc"
+            "category" :"Featured",
+            "img": "https://i.pinimg.com/236x/eb/ce/ab/ebceabdc1cee337ec2a7c03024720760.jpg"
         },
         {
             "id": "2",
-            "title": "Women-shirt",
+            "title": "Jacket",
             "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
-            "price": "300.00",
+            "price": "$300.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhh1i6y4nrDDtW862pCqKW5SeG77V2ePsibg&usqp=CAU"
+            "category" :"Featured",
+            "img": "https://i.pinimg.com/236x/dd/f1/07/ddf107bb279384875687de99d795513e.jpg"
         },
         {
             "id": "3",
             "title": "Watch",
             "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
-            "price": "260.00",
+            "price": "$260.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDC1n5j71dlAjX3wlyXiaZAXUH9RUD8dacOQ&usqp=CAU"
+            "category" :"latests",
+            "img": "https://i.pinimg.com/236x/de/a7/ce/dea7ced1d31da84af34ef72ec2d7e1fb.jpg"
         },
         {
             "id": "4",
-            "title": "Shoes",
+            "title": "Bag",
             "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
-            "price": "600.00",
+            "price": "$600.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuLWRBAXTXrr9IbjJ7HqP9kpl8v5OY1wQpZw&usqp=CAU"
+            "category" :"latests",
+            "img": "https://i.pinimg.com/236x/a4/e7/14/a4e714fd698577bb45f463b5a579a826.jpg"
         },
         {
             "id": "5",
-            "title": "Books",
+            "title": "Sun-Glasses",
             "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
-            "price": "600.00",
+            "price": "$600.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3iMR0Vk8Xde9Rr1hS1cZJ8cld1H-hDbJzBgE7Pc-nj1tPiBd1n2Qdya4HaeoVtNQArQ&usqp=CAU"
+            "category" :"bestseller",
+            "img": "https://i.pinimg.com/236x/0b/a9/5c/0ba95cecf81b3c9329e776e3e812fb61.jpg"
         },
         {
             "id": "6",
-            "title": "car",
+            "title": "Jacket",
             "content": "Lorem ipsum dolor , sed do eiusmod tempor incididunt ",
-            "price": "600.00",
+            "price": "$600.00",
             "type": "card",
-            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxOrCzmtfIjNyvPgS4usRVFZPPYcSku6UOA&usqp=CAU"
+            "category" :"bestseller",
+            "img": "https://i.pinimg.com/236x/2c/9b/83/2c9b83c81a34663ff3d889fc3709c661.jpg"
         },
         {
             "id": "7",
             "title": "earphone",
             "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
-            "price": "500.00",
+            "price": "$500.00",
             "type": "card",
+            "category" :"bestseller",
             "img": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
         },
         {
             "id": "8",
-            "img": "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621",
+            "img": "https://i.pinimg.com/236x/1a/53/e3/1a53e39e29c4b0c11bbb6daf96867f2a.jpg",
             "title": "Headphone",
-            "price": "200.00",
+            "price": "$200.00",
             "type": "carousel_card",
+            "category" :"specials",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "9",
             "img": "https://i.pinimg.com/236x/32/77/1d/32771dd81388387885c8ff29c1fe5268.jpg",
             "title": "Watch",
-            "price": "300.00",
+            "price": "$300.00",
             "type": "carousel_card",
+            "category" :"specials",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "10",
             "img": "https://i.pinimg.com/236x/6d/bf/d3/6dbfd33940918279ea55bd44df291a07.jpg",
             "title": "Camera",
-            "price": "300.00",
+            "price": "$300.00",
             "type": "carousel_card",
+            "category" :"specials",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "11",
             "img": "https://i.pinimg.com/236x/ec/79/6a/ec796a016136b590d635b46e7fe9e6c7.jpg",
             "title": "Bag",
-            "price": "560.00",
+            "price": "$560.00",
             "type": "carousel_card",
+            "category" :"Featured",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "12",
-            "img": "https://rukminim1.flixcart.com/image/200/200/kdbzqfk0/microphone/y/e/f/ashiv-3-5mm-clip-microphone-for-youtube-collar-mike-for-voice-original-imafu9pjxcsqxwrt.jpeg?q=70",
-            "title": "Microphone",
-            "price": "210.00",
+            "img": "https://i.pinimg.com/236x/bc/76/c5/bc76c56b1eac394fbc5c899e49ccb8e7.jpg",
+            "title": "Ring",
+            "price": "$210.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "13",
-            "img": "https://rukminim1.flixcart.com/image/200/200/xif0q/shopsy-water-bottle/0/d/e/plastic-water-bottles-for-fridge-office-school-gym-unbreakable-original-imagcu7gdxqsuzzh.jpeg?q=70",
-            "title": "Water Bottle",
-            "price": "210.00",
+            "img": "https://i.pinimg.com/236x/01/06/9c/01069c38fa9d58e2024b734694c8e631.jpg",
+            "title": "Nail-paint",
+            "price": "$210.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "14",
-            "img": "https://rukminim1.flixcart.com/image/200/200/kql8sy80/lipstick/7/m/y/21-sara-s-favorite-sensational-liquid-matte-pack-of-3-touch-of-original-imag4kgnbmynydnw.jpeg?q=70",
-            "title": "Makeup",
-            "price": "22.00",
+            "img": "https://i.pinimg.com/236x/93/bc/4d/93bc4dbd76866c5c466d8ff6040c943b.jpg",
+            "title": "Lipbalm",
+            "price": "$22.00",
             "type": "carousel_card",
+            "category" :"bestsellers",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "15",
             "img": "https://rukminim1.flixcart.com/image/200/200/kqpj4i80/ring/8/1/8/adjustable-cfr-k149-ring-set-karishma-kreations-original-imag4ntug2g26twf.jpeg?q=70",
             "title": "jewellery",
-            "price": "970.00",
+            "price": "$970.00",
             "type": "carousel_card",
+            "category" :"bestsellers",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "16",
-            "img": "https://rukminim1.flixcart.com/image/200/200/k59xci80/watch/t/p/9/premium-luxury-business-casual-trendy-water-resistant-original-imafnzmembfxdyhv.jpeg?q=70",
+            "img": "https://i.pinimg.com/750x/77/c8/c9/77c8c91be8b9c9f7e830c6ec205396fb.jpg",
             "title": "Watch",
-            "price": "120.00",
+            "price": "$120.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "17",
             "img": "https://i.pinimg.com/236x/82/f2/93/82f29387add08886a16af21bbe8172a1.jpg",
             "title": "pen",
-            "price": "10.00",
+            "price": "$10.00",
             "type": "carousel_card",
+            "category" :"specails",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "18",
             "img": "https://i.pinimg.com/236x/38/41/02/38410256c9b393c4887c24b919373328.jpg",
             "title": "Perfume",
-            "price": "100.00",
+            "price": "$100.00",
             "type": "carousel_card",
+            "category" :"specails",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "19",
             "img": "https://i.pinimg.com/236x/2d/82/8f/2d828f21fd6c829f8ee9698e3b7f205b.jpg",
             "title": "Food",
-            "price": "100.00",
+            "price": "$100.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "20",
             "img": "https://i.pinimg.com/236x/b9/73/78/b97378a7be1a414985b68d6d98d8c71d.jpg",
             "title": "Cap",
-            "price": "100.00",
+            "price": "$100.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "21",
             "img": "https://i.pinimg.com/236x/ed/de/57/edde577f58591246d7e7a3b6eeb44b2b.jpg",
             "title": "Laptop",
-            "price": "100.00",
+            "price": "$100.00",
             "type": "carousel_card",
+            "category" :"featured",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {
             "id": "22",
             "img": "https://i.pinimg.com/236x/9d/25/93/9d2593780fe22eba7acf1ea6e9e57110.jpg",
             "title": "Cake",
-            "price": "100.00",
+            "price": "$100.00",
             "type": "carousel_card",
+            "category" :"latests",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         }
 

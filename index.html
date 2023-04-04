@@ -27,9 +27,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body onload="onload()">
@@ -38,14 +38,17 @@
             <!--  Start  nav bar Section for phone screen -->
             <div class="phone-nav">
                 <div class="phn-nav-left">
-                    <i class="fa-solid fa-user"></i>
-                    Login
+                   <a><i class="fa-solid fa-user"></i>
+                    Login</a>
+                    <a>
                     <i class="fa-solid fa-pen"></i>
                     Register
+                    </a>
                 </div>
-                <div class="phn-nav right">
-                    $US Dollar<i class="fa-solid fa-caret-down"></i>
-                    🇦🇺 English<i class="fa-solid fa-caret-down"></i>
+                <div class="phn-nav-right">
+                    <a>
+                    $US Dollar<i class="fa-solid fa-caret-down"></i></a>
+                  <a> 🇦🇺 English<i class="fa-solid fa-caret-down"></i></a>
                 </div>
             </div>
             <!-- End nav bar section of phone screen -->
@@ -75,7 +78,7 @@
                         </a>
                     </div>
                     <div class="nav-mid">
-                      <a> 🇦🇺 </a>English&nbsp  <select class="faq-drop-down">
+                        <a> 🇦🇺 </a>English&nbsp <select class="faq-drop-down">
                             <option></option>
                             <option>question</option>
                             <option>about-us</option>
@@ -223,12 +226,12 @@
                             <div class="item">
                                 <div class="tp">
                                     <img
-                                        src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/03/best-phone-2022.jpg">
+                                        src="https://c1.wallpaperflare.com/preview/427/745/192/notebook-natural-laptop-macbook.jpg">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="tp">
-                                    <img src="https://i.pinimg.com/236x/81/13/52/811352bf8edcc3d9c7cc15051fa1339e.jpg">
+                                    <img src="https://c4.wallpaperflare.com/wallpaper/271/682/513/notebooks-cat-laptop-monochrome-wallpaper-preview.jpg">
                                 </div>
                             </div>
                         </div>
@@ -329,8 +332,12 @@
             <div class="container">
                 <!-- Start why buy from us Section -->
                 <div class="middle">
-                    <a id="why-buy-line"> <h1>Why buy from us?</h1><hr></a>
-                    <p id="why-buy-grey-text">Pellentesque faucibus tempus ex, quis vulputate elit consectetur eget.Interdum<br />
+                    <a id="why-buy-line">
+                        <h1>Why buy from us?</h1>
+                        <hr>
+                    </a>
+                    <p id="why-buy-grey-text">Pellentesque faucibus tempus ex, quis vulputate elit consectetur
+                        eget.Interdum<br />
                         fames ac ante bus. Maecenas facilisis, enim at volutpat.
                     </p>
                 </div>
@@ -397,28 +404,32 @@
 
     <section id="feature-pro">
         <div class="feature-product">
-         <a id="feature-product-line"> <h1>Featured Products</h1><hr></a>
-           <a id="feature-product-grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut
-            labore
-            nisi ut <br /> aliquip ex ea commodo consequat. Duis aute irure.</a>
+            <a id="feature-product-line">
+                <h1>Featured Products</h1>
+                <hr>
+            </a>
+            <a id="feature-product-grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor inci didunt ut
+                labore
+                nisi ut <br /> aliquip ex ea commodo consequat. Duis aute irure.</a>
         </div>
 
         <!-- End feature Section of Products -->
 
         <!-- Start feature select items Sections -->
-        <div class="feature-pt">
-            <a>
-                <p id="feature-blue">FEATURED</p>
-            </a>
-            <a>
-                <p id="feature-grey">LATESTS</p>
-            </a>
-            <a>
-                <p id="feature-grey">BESTSELLERS</p>
-            </a>
-            <a>
-                <p id="feature-grey">SPECIALS</p>
-            </a>
+        <div class="feature-pt" id="categoriesListParent">
+
+            <p id="featured" class="active featured" onclick="handleclick(id)">FEATURED</p>
+
+
+            <p id="latests" onclick="handleclick(id)">LATESTS</p>
+
+
+            <p id="bestseller" onclick="handleclick(id)">BESTSELLERS</p>
+
+
+            <p id="specials" onclick="handleclick(id)">SPECIALS</p>
+
         </div>
     </section>
     <!-- End feature select items section  -->
@@ -434,272 +445,452 @@
     <div id="carousel-card-container" class="carousel-cards">
         <div id="carousel-card" class="owl-carousel owl-theme">
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="1" onclick="addToCart(1)">Add toCart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="2" onclick="addToCart(2)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="3" onclick="addToCart(3)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="4" onclick="addToCart(4)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="5" onclick="addToCart(5)">Add to
-                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="6" onclick="addToCart(6)">Add to
-                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
-                    <div class="card-img-top">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFYZZaLYgC8QQz7WeVyVG20jEOKkQHH69Jw&usqp=CAU"
-                            alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="card-title">Women maria pump</h2>
-                        $990.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="7" onclick="addToCart(7)">Add to
-                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
                         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
                         <h2 class="card-title">Head phones</h2>
-                        $999.00
-                        <p class="card-text">Some quick example text to build on thecard title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="8" onclick="addToCart(8)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoxBsHjfwrRxuQ3pfsMeQxmbjMyYnZOwjAQ&usqp=CAU"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Latest Digital Camera</h2>
-                        $1,189.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="9" onclick="addToCart(9)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkhaHxPyV3UUQUZPO5xBeAdtZGRAWB8Ekdw&usqp=CAU"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Shopping Bag</h2>
-                        $109.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="10" onclick="addToCart(10)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://rukminim1.flixcart.com/image/200/200/kdbzqfk0/microphone/y/e/f/ashiv-3-5mm-clip-microphone-for-youtube-collar-mike-for-voice-original-imafu9pjxcsqxwrt.jpeg?q=70"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Microphones</h2>
-                        $90.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="11" onclick="addToCart(11)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://rukminim1.flixcart.com/image/200/200/xif0q/shopsy-water-bottle/0/d/e/plastic-water-bottles-for-fridge-office-school-gym-unbreakable-original-imagcu7gdxqsuzzh.jpeg?q=70"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Water Bottle</h2>
-                        $170.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="12" onclick="addToCart(12)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://rukminim1.flixcart.com/image/200/200/kql8sy80/lipstick/7/m/y/21-sara-s-favorite-sensational-liquid-matte-pack-of-3-touch-of-original-imag4kgnbmynydnw.jpeg?q=70"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Makeup-Essential</h2>
-                        $200.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="13" onclick="addToCart(13)">Add to
-                            Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://rukminim1.flixcart.com/image/200/200/kqpj4i80/ring/8/1/8/adjustable-cfr-k149-ring-set-karishma-kreations-original-imag4ntug2g26twf.jpeg?q=70"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Jewellery</h2>
-                        $125.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="14" onclick="addToCart(14)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <div class="card" style="width: 15rem;">
+                <div class="card">
                     <div class="card-img-top">
-                        <img src="https://rukminim1.flixcart.com/image/200/200/k59xci80/watch/t/p/9/premium-luxury-business-casual-trendy-water-resistant-original-imafnzmembfxdyhv.jpeg?q=70"
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
                             alt="Card image cap">
                     </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
                     <div class="card-body">
-                        <h2 class="card-title">Samrt Watch</h2>
-                        $205.00
-                        <p class="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p><br />
-                        <button id="15" onclick="addToCart(15)">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ae22e3a6-9590-401a-94f6-d8ecf42b4932_600x.png?v=1673002621"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Head phones</h2>
+                        <a id="carousel-price">$999.00</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(1)">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -724,10 +915,14 @@
 
         <!-- Feature Content -->
         <div class="feature-top-content">
-            <a id="feature-line"><h1>Feature Categories</h1><hr></a>
-            <p id="feature-category-grey-text">ypesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset <br />sheets containing Lorem Ipshing software like
-                Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <a id="feature-line">
+                <h1>Feature Categories</h1>
+                <hr>
+            </a>
+            <p id="feature-category-grey-text"> lorem ipsum ypesetting, remaining essentially unchanged. It was
+                popularised in the
+                1960s with the
+                release of Letrase</p>
         </div>
         <!-- End feature content -->
 
@@ -735,145 +930,173 @@
         <div id="features-card-container" class="features-card">
             <div id="features-card" class="owl-carousel owl-theme">
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
                             src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/kyrlifk0/sweatshirt/7/5/8/s-szf-wb-sweat-yellow-prette-original-imagaxbphtxntgyf.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtrdH-cAFtBZVRYcIVh6FhO9mFU5mjwhpEhTeTUuhrA&s"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/l2rwzgw0/key-holder/k/a/t/6-czdmskh01-allah-brown-craftzo-original-imagefn6egnfrcgc.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/k12go7k0/sticker/w/y/e/wall-stickers-wallpaper-happy-winter-trees-and-frames-home-diy-original-imafknv4vc3xf4wm.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/l4n2oi80/wall-clock/0/k/m/sk-multistoreworld-analog-31-cm-x-31-cm-wall-clock-taitanic-best-original-imagfht2bcxxjnyw.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/kg8avm80-0/watch/2/f/c/vh000008c-van-heusen-original-imafwgaaukt5qyc8.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/lehenga-choli/9/h/s/free-sleeveless-atllgkgl1896-logo-of-alphabet-a-original-imaggeb2qzwgnbqa.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to
-                                Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-bottom"
-                            src="https://rukminim1.flixcart.com/image/612/612/l0cr4i80/shirt/1/t/8/m-sh-53-getchi-original-imagc5xphrdk5xyr.jpeg?q=70"
+                            src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/g/j/s-bb-polo-tshirt-more-more-original-imagm7fzbf3q23yp.jpeg?q=70"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h3 class="card-title">Card title</h3>
-                            <p class="card-text">Some quick example text to build on the card title and make up
-                                the bulk of the card's content.</p><br />
-                            <button>Add to Cart</button>
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
+                            <h3 class="card-title">Bodycorn Dresses</h3>
+                            <a> $399.00 </a>
+                            <hr>
+                            <br />
+                            <div class="feature-cart">
+                                <button>Add to
+                                    Cart</button>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-light fa-route-interstate"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -885,7 +1108,10 @@
     <!-- Start shop-brand section -->
     <section id="shop-hide">
         <div class="shop-brand">
-           <a id="shop-brand-heading"> <h1>Shop by brand</h1><hr></a>
+            <a id="shop-brand-heading">
+                <h1>Shop by brand</h1>
+                <hr>
+            </a>
             <section class="common">
                 <div class="bw-images con">
                     <img class="bw"
@@ -908,13 +1134,14 @@
 
             <!-- Gallery content -->
             <div class="gallery-content">
-              <div id="improve-gallery-line"><h1>Improved Gallery Module</h1>
-                <hr>
+                <div id="improve-gallery-line">
+                    <h1>Improved Gallery Module</h1>
+                    <hr>
                 </div>
                 <a>
-                The PowerShell Gallery is a package repository containing scripts, modules,
-                and DSC resources you can download <br />and leverage. You use the cmdlets in the
-                PowerShellGet module to install packages from the PowerShell Gallery.</a>
+                    The PowerShell Gallery is a package repository containing scripts, modules,
+                    and DSC resources you can download <br />and leverage. You use the cmdlets in the
+                    PowerShellGet module to install packages from the PowerShell Gallery.</a>
             </div>
 
             <!-- gallery content end -->
@@ -924,18 +1151,12 @@
             <div class="gallery-pics">
                 <section class="common">
                     <div class="con">
-                        <img class="gp"
-                            src="https://i.pinimg.com/236x/1d/79/4b/1d794ba6bd33ad10d736b3eb221cd622.jpg">
-                        <img class="gp"
-                            src="https://i.pinimg.com/236x/27/01/64/27016454abedc97b57e5143d96919b22.jpg">
-                        <img class="gp"
-                            src="https://i.pinimg.com/236x/eb/ce/ab/ebceabdc1cee337ec2a7c03024720760.jpg">
-                        <img class="gp"
-                            src="https://i.pinimg.com/236x/8e/81/54/8e815425a6500fdd0884c53ff137bbaa.jpg">
-                        <img class="gp"
-                            src="https://i.pinimg.com/474x/96/ec/9b/96ec9b848d035fead4b7f8150af433ec.jpg">
-                        <img class="gp"
-                            src="https://i.pinimg.com/236x/83/4c/93/834c93e4ae6b6ccae9dd22e342eb9880.jpg">
+                        <img class="gp" src="https://i.pinimg.com/236x/1d/79/4b/1d794ba6bd33ad10d736b3eb221cd622.jpg">
+                        <img class="gp" src="https://i.pinimg.com/236x/27/01/64/27016454abedc97b57e5143d96919b22.jpg">
+                        <img class="gp" src="https://i.pinimg.com/236x/eb/ce/ab/ebceabdc1cee337ec2a7c03024720760.jpg">
+                        <img class="gp" src="https://i.pinimg.com/236x/8e/81/54/8e815425a6500fdd0884c53ff137bbaa.jpg">
+                        <img class="gp" src="https://i.pinimg.com/474x/96/ec/9b/96ec9b848d035fead4b7f8150af433ec.jpg">
+                        <img class="gp" src="https://i.pinimg.com/236x/83/4c/93/834c93e4ae6b6ccae9dd22e342eb9880.jpg">
                     </div>
                 </section>
             </div>
@@ -947,8 +1168,9 @@
         <!-- Start  from blog section here -->
         <div class="from-blog">
             <div class="blog-content">
-                <div id="from-blog-line"><h1>From our blog</h1>
-                <hr>
+                <div id="from-blog-line">
+                    <h1>From our blog</h1>
+                    <hr>
                 </div>
                 <br />
                 <p> Next ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -1100,8 +1322,8 @@
         <section id="people-saying-hide">
             <div class="people-saying">
                 <div id="why-people-say">
-                <h1>What are people saying about us</h1>
-                <hr>
+                    <h1>What are people saying about us</h1>
+                    <hr>
                 </div>
 
 
@@ -1357,8 +1579,8 @@
                         <h2>Newsletter</h2>
                         <hr>
                         Stay up to date with news and promotions<br /> by signing up your news letter<br />
-                       <div class="enter-mail"> <input type="text" placeholder="Enter your mail">
-                        <button> <i class="fa-regular fa-envelope"></i>&nbspSend</button>
+                        <div class="enter-mail"> <input type="text" placeholder="Enter your mail">
+                            <button> <i class="fa-regular fa-envelope"></i>&nbspSend</button>
                         </div>
                         <br />
                         <input type="checkbox">I have read and agree to<a href="#">Privacy and policy</a>

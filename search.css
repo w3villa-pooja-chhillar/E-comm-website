@@ -50,7 +50,10 @@
     justify-content: space-between;
     column-gap: 14px;
 }
-
+.nav-left .home  span{
+    color:black;
+    text-decoration:none;
+}
 .nav-mid {
     display: flex;
     justify-content: space-between;

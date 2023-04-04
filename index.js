@@ -30,21 +30,24 @@ function showfeatureCard(Data) {
         if (element.type == "card") {
             html += `
             <div class="item">
-                <div class="card" style="width: 12rem;">
-                    <img class="card-img-bottom"
-                        src="${element.img}
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-title">${element.title}</h3>
-                      $${element.price}
-                        <p class="card-text">${element.content}</p><br />
-                        <button onclick="addToCart(${element.id})">Add to Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="card">
+                <img class="card-img-bottom"
+                    src="${element.img}"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title">${element.title}</h3>
+                    <a> ${element.price} </a>
+                    <hr>
+                    <br />
+                    <div class="feature-cart">
+                        <button onclick="addToCart(${element.id})">Add to
+                            Cart</button>
                         <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
                         <i class="fa-light fa-route-interstate"></i>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
-            </div> `
+            </div>
+        </div>`
         }
     })
     document.getElementById("features-card").innerHTML = html;
@@ -75,6 +78,10 @@ function showfeatureCard(Data) {
         }
     })
 };
+
+
+// <button onclick="addToCart(${element.id})">Add to Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+// <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
 
 // show blog card data on html file 
 function showblog(arrayOfData) {
@@ -117,10 +124,6 @@ function showblog(arrayOfData) {
 }
 
 
-
-
-
-
 // show carousel-card data on html 
 function showcarousel(arrayOfData) {
     let carouselcard = document.getElementById("carousel-card-container");
@@ -128,20 +131,33 @@ function showcarousel(arrayOfData) {
     // console.log(arrayOfData.products)
     arrayOfData.products.forEach((element) => {
         if (element.type == "carousel_card") {
-            carousel += `<div class="item">
-            <div class="card" style="width: 15rem;">
+            carousel += `  <div class="item">
+            <div class="card">
                 <div class="card-img-top">
                     <img src="${element.img}"
                         alt="Card image cap">
                 </div>
+                <div class="card-grey-line">
+                    <a id="ericson">Ericson</a>
+                    <a id="model">Model 15</a>
+                </div>
                 <div class="card-body">
                     <h2 class="card-title">${element.title}</h2>
-                    $${element.price}
-                    <p class="card-text">${element.content}</p><br />
-                    <button onclick="addToCart(${element.id})">Add to Cart</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
-                    <i class="fa-light fa-route-interstate"></i>
+                    <a id="carousel-price">${element.price}</a><br />
+                    <div class="carousel-addcart">
+                        <div>
+                            <input type="number" value="2">
+                            <button id="1" onclick="addToCart(${element.id})">Add toCart</button>
+                        </div>
+                        <div id="carousel-heart">
+                            <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="last-carousel-greyline">
+                        <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                        <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                    </div>
                 </div>
             </div>
         </div>`
@@ -162,7 +178,7 @@ function showcarousel(arrayOfData) {
             700: {
                 items: 2
             },
-            900: {
+            980: {
                 items: 3
             },
             1200: {
@@ -516,16 +532,16 @@ async function addToCart(id) {
         document.getElementById('items-counter').innerText = arr.length;
         localStorage.setItem("item-counter", arr.length);
         // adding price of cart items
-        let totalprice=0;
         const res8 = await fetch('./items.json');
         const data8 = await res8.json();
+        let totalprice = parseInt(JSON.parse(localStorage.getItem('item-price'))) || 0;
         data8.products.forEach((element) => {
-            totalprice = parseInt(JSON.parse(localStorage.getItem('item-price')));
             if (element.id == id) {
-                totalprice =totalprice+element.price;
+                totalprice =totalprice+Number(element.price.split("$")[1]);
             }
-            localStorage.setItem('item-price', JSON.stringify(totalprice));
+            console.log(element.price)
         })
+        localStorage.setItem('item-price', JSON.stringify(totalprice));
         console.log(totalprice);
     }
 }
@@ -711,5 +727,24 @@ function onload() {
     let items = JSON.parse(localStorage.getItem("item-counter"));
     if (items) {
         document.getElementById('items-counter').innerHTML = items;
+    }
+}
+
+
+// handle click of  featured categories
+function handleclick(id){
+    let currentActive = document.getElementById(id)
+    let categoriesListParent = document.getElementById("categoriesListParent")
+
+    if(Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true){
+        categoriesListParent.firstElementChild.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentActiveElementId", id);
+    }else{
+        let recentActiveID = localStorage.getItem("currentActiveElementId")
+        let recentActiveElt = document.getElementById(recentActiveID)
+        recentActiveElt.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentActiveElementId", id);
     }
 }
