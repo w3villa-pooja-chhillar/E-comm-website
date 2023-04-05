@@ -561,6 +561,7 @@ function addtoWishlist(id) {
 
 
 
+
 // Show Cart Section here
 async function showCart() {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -583,21 +584,35 @@ async function showCart() {
         if (element.id == cartItems[z]) {
             html += `
             <div class="item">
-                <div class="card" style="width: 12rem;">
-                    <img class="card-img-bottom"
-                        src="${element.img}
+            <div class="card">
+                <div class="card-img-top">
+                    <img src="${element.img}"
                         alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-title">${element.title}</h3>
-                      ${element.price}
-                        <p class="card-text">${element.content}</p><br />
-                        <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-light fa-route-interstate"></i>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+                <div class="card-grey-line">
+                    <a id="ericson">Ericson</a>
+                    <a id="model">Model 15</a>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">${element.title}</h2>
+                    <a id="carousel-price">${element.price}</a><br />
+                    <div class="carousel-addcart">
+                        <div>
+                            <input type="number" value="2">
+                            <button id="1" onclick="removefromCart(${element.id})">REMOVE FROM CART</button>
+                        </div>
+                        <div id="carousel-heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                    </div>
+                    <div class="last-carousel-greyline">
+                        <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                        <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
                     </div>
                 </div>
-            </div> `
+            </div>
+        </div>`
             z++;
         }
     })
@@ -653,6 +668,25 @@ async function showCart() {
         
     }
     }
+
+
+
+//     <div class="item">
+//     <div class="card" style="width: 12rem;">
+//         <img class="card-img-bottom"
+//             src="${element.img}
+//             alt="Card image cap">
+//         <div class="card-body">
+//             <h3 class="card-title">${element.title}</h3>
+//           $${element.price}
+//             <p class="card-text">${element.content}</p><br />
+//             <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+//             <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
+//             <i class="fa-light fa-route-interstate"></i>
+//             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+//         </div>
+//     </div>
+// </div> 
     // Wishlist Section
     async function showWishlist() {
         let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
@@ -672,23 +706,37 @@ async function showCart() {
         let html = ""
         res8.products.forEach((element) => {
             if (element.id == wishItems[index]) {
-                html += `
-        <div class="item">
-            <div class="card" style="width: 12rem;">
-                <img class="card-img-bottom"
-                    src="${element.img}
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h3 class="card-title">${element.title}</h3>
-                  $${element.price}
-                    <p class="card-text">${element.content}</p><br />
-                    <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
-                    <i class="fa-light fa-route-interstate"></i>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                html += ` <div class="item">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="${element.img}"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">${element.title}</h2>
+                        <a id="carousel-price">${element.price}</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1"  onclick="addToCart(${element.id})">ADD TO CART</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> `
+       `
                 index++;
             }
         })
