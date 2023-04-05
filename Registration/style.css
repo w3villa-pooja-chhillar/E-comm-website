@@ -129,6 +129,7 @@ section .content .form .sci li{
 section .content .form .sci li:hover{
     background-color: #ff4584;
 }
+/* breakpoints  */
 @media (max-width: 780px){
     section .img{
         width:100%;
