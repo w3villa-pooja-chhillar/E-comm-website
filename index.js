@@ -342,14 +342,14 @@ function showmostview(arrayOfData) {
 //         location.reload()
 //     }
 // }
-async function searching(){
-    let search_data =document.getElementById('search').value;
-    if(!search_data.length){
-        
+async function searching() {
+    let search_data = document.getElementById('search').value;
+    if (!search_data.length) {
+
     }
-    else{
+    else {
         localStorage.setItem('search_data', search_data);
-    window.location = './search.html';
+        window.location = './search.html';
     }
 }
 function showPaginationProduct(id) {
@@ -537,12 +537,11 @@ async function addToCart(id) {
         let totalprice = parseInt(JSON.parse(localStorage.getItem('item-price'))) || 0;
         data8.products.forEach((element) => {
             if (element.id == id) {
-                totalprice =totalprice+Number(element.price.split("$")[1]);
+                totalprice = totalprice + Number(element.price.split("$")[1]);
             }
-            console.log(element.price)
         })
         localStorage.setItem('item-price', JSON.stringify(totalprice));
-        console.log(totalprice);
+        document.getElementById('total-price').innerText = totalprice;
     }
 }
 
@@ -590,7 +589,7 @@ async function showCart() {
                         alt="Card image cap">
                     <div class="card-body">
                         <h3 class="card-title">${element.title}</h3>
-                      $${element.price}
+                      ${element.price}
                         <p class="card-text">${element.content}</p><br />
                         <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
                         <i class="fa-regular fa-heart"></i>
@@ -627,12 +626,11 @@ async function showCart() {
 
 }
 // remove from cart section here
-function removefromCart(id) {
+ async function removefromCart(id) {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
     const index = cartItems.indexOf(id);
     if (index >= 0) {
         cartItems.splice(index, 1);
-        console.log(cartItems)
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
     alert('item is removed from cart');
@@ -641,27 +639,40 @@ function removefromCart(id) {
         localStorage.setItem('item-counter', JSON.stringify(totalItem));
         document.getElementById('items-counter').innerText = totalItem;
     }
-}
-// Wishlist Section
-async function showWishlist() {
-    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
-    if (wishItems == null) {
-        alert('nothing to see in wishlist');
+    if ((localStorage.getItem('item-price')) > 0) {
+        const res9 = await fetch('./items.json');
+        const data9 = await res9.json();
+        data9.products.forEach( element => {
+         if(element.id==id){
+           let current_price = localStorage.getItem('item-price');
+           current_price -= Number(element.price.split("$")[1]);
+           localStorage.setItem('item-price',current_price);
+           document.getElementById('total-price').innerText= current_price;
+         }
+        })
+        
     }
-    wishItems.sort((a, b) => {
-        if (a > b) {
-            return 1
-        } else {
-            return -1
+    }
+    // Wishlist Section
+    async function showWishlist() {
+        let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+        if (wishItems == null) {
+            alert('nothing to see in wishlist');
         }
-    })
-    let index = 0;
-    const data8 = await fetch('./items.json');
-    const res8 = await data8.json();
-    let html = ""
-    res8.products.forEach((element) => {
-        if (element.id == wishItems[index]) {
-            html += `
+        wishItems.sort((a, b) => {
+            if (a > b) {
+                return 1
+            } else {
+                return -1
+            }
+        })
+        let index = 0;
+        const data8 = await fetch('./items.json');
+        const res8 = await data8.json();
+        let html = ""
+        res8.products.forEach((element) => {
+            if (element.id == wishItems[index]) {
+                html += `
         <div class="item">
             <div class="card" style="width: 12rem;">
                 <img class="card-img-bottom"
@@ -678,73 +689,77 @@ async function showWishlist() {
                 </div>
             </div>
         </div> `
-            index++;
+                index++;
+            }
+        })
+        document.getElementById('wishlist').innerHTML = html;
+        if (html != '') {
+            document.getElementById('heart').style.color = "red";
+            document.getElementById("wishlist").style.display = "flex";
+            document.getElementById('section-hide').style.display = "none";
+            document.getElementById('main-hide').style.display = "none";
+            document.getElementById('shop-hide').style.display = "none";
+            document.getElementById('people-saying-hide').style.display = "none";
+            document.getElementById('feature-pro').style.display = "none";
+            document.getElementById('carousel-card-container').style.display = "none";
+            document.getElementById('feature-category-hide').style.display = "none";
+            document.getElementById('shop-block').style.display = "none";
+            document.getElementById("show-cart").style.display = "none";
+            document.getElementById('search-pagination').style.display = "none";
+
         }
-    })
-    document.getElementById('wishlist').innerHTML = html;
-    if (html != '') {
-        document.getElementById('heart').style.color = "red";
-        document.getElementById("wishlist").style.display = "flex";
-        document.getElementById('section-hide').style.display = "none";
-        document.getElementById('main-hide').style.display = "none";
-        document.getElementById('shop-hide').style.display = "none";
-        document.getElementById('people-saying-hide').style.display = "none";
-        document.getElementById('feature-pro').style.display = "none";
-        document.getElementById('carousel-card-container').style.display = "none";
-        document.getElementById('feature-category-hide').style.display = "none";
-        document.getElementById('shop-block').style.display = "none";
-        document.getElementById("show-cart").style.display = "none";
-        document.getElementById('search-pagination').style.display = "none";
-
+        else {
+            alert('nothing to see in wishlist');
+            document.getElementById('section-hide').style.display = "block";
+            document.getElementById('main-hide').style.display = "block";
+            document.getElementById('shop-hide').style.display = "block";
+            document.getElementById('people-saying-hide').style.display = "block";
+            document.getElementById('feature-pro').style.display = "block";
+            document.getElementById('carousel-card-container').style.display = "block";
+            document.getElementById('feature-category-hide').style.display = "block";
+            document.getElementById('heart').style.color = "black";
+            document.getElementById('shop-block').style.display = "none";
+            document.getElementById('search-pagination').style.display = "none";
+        }
     }
-    else {
-        alert('nothing to see in wishlist');
-        document.getElementById('section-hide').style.display = "block";
-        document.getElementById('main-hide').style.display = "block";
-        document.getElementById('shop-hide').style.display = "block";
-        document.getElementById('people-saying-hide').style.display = "block";
-        document.getElementById('feature-pro').style.display = "block";
-        document.getElementById('carousel-card-container').style.display = "block";
-        document.getElementById('feature-category-hide').style.display = "block";
-        document.getElementById('heart').style.color = "black";
-        document.getElementById('shop-block').style.display = "none";
-        document.getElementById('search-pagination').style.display = "none";
+
+    //  remove from Wishlist section 
+    function removefromWishlist(id) {
+        alert('item is removed from wishlist');
+        let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
+        const index = wishlistItems.indexOf(id);
+        wishlistItems.splice(index, 1);
+        localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
     }
-}
 
-//  remove from Wishlist section 
-function removefromWishlist(id) {
-    alert('item is removed from wishlist');
-    let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
-    const index = wishlistItems.indexOf(id);
-    wishlistItems.splice(index, 1);
-    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
-}
-
-// on load function
-function onload() {
-    // alert('page is loaded');
-    let items = JSON.parse(localStorage.getItem("item-counter"));
-    if (items) {
-        document.getElementById('items-counter').innerHTML = items;
+    // on load function
+    function onload() {
+        // alert('page is loaded');
+        let items = JSON.parse(localStorage.getItem("item-counter"));
+        if (items) {
+            document.getElementById('items-counter').innerHTML = items;
+        }
+        let price= localStorage.getItem('item-price');
+        if(price){
+            document.getElementById('total-price').innerHTML= price;
+        }
     }
-}
 
 
-// handle click of  featured categories
-function handleclick(id){
-    let currentActive = document.getElementById(id)
-    let categoriesListParent = document.getElementById("categoriesListParent")
+    // handle click of  featured categories
+    function handleclick(id) {
+        let currentActive = document.getElementById(id)
+        let categoriesListParent = document.getElementById("categoriesListParent")
 
-    if(Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true){
-        categoriesListParent.firstElementChild.classList.remove("active")
-        currentActive.classList.add("active")
-        localStorage.setItem("currentActiveElementId", id);
-    }else{
-        let recentActiveID = localStorage.getItem("currentActiveElementId")
-        let recentActiveElt = document.getElementById(recentActiveID)
-        recentActiveElt.classList.remove("active")
-        currentActive.classList.add("active")
-        localStorage.setItem("currentActiveElementId", id);
+        if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
+            categoriesListParent.firstElementChild.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("currentActiveElementId", id);
+        } else {
+            let recentActiveID = localStorage.getItem("currentActiveElementId")
+            let recentActiveElt = document.getElementById(recentActiveID)
+            recentActiveElt.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("currentActiveElementId", id);
+        }
     }
-}

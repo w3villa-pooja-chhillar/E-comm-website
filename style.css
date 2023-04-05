@@ -173,6 +173,7 @@ header .container .journal {
     padding: 2px;
     left: 15px;
     bottom: 25px;
+    border-radius:2px;
 }
 
 .department #new {
@@ -182,15 +183,12 @@ header .container .journal {
     bottom: 25px;
     padding: 2px;
     right: 140px;
+    border-radius:2px;
 }
 
 
 
 /* End Department Section  */
-
-
-
-
 /* Start top Section next to Department Section */
 .top {
     display: flex;
@@ -251,13 +249,6 @@ header .container .journal {
 }
 
 /* End top-left section of carousel laptop */
-
-
-
-
-
-
-
 
 /* Start top right section of watch and computer */
 .top-watch-com {
@@ -338,8 +329,6 @@ header .container .journal {
 }
 
 /* End top right section here */
-
-
 /* Start free shipping section here */
 
 .free-shipping {
@@ -390,10 +379,6 @@ header .container .journal {
 .secure {
     padding-right: 155px;
 }
-
-
-
-
 
 /* Start  why buy from us section next to free shipping  */
 .middle {
@@ -612,10 +597,6 @@ color:grey;
     cursor:pointer;
 }
 
-
-
-
-
 /* Start carousel-cards section next to feature product section */
 .carousel-cards {
     padding: 40px;
@@ -832,10 +813,6 @@ display:none;
     padding: 20px;
     justify-content: space-between;
 }
-
-
-
-
 /* Start gallery modules section here next to black and white images section */
 
 .gallery-modules {
@@ -1014,8 +991,6 @@ display:none;
     position:absolute;
     bottom:-4px;
 }
-
-
 /* Start people saying section here next to from our blog section */
 .people-saying {
     text-align: center;
@@ -1068,10 +1043,6 @@ display:none;
     width: 100%;
     height: 100%;
 }
-
-
-
-
 /* Start most viewed section here */
 
 .most-viewed h2 {
@@ -1133,9 +1104,6 @@ display:none;
         /* column-gap: 65px; */
         padding-top: 17px;
 }
-
-
-
 /* Social section icons section next to most viewed section */
 
 .social-icons {
