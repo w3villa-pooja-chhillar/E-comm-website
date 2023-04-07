@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-page</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@1&family=Labrada&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--  desktop navbar section start here -->
+            <div class="navbar">
+                <div class="nav-left">
+                    <div class="home">
+                        <a><i class="fa-thin fa-house"></i>
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    <div class="about-us">
+                        <a><i class="fa-sharp fa-regular fa-stars"></i>
+                            About-us
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <a> <i class="fa-regular fa-envelope"></i>
+                            Contact-us
+                        </a>
+                    </div>
+                    <div class="faq">
+                        <a><i class="fa-regular fa-circle-question"></i>
+                            FAQ
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-mid">
+                    <div class="english">
+                        <a>
+                           <a id="eng-flag">🇦🇺 </a>English
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div class="euro">
+                        <a> $ Euro
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="menu">
+                        <a> <i class="fa-regular fa-user"></i>
+                            <i class="fa-solid fa-bars"></i> &nbspMore Menus
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div class="delivery">
+                        <a><i class="fa-solid fa-truck"></i>
+                            Delivery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="phone-navbar">
+        <div class="container">
+            <div class="phone-nav">
+                <div class="phn-nav-left">
+                    <div class="phon-login">
+                        <i class="fa-solid fa-user"></i>
+                        Login
+                    </div>
+                    <div class="phon-register">
+                        <i class="fa-solid fa-pen"></i>
+                        Register
+                    </div>
+                </div>
+                <div class="phn-nav-right">
+                    <div class="dollar">
+                        $US Dollar<i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="phn-eng">
+                        🇦🇺 English<i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- journal for phone view start here -->
+      <section class="phn-journal-section">
+        <div class="container">
+            <div class="phn-journal">
+                <div class="journal-logo">
+                    <h2>JOURNAL</h2>
+                </div>
+                <div class="phn-journal-items">
+                    <i class="fa-solid fa-bars"></i>&nbsp&nbsp
+                    <i class="fa-solid fa-magnifying-glass"></i>&nbsp&nbsp
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp&nbsp
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="journal-section">
+        <div class="container">
+            <div class="journal">
+                <div class="journal-logo">
+                    JOURNAL
+                </div>
+                <div class="journal-search">
+                    <div class="search-all">
+                        <a>All
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <input id="search" type="text" placeholder="Search here...">
+                    <i id="mag-glass" class="fa-solid fa-magnifying-glass" onclick="searching()"></i>
+                </div>
+                <div class="journal-icon">
+                    <div class="journal-login">
+                        <div class="journal-login-a">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="journal-login-b" id="login-form">
+                            Login
+                        </div>
+                    </div>
+                    <div class="journal-register">
+                        <div class="journal-register-a">
+                            <i class="fa-regular fa-pen-circle"></i>
+                        </div>
+                        <div class="journal-register-b" id="register-form">
+                            Register
+                        </div>
+                    </div>
+                    <div class="journal-wishlist">
+                        <div class="journal-wishlist-a">
+                            <i class="fa-regular fa-heart" id="heart"></i>
+                        </div>
+                        <div class="journal-wishlist-b">
+                            Wishlist
+                        </div>
+                    </div>
+                    <div class="journal-compare">
+                        <div class="journal-compare-a">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                        </div>
+                        <div class="journal-compare-b">
+                            Compare
+                        </div>
+                    </div>
+                </div>
+                <div class="journal-items">
+                    <span>0</span>&nbspitem(s) -&nbsp$
+                    <span>0.00</span>&nbsp
+                    <a id="journal-cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="department-section">
+        <div class="container">
+            <div class="department">
+                <div class="department-row-align">
+                    <span id="yellow"><i class="fa-regular fa-bars"></i>&nbspALL DEPARTMENTS
+                        <span id="sales">Sales
+                        </span>
+                    </span>
+                    &nbsp&nbsp MULTILEVEL &nbsp&nbsp MEGA MENU &nbsp&nbsp FULLWIDTH
+                    <span id="new">New</span>
+                </div>
+                <div class="department-call">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span id="num">1.800.55.6625 &nbsp</span>
+                    <span id="yellow"><i class="fa-solid fa-message"></i>&nbsp&nbsp BLOG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="search-section">
+        <div class="container">
+            <div class="search-emoji">
+                <i class="fa-thin fa-house"></i>&nbsp →  <a href="">Search</a>  → &nbsp Apple Cinema 30"
+            </div>
+        </div>
+    </section>
+    <section id="product-page">
+        <div class="container">
+            <div class="product-page">
+                <div id="apple-logo">
+                    <h1>Apple Cinema 30"</h1>
+                    <hr>
+                </div>
+                <hr>
+                <div class="product-view">
+                    <div class="product-img-part">
+                        <div class="small-images">
+                            <div class="small-img">
+                                <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                            </div>
+                            <div class="small-img">
+                                <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                            </div>
+                            <div class="small-img">
+                                <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                            </div>
+                            <div class="small-img">
+                                <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                            </div>
+                        </div>
+                        <div class="product-img">
+                            <img src="https://m.media-amazon.com/images/I/51Rte1usmJL._AC_UY327_FMwebp_QL65_.jpg">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="description-line">
+                            <a id="description">DESCRIPTIONS</a>
+                            <a id="specification">SPECIFICATIONS</a>
+                            <a id="review">REVIEWS</a>
+                            <a id="custom">CUSTOM TABS</a>
+                            <hr>
+                        </div>
+                        <div class="product-description">
+                            <a>This product has been professionally inspected and tested to be fully functional by the
+                                Sellers.
+                                Product may be packed in a non-branded box.Accessories may not be original but have
+                                been tested to be the compatible and fully functional. <a id="low-opacity-content">All
+                                    Amazon Renewed purchases will
+                                    come with the compatible and fully randed box Amazon Renewed products will be
+                                    packaged in either original packaging   fully randed box Amazon Renewed products will be
+                                    packaged in either original packagingor in a new and clean cardboard box.<br /><a id="hidden-description">
+                                        People just ignore them if they are the only highlighting features of the product description. 
+                                        Product Descriptions is where you can include the 
+                                         benefits of using the product. Since most of the benefits will be buyer search terms they strengthen your listing value.
+                                    </a>
+                                </a></a>
+                            <button  id="show-more" onclick="showmore()"> <i class="fa-regular fa-chevron-down"></i>&nbsp&nbspShow more</button>
+                            <button  id="show-less" onclick="showless()"> <i class="fa-regular fa-chevron-down"></i>&nbsp&nbspShow  Less</button>
+                        </div>
+                        <div id="star-line">
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-thin fa-star"></i>&nbsp&nbsp&nbsp
+                            <a href=""> Based on 1 Reviews</a> &nbsp - &nbsp
+                            <a href=""> Write a review</a>
+                            <hr>
+                        </div>
+                        <div class="product-in-stock">
+                            <div class="product-stock-rate">
+                                <a id="delete-price"><del>78.66$</del></a><br />
+                                <a id="red-price">70.61$</a><br />
+                                <div class="price-more"> <a>Ex tax:70.61 $</a>
+                                    <a>Price in reward points: 400</a>
+                                    <a>10 or more 49.04$</a>
+                                    <a>20 or more 69.04$</a>
+                                    <a>30 or more 89.04$</a>
+                                    <a>40 or more 99.04$</a>
+                                </div>
+                            </div>
+                            <div class="in-stock-category">
+                                <div class="in-stock">
+                                    <a id="correct-stock-emoji"> <i class="fa-duotone fa-check"></i> IN STOCK</a>
+                                    <ul>
+                                        <li>Reward point: 100</li>
+                                        <li>Model: Product 15</li>
+                                        <li>Weight: 12.50kg</li>
+                                        <li> Dimension: 1.00cm ✖ 2.00cm ✖ 3.00cm</li>
+                                    </ul>
+                                </div>
+                                <div class="apple">
+                                    <div class="apple-img">
+                                        <img
+                                            src="https://media.idownloadblog.com/wp-content/uploads/2018/07/Apple-logo-black-and-white.png">
+                                    </div>
+                                    <div class="apple-text">
+                                        <a href="">Apple</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br />
+                        <hr>
+                        <div class="another-select-category">
+                            <div class="another-select">
+                                Another Select &nbsp<a class="red-select-star">*</a>
+                            </div>
+                            <div class="another-input">
+                                <select>
+                                    <option>--Please Select--</option>
+                                    <option>Electronics</option>
+                                    <option>Fashion</option>
+                                    <option>Footwear</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="another-select-category">
+                            <div class="another-select">
+                                Select List &nbsp<a class="red-select-star">*</a>
+                            </div>
+                            <div class="another-input">
+                                <select>
+                                    <option>--Please Select--</option>
+                                    <option>Electronics</option>
+                                    <option>Fashion</option>
+                                    <option>Footwear</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="radio-category">
+                            <div class="radio-text">
+                                Radio <a class="red-select-star">*</a>
+                            </div>
+                            <div class="radio-input">
+                                <input type="text" placeholder="Small +7.75$">
+                                <input type="text" placeholder="Medium +15.75$">
+                                <input type="text" placeholder="Large +23.75$">
+                            </div>
+                        </div>
+                        <div class="single-choice-img">
+                            <div class="single-choice-text">
+                                Single Choice (with image) <a class="red-select-star">*</a>
+                            </div>
+                            <div class="single-choice-color">
+                                <div id="sky-blue"></div>
+                                <div id="purple"></div>
+                                <div id="blue"></div>
+                                <div id="red"></div>
+                            </div>
+                        </div>
+                        <div class="text-category">
+                            <div class="text-line">
+                                Text<a class="red-select-star">*</a>
+                            </div>
+                            <div class="text-input">
+                                <input type="text" placeholder="test">
+                            </div>
+                        </div>
+                        <div class="text-area-category">
+                            <div class="Text-area-text">
+                                Textarea <a class="red-select-star">*</a>
+                            </div>
+                            <div class="area-input">
+                                <input type="text" placeholder="Textarea">
+                            </div>
+                        </div>
+                        <div class="file-upload-section">
+                            <div class="file-text">
+                                File
+                            </div>
+                            <div class="upload-file">
+                                <button>
+                                    <i class="fa-sharp fa-regular fa-arrow-up-from-bracket"></i> UPLOAD FILE
+                                </button>
+                            </div>
+                        </div>
+                        <div class="date-section">
+                            <div class="date-text">
+                                Date <a class="red-select-star">*</a>
+                            </div>
+                            <div class="date-input">
+                                <input type="text" placeholder="2020-02-20">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="date-section">
+                            <div class="date-text">
+                                Time <a class="red-select-star">*</a>
+                            </div>
+                            <div class="date-input">
+                                <input type="text" placeholder="22:25">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="date-section">
+                            <div class="date-text">
+                                Date & Time <a class="red-select-star">*</a>
+                            </div>
+                            <div class="date-input">
+                                <input type="text" placeholder="2011-02-20 & 22:25">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                        </div>
+                        <br />
+                        <hr>
+                        <div class="add-cart-category">
+                            <div>
+                                <input type="number" value="2">
+                            </div>
+                            <div id="product-add-cart">
+                                <button>
+                                    <i class="fa-solid fa-cart-shopping cart"></i>&nbspADD TO CART
+                                </button>
+                            </div>
+                            <div id="buy-now">
+                                <button>
+                                    <i class="fa-thin fa-circle-dollar"></i>&nbspBUY NOW
+                                </button>
+                            </div>
+                            <div id="cart-question">
+                                <button>
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <hr>
+                        <div class="wishlist-line">
+                            <a id="heart"><i class="fa-regular fa-heart"></i></a>
+                            Add to Wishlist &nbsp&nbsp
+                            <a id="direction"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                            Compare this product
+                        </div>
+                        <div class="minimum-quantity">
+                            <i class="fa-solid fa-circle-info"></i>&nbsp&nbsp
+                            This product has a minimum quantity of 2
+                        </div>
+                        <div class="social-icons">
+                            <div class="fb">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="pinterest">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
+                            <div class="mail">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="msgs">
+                                + 7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="related-products">
+        <div class="container">
+            <div class="related-products">
+                <div class="related-text">
+                    <a>RELATED PRODUCTS</a>&nbsp&nbsp&nbsp&nbsp
+                    <a id="people-bought"> PEOPLE ALSO BOUGHT</a>
+                </div>
+                <hr>
+                <div class="related-images">
+                    <div class="phn-card">
+                        <div class="related-phn">
+                            <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                        </div>
+                        <div class="related-phn-content">
+                            <div class="iphone-price"><a id="iphone">iMAc</a>
+                                <a id="phn-price">79.24$</a>
+                            </div>
+                            <hr>
+                            <div class="related-add-cart">
+                                <button>ADD TO CART</button>
+                                <a><i style="font-weight:100" class="fa-solid fa-heart"></i></a>
+                                <a><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="laptop-card">
+                        <div class="related-laptop">
+                            <img src="https://i.pinimg.com/236x/b6/a6/b0/b6a6b00b6c015ab2f628bd5286eb21e1.jpg">
+                            <div class="out-of-stock">
+                                Out of Stock
+                            </div>
+                            <div class="hot">
+                                HOT
+                            </div>
+                        </div>
+                        <div class="related-phn-content">
+                            <div class="iphone-price"><a id="iphone">iMac</a>
+                                <a id="phn-price">79.24$</a>
+                            </div>
+                            <hr>
+                            <div class="related-add-cart">
+                                <button>ADD TO CART</button>
+                                <a><i style="font-weight:100" class="fa-solid fa-heart"></i></a>
+                                <a><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="most-view">
+        <div class="container">
+            <div class="most-view-content">
+                <a id="most-view-white">RECENTLY VIEWED</a>
+                <a id="most-view-grey">MOST-VIEWED</a>
+            </div>
+            <hr>
+            <div class="most-view-cards">
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/5a/bf/2d/5abf2d8dc542b07723ae78a6774d10bd.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera
+                        1,717.49$
+                        <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-solid fa-star yellow-star"></i>
+                            <i class="fa-thin fa-star"></i>
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/7a/0a/21/7a0a21aefbf31e1c53e2b0ae096baf92.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera
+                        1,717.49$
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="social">
+        <div class="container">
+            <div class="social-icons">
+                <div class="round-icon"><a><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="round-icon"><a> <i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="round-icon"><a><i class="fa-brands fa-google-plus-g"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="footer-last">
+                <div class="footer-left">
+                    <div class="about-us">
+                        <h2>About us</h2>
+                        <hr>
+                        <ul>
+                            <li><a href="#">About-us</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Privacy-policy</a></li>
+                            <li><a href="#">Terms and Condition</a></li>
+                            <li><a href="#">Custom links</a></li>
+                        </ul>
+                    </div>
+                    <div class="customer-service">
+                        <h2>Customer Service</h2>
+                        <hr>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Return</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Unlimited Links</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="my-account">
+                        <h2>My-account</h2>
+                        <hr>
+                        <ul>
+                            <li><a href="#">My account</a></li>
+                            <li><a href="#">order history</a></li>
+                            <li><a href="#">Affialiate</a></li>
+                            <li><a href="#">newsletter</a></li>
+                            <li><a href="#">Gift Certificate</a></li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <h2>Newsletter</h2>
+                        <hr>
+                        <a>Stay up to date with news and promotions<br /> by signing up your news letter<br /></a>
+                        <input type="text" placeholder="Enter your mail">
+                        <br />
+                        <input type="checkbox">&nbspI have read and agree to<a href="#">Privacy and policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <div class="container">
+            Copyright@2014,Your store All right Reserved.
+        </div>
+    </div>
+    <script src="product.js"></script>
+</body>
+
+</html>
