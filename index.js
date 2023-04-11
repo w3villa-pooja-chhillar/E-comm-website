@@ -472,6 +472,7 @@ let registerform = () => {
         localStorage.setItem("registerdata", JSON.stringify(registerdata));
         setSucess('You are successfully registered!!');
         window.location = '../index.html';
+        localStorage.setItem('login','false');
     }
     // console.log(window.localStorage.getItem('registerdata'));
 
@@ -512,6 +513,7 @@ let loginform = () => {
     else if (username === registeruser.username && password === registeruser.pass1) {
         alert('welcome!! you are sucessfully login');
         window.location = '../index.html';
+        localStorage.setItem('login','true');
     }
     else {
         alert("plase check your username and password");
@@ -668,25 +670,6 @@ async function showCart() {
         
     }
     }
-
-
-
-//     <div class="item">
-//     <div class="card" style="width: 12rem;">
-//         <img class="card-img-bottom"
-//             src="${element.img}
-//             alt="Card image cap">
-//         <div class="card-body">
-//             <h3 class="card-title">${element.title}</h3>
-//           $${element.price}
-//             <p class="card-text">${element.content}</p><br />
-//             <button onclick="removefromCart(${element.id})">REMOVE FROM CART</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-//             <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
-//             <i class="fa-light fa-route-interstate"></i>
-//             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-//         </div>
-//     </div>
-// </div> 
     // Wishlist Section
     async function showWishlist() {
         let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
@@ -791,11 +774,15 @@ async function showCart() {
         if(price){
             document.getElementById('total-price').innerHTML= price;
         }
+        if(localStorage.getItem('login')=='true'){
+        let a = document.getElementById('login-form');
+        a.innerHTML=(JSON.parse(localStorage.getItem('registerdata')).username);
+        }
     }
 
 
     // handle click of  featured categories
-    function handleclick(id) {
+    async function handleclick(id) {
         let currentActive = document.getElementById(id)
         let categoriesListParent = document.getElementById("categoriesListParent")
 
@@ -810,4 +797,174 @@ async function showCart() {
             currentActive.classList.add("active")
             localStorage.setItem("currentActiveElementId", id);
         }
+        const res10 = await fetch('./items.json');
+        const data10 = await res10.json();
+        let carouselcard = document.getElementById("carousel-card-container");
+        let carousel = `<div id="carousel-card" class="owl-carousel owl-theme">`;
+        data10.products.forEach((element) => {
+            if(element.category==id){
+                carousel += `  <div class="item">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="${element.img}"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card-grey-line">
+                        <a id="ericson">Ericson</a>
+                        <a id="model">Model 15</a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">${element.title}</h2>
+                        <a id="carousel-price">${element.price}</a><br />
+                        <div class="carousel-addcart">
+                            <div>
+                                <input type="number" value="2">
+                                <button id="1" onclick="addToCart(${element.id})">Add toCart</button>
+                            </div>
+                            <div id="carousel-heart">
+                                <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="last-carousel-greyline">
+                            <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                            <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+            }
+        })
+        carousel += `</div>`;
+        carouselcard.innerHTML = carousel;
+        $('#carousel-card').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                700: {
+                    items: 2
+                },
+                980: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        })
+    }
+    
+
+
+    // why buy from us handle click  
+     async function clickhandle(id){
+        let currentActive = document.getElementById(id);
+        let categoriesListParent = document.getElementById('why-buy-parent');
+        if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
+            categoriesListParent.firstElementChild.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("currentwhybuyid", id);
+        } else {
+            let recentActiveID = localStorage.getItem("currentwhybuyid")
+            let recentActiveElt = document.getElementById(recentActiveID)
+            recentActiveElt.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("currentwhybuyid", id);
+        }
+        const res11 = await fetch('./carousel-collection.json');
+        const data11 = await res11.json();
+        let carouselcoll = document.getElementById("carous-coll");
+        let coll = `<div id="mid-owl" class="owl-carousel owl-theme">`;
+        data11.carousel_collection.forEach((element) => {
+            if(element.category == id){
+                coll += `<div class="item">
+                <img class="cm"
+                    src="${element.img}">
+            </div>`
+            }
+        });
+        coll += `</div>`;
+        carouselcoll.innerHTML = coll;
+        $('#mid-owl').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    }
+
+    // blog click handle
+     async function blogclick(id){
+        let currentActive = document.getElementById(id);
+        let categoriesListParent = document.getElementById('blog-selector');
+        if(Array.from(categoriesListParent.firstElementChild.classList).includes("active")===true){
+            categoriesListParent.firstElementChild.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("blog-active", id);
+        }
+        else{
+            let recentActiveID = localStorage.getItem("blog-active")
+            let recentActiveElt = document.getElementById(recentActiveID)
+            recentActiveElt.classList.remove("active")
+            currentActive.classList.add("active")
+            localStorage.setItem("blog-active", id);
+        }
+        const res12 = await fetch('./blog-card.json');
+        const data12 = await res12.json();
+        let blogcard = document.getElementById("blog-card-container");
+        let blog = `<div id="blog-carousel-cards" class="owl-carousel owl-theme">`;
+        data12.blog_card.forEach((element) => {
+            if(element.category ==id){
+                blog += `<div class="item">
+                <div class="blog" style="width: 24rem;">
+                    <img class="blog-card"
+                        src="${element.img}"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">${element.title}</h4>
+                        <p class="card-text">${element.content}</p>
+                        <a><h3> Read More →</h3></a>
+                    </div>
+                </div>
+            </div>`
+            }
+        })
+        blog += `</div>`;
+        blogcard.innerHTML = blog;
+        $('#blog-carousel-cards').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            nav: true,
+            responsiveBaseElement: 'body',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1390: {
+                    items: 2
+                },
+                1440: {
+                    items: 3
+                }
+            }
+        })
     }

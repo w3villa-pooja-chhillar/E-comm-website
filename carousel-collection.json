@@ -1,22 +1,60 @@
 {
-    "carousel_collection":[
+    "carousel_collection": [
         {
-            "img":"https://i.pinimg.com/474x/09/2c/80/092c808c16d372fe35f247ce9fb7a699.jpg"
+            "img": "https://i.pinimg.com/474x/09/2c/80/092c808c16d372fe35f247ce9fb7a699.jpg",
+            "category":"top-categories"
         },
         {
-            "img":"https://i.pinimg.com/750x/77/c8/c9/77c8c91be8b9c9f7e830c6ec205396fb.jpg"
+            "img": "https://i.pinimg.com/750x/77/c8/c9/77c8c91be8b9c9f7e830c6ec205396fb.jpg",
+            "category":"fashion"
         },
         {
-            "img":"https://i.pinimg.com/236x/98/69/5f/98695f2b6b9e5bbe34178e9a126f7587.jpg"
+            "img": "https://i.pinimg.com/236x/98/69/5f/98695f2b6b9e5bbe34178e9a126f7587.jpg",
+            "category":"top-categories"
         },
         {
-            "img":"https://i.pinimg.com/564x/c7/d2/c7/c7d2c708ce85fb4ddd066577cc35d3d6.jpg"
+            "img": "https://i.pinimg.com/564x/c7/d2/c7/c7d2c708ce85fb4ddd066577cc35d3d6.jpg",
+            "category":"fashion"
         },
         {
-            "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_gkwr9lZOhqe1NmyFX4aK3a5ksuEn5NDvQ&usqp=CAU"
+            "img": "https://i.pinimg.com/236x/80/53/6c/80536ca7f1955879d53cbb3cddc4817f.jpg",
+            "category":"fashion"
         },
         {
-            "img":"https://i.pinimg.com/236x/38/41/02/38410256c9b393c4887c24b919373328.jpg"
+            "img": "https://i.pinimg.com/236x/65/2b/b7/652bb75fe6f48b222fa39ee53f17139b.jpg",
+            "category":"electronics"
+        },
+        {
+            "img": "https://i.pinimg.com/236x/54/25/10/5425107ea7ec9047b142810f3beee515.jpg",
+            "category":"electronics"
+        },
+        {
+            "img": "https://i.pinimg.com/236x/19/00/ad/1900adec3b4198f85bd57db75e236078.jpg",
+            "category":"beauty"
+        },
+        {
+            "img": "https://i.pinimg.com/236x/7a/4a/60/7a4a6033fe0d0676893e9e4457387832.jpg",
+            "category":"beauty"
+        },
+        {
+            "img": "https://i.pinimg.com/236x/aa/33/e7/aa33e77c3c130ff4f582f15308a778d4.jpg",
+            "category":"electronics"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/ab/4b/53/ab4b53d57c45994e2c092c59b13d9b5d.jpg",
+            "category":"top-categories"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/d2/4b/01/d24b013a1ed85385a05a0bcc89a0bd3f.jpg",
+            "category":"electronics"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/b6/02/03/b60203664ad9d6fda3f82b0545260e86.jpg",
+            "category":"beauty"
+        },
+        {
+            "img":"https://i.pinimg.com/236x/38/a1/d4/38a1d437f9f829b5c3b149ff01d76ff7.jpg",
+            "category":"top-categories"
         }
     ]
 }

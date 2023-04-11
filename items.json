@@ -6,7 +6,7 @@
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt ",
             "price": "$200.00",
             "type": "card",
-            "category" :"Featured",
+            "category" :"featured",
             "img": "https://i.pinimg.com/236x/eb/ce/ab/ebceabdc1cee337ec2a7c03024720760.jpg"
         },
         {
@@ -15,7 +15,7 @@
             "content": "Lorem ipsum dolor  sed do eiusmod tempor incididunt ",
             "price": "$300.00",
             "type": "card",
-            "category" :"Featured",
+            "category" :"featured",
             "img": "https://i.pinimg.com/236x/dd/f1/07/ddf107bb279384875687de99d795513e.jpg"
         },
         {
@@ -96,7 +96,7 @@
             "title": "Bag",
             "price": "$560.00",
             "type": "carousel_card",
-            "category" :"Featured",
+            "category" :"featured",
             "content": "Lorem ipsum dolor, sed do eiusmod tempor incididunt "
         },
         {

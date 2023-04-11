@@ -65,8 +65,8 @@
                 <div class="con">
                     <div class="nav-left">
                         <i class="fa-thin fa-house"></i>&nbsp <a href='./index.html'>Home</a>&nbsp&nbsp
-                        <i class="fa-sharp fa-regular fa-stars"></i> About us&nbsp&nbsp
-                        <i class="fa-regular fa-envelope"></i>&nbspContact&nbsp&nbsp
+                        <i class="fa-sharp fa-regular fa-stars"></i> <a href="#about-us">About us</a>&nbsp&nbsp
+                        <i class="fa-regular fa-envelope"></i>&nbsp<a href="#contact-us">Contact</a>&nbsp&nbsp
                         <i class="fa-regular fa-circle-question"></i>&nbsp
                         <a>FAQ
                             <select class="faq-drop-down">
@@ -344,18 +344,15 @@
                 <!-- End  why from us section -->
 
                 <!-- Start  mid category Section  of select Items -->
-                <div class="mid-category">
-                    <a id="active-why-buy">
-                        <p>TOP-CATEGORIES</p>
-                    </a>
-                    <a>
-                        <p id="mid-grey">ELECTRONICS</p>
-                    </a>
-                    <a>
-                        <p id="mid-grey">BEAUTY</p>
-                    </a>
-                    <a>
-                        <p id="mid-grey">FASHION</p>
+                <div class="mid-category" id="why-buy-parent">
+                  
+                        <p id="top-categories"  class="active" onclick="clickhandle(id)">TOP-CATEGORIES</p>
+                 
+                        <p id="electronics" onclick="clickhandle(id)">ELECTRONICS</p>
+                
+                        <p id="beauty" onclick="clickhandle(id)">BEAUTY</p>
+                    
+                        <p id="fashion" onclick="clickhandle(id)">FASHION</p>
                     </a>
                 </div>
                 <!-- End mid category Section  of select Items -->
@@ -1175,12 +1172,11 @@
                 <br />
                 <p> Next ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                     make a type</p>
-                <div class="blog-selector"> <a>
-                        <p id="blog-blue-selector">LATEST POSTS</p>
-                    </a>
-                    <a>
-                        <p id="blog-grey">MOST RATED</p>
-                    </a>
+                <div class="blog-selector" id="blog-selector"> 
+                        <p id="latest-post" class="active" onclick="blogclick(id)">LATEST POSTS</p>
+            
+                        <p id="most-rated" onclick="blogclick(id)">MOST RATED</p>
+                
                 </div>
             </div>
 
@@ -1542,7 +1538,7 @@
             <div class="footer-last">
                 <div class="con">
                     <!-- Start about us last Section here -->
-                    <div class="about-us">
+                    <div class="about-us" id="about-us">
                         <h2>About us</h2>
                         <hr>
                         <ul>
@@ -1557,7 +1553,7 @@
                         <h2>Customer Service</h2>
                         <hr>
                         <ul>
-                            <li><a href="#">Contact</a></li>
+                            <li><a  id="contact-us" href="#">Contact</a></li>
                             <li><a href="#">Return</a></li>
                             <li><a href="#">Site map</a></li>
                             <li><a href="#">Brand</a></li>
