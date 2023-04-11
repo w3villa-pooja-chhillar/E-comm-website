@@ -35,7 +35,9 @@ header .container .nav {
 }
 .faq-drop-down{
     width:16px;
+    outline:unset;
     border:unset;
+    cursor:pointer;
     color:rgba(105, 105, 115, 1);
     background-color:white;
 }
@@ -112,6 +114,7 @@ header .container .journal {
     border: unset;
     height: 100%;
     width: 270px;
+    padding-left:4px;
 }
 
 .search-all {
@@ -406,11 +409,12 @@ header .container .journal {
     font-size: 17px;
 }
 
-.mid-category #mid-grey {
+.mid-category #top-categories, #electronics,#beauty,#fashion {
     color:#404040;
     background-color: #BEBEBE;
     border-right:2px solid grey;
     border-radius:2px;
+    cursor:pointer;
 }
 #why-buy-line{
     display: flex;
@@ -432,14 +436,15 @@ header .container .journal {
     color:grey;
 }
 
-#active-why-buy {
+.mid-category .active {
     border-radius:2px;
-    color: white;
+    color: white!important;
     position:relative;
-    background-color: rgba(13, 82, 214, 1);;
+    cursor:pointer;
+    background-color: rgba(13, 82, 214, 1)!important;
 }
 
-#active-why-buy::after {
+.mid-category .active::after {
     transform: rotate(45deg);
     left:34%;
     top:27px;
@@ -584,9 +589,10 @@ color:grey;
     display: block;
 }
 
-.feature-pt #latests,#bestseller,#specials{
+.feature-pt #featured, #latests,#bestseller,#specials{
     color:#404040;
     background-color: #BEBEBE;
+    cursor:pointer;
 }
 
 .feature-pt p,
@@ -911,9 +917,9 @@ display:none;
 .from-blog {
     background-color: #bab9b975;
 }
-.from-blog #blog-blue-selector{
-    background-color: rgba(13, 82, 214, 1);;
-    color:white;
+.blog-selector .active{
+    background-color: rgba(13, 82, 214, 1)!important;
+    color: white !important;
     position:relative;
     font-family: 'roboto';
     font-size: 16px;
@@ -921,7 +927,7 @@ display:none;
     font-weight: bold;
     border-radius:2px;
 }
-.from-blog #blog-grey{
+.from-blog #latest-post,#most-rated{
     color:#404040;
     background-color: #BEBEBE;
     font-family: 'roboto';
@@ -940,6 +946,7 @@ display:none;
     margin-top:17px;
 }
 .blog-selector {
+    cursor:pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -953,7 +960,7 @@ display:none;
     padding-left:0px!important;
     text-align:center;
 }
-.from-blog #blog-blue-selector::after{
+.blog-selector .active::after{
     height:17px;
     width:17px;
     content:'';
