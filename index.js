@@ -777,6 +777,8 @@ async function showCart() {
         if(localStorage.getItem('login')=='true'){
         let a = document.getElementById('login-form');
         a.innerHTML=(JSON.parse(localStorage.getItem('registerdata')).username);
+        let b = document.getElementById('register-form');
+        b.innerHTML = "Log-out";
         }
     }
 
@@ -967,4 +969,9 @@ async function showCart() {
                 }
             }
         })
+    }
+
+    // Log-out function
+    function logout(){
+        console.log("hello");
     }
