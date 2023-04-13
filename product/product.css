@@ -257,7 +257,7 @@
 #apple-logo h1{
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
-    font-weight:500;
+    font-weight:700;
     padding-bottom:10px;
 }
 #apple-logo hr{
@@ -304,7 +304,7 @@
 }
 /* below description star line start here */
 #star-line{
-    margin-top:30px;
+    padding-top:65px;
 }
 #star-line .yellow-star{
     color:yellow;
@@ -336,6 +336,7 @@
 /* product desciption  */
 
 .product-description{
+    line-height:1.6;
     margin-top:30px;
     font-size:20px;
     position:relative;
@@ -407,6 +408,7 @@
 .in-stock ul{
     color: black;
     font-size: 17px;
+    line-height:1.7;
     padding-top: 16px;
 }
 .apple{
@@ -1382,5 +1384,21 @@
     }
     .product-img {
         margin-top:0px;
+    }
+}
+@media screen and (max-width:1550px){
+    .description-line{
+        padding-right:unset;
+    }
+}
+@media screen and (max-width:1400px){
+    .description-line{
+        font-size:16px;
+    }
+    .product-content .description-line hr{
+        width:100px;
+    }
+    .radio-input input{
+        font-size:16px;
     }
 }
