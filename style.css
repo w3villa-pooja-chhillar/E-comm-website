@@ -89,6 +89,7 @@ header .container .journal {
     font-family: 'roboto';
     font-weight: 900;
     font-size: 40px;
+    cursor:pointer;
 }
 .journal-wishlist{
     cursor:pointer;
@@ -160,13 +161,40 @@ header .container .journal {
 }
 
 .department #num {
-    padding-right: 5px;
+    padding: 15px;
+}
+.department #num:hover{
+    background-color: white;
+    color:black;
 }
 
 .department #yellow {
     background-color: yellow;
     padding: 15px;
     color: black;
+    cursor:pointer;
+}
+.department #yellow:hover{
+    background-color: white;
+    color: black;
+}
+.department #multilevel,#megamenu,#full-width{
+    padding:15px;
+}
+.department #multilevel:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+.department #megamenu:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+.department #full-width:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
 }
 
 .department #sales {
@@ -631,8 +659,33 @@ display:none;
     padding:10px;
     height: 220px;
     width: 288px;
+    position:relative;
 }
-
+.card-line{
+    position:absolute;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    width: 174px;
+    font-family: roboto;
+    font-size: 16px;
+    text-align: center;
+    top: 32px;
+    transform: rotate(-45deg);
+    left: -42px;
+}
+.card-sticker{
+    position:absolute;
+        background-color: red;
+        color: white;
+        font-family: roboto;
+        padding: 6px;
+        width: 40px;
+        text-align: center;
+        border-radius: 4px;
+        top: 10px;
+        left: 250px;
+}
 .card-img-top img {
     object-fit:cover;
     height: 100%;
@@ -667,6 +720,7 @@ display:none;
     width:310px;
     background-color:#F5F5F5;
     border-radius:5px;
+    overflow:hidden;
 }
 .carousel-cards .card button {
     padding: 9px;
@@ -754,10 +808,24 @@ display:none;
     width: 200px;
     object-fit:cover;
     border-radius:6px;
+    position:relative;
 }
 .card-img-bottom img{
     height:100%;
     width:100%;
+}
+.card-new{
+    position:absolute;
+    background-color: blue;
+    color:white;
+    padding:5px;
+    width:40px;
+    font-family:roboto;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align:center;
+    left:160px;
+    top:8px;
 }
 
 .feature-top-content {
@@ -1212,6 +1280,9 @@ display:none;
 
 .footer-last ul li a {
     text-decoration: none;
+}
+.footer-last ul li a:hover{
+    color: #ff5349;
 }
 
 .phone-nav {

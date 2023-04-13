@@ -136,6 +136,8 @@ function showcarousel(arrayOfData) {
                 <div class="card-img-top">
                     <img src="${element.img}"
                         alt="Card image cap">
+                        <a class="card-line">CUSTOM LABEL</a>
+                        <a class="card-sticker">-70%</a>
                 </div>
                 <div class="card-grey-line">
                     <a id="ericson">Ericson</a>
@@ -406,7 +408,15 @@ function showPaginationProduct(id) {
 
 // ***************** show a new tab of login page 
 function login() {
+    if(!localStorage.getItem('login')){
+        alert("Please Register first")
+    }
+   else if(localStorage.getItem('login')== "false"){
     window.location = './Login/login.html';
+    }
+    else{
+        alert("you are already login");
+    }
 }
 
 // ****************show a new  tab of register page
@@ -472,7 +482,7 @@ let registerform = () => {
         localStorage.setItem("registerdata", JSON.stringify(registerdata));
         setSucess('You are successfully registered!!');
         window.location = '../index.html';
-        localStorage.setItem('login','false');
+        localStorage.setItem('login', 'false');
     }
     // console.log(window.localStorage.getItem('registerdata'));
 
@@ -513,7 +523,7 @@ let loginform = () => {
     else if (username === registeruser.username && password === registeruser.pass1) {
         alert('welcome!! you are sucessfully login');
         window.location = '../index.html';
-        localStorage.setItem('login','true');
+        localStorage.setItem('login', 'true');
     }
     else {
         alert("plase check your username and password");
@@ -643,7 +653,7 @@ async function showCart() {
 
 }
 // remove from cart section here
- async function removefromCart(id) {
+async function removefromCart(id) {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
     const index = cartItems.indexOf(id);
     if (index >= 0) {
@@ -659,37 +669,37 @@ async function showCart() {
     if ((localStorage.getItem('item-price')) > 0) {
         const res9 = await fetch('./items.json');
         const data9 = await res9.json();
-        data9.products.forEach( element => {
-         if(element.id==id){
-           let current_price = localStorage.getItem('item-price');
-           current_price -= Number(element.price.split("$")[1]);
-           localStorage.setItem('item-price',current_price);
-           document.getElementById('total-price').innerText= current_price;
-         }
-        })
-        
-    }
-    }
-    // Wishlist Section
-    async function showWishlist() {
-        let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
-        if (wishItems == null) {
-            alert('nothing to see in wishlist');
-        }
-        wishItems.sort((a, b) => {
-            if (a > b) {
-                return 1
-            } else {
-                return -1
+        data9.products.forEach(element => {
+            if (element.id == id) {
+                let current_price = localStorage.getItem('item-price');
+                current_price -= Number(element.price.split("$")[1]);
+                localStorage.setItem('item-price', current_price);
+                document.getElementById('total-price').innerText = current_price;
             }
         })
-        let index = 0;
-        const data8 = await fetch('./items.json');
-        const res8 = await data8.json();
-        let html = ""
-        res8.products.forEach((element) => {
-            if (element.id == wishItems[index]) {
-                html += ` <div class="item">
+
+    }
+}
+// Wishlist Section
+async function showWishlist() {
+    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    if (wishItems == null) {
+        alert('nothing to see in wishlist');
+    }
+    wishItems.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+    let index = 0;
+    const data8 = await fetch('./items.json');
+    const res8 = await data8.json();
+    let html = ""
+    res8.products.forEach((element) => {
+        if (element.id == wishItems[index]) {
+            html += ` <div class="item">
                 <div class="card">
                     <div class="card-img-top">
                         <img src="${element.img}"
@@ -720,96 +730,104 @@ async function showCart() {
                 </div>
             </div>
        `
-                index++;
-            }
-        })
-        document.getElementById('wishlist').innerHTML = html;
-        if (html != '') {
-            document.getElementById('heart').style.color = "red";
-            document.getElementById("wishlist").style.display = "flex";
-            document.getElementById('section-hide').style.display = "none";
-            document.getElementById('main-hide').style.display = "none";
-            document.getElementById('shop-hide').style.display = "none";
-            document.getElementById('people-saying-hide').style.display = "none";
-            document.getElementById('feature-pro').style.display = "none";
-            document.getElementById('carousel-card-container').style.display = "none";
-            document.getElementById('feature-category-hide').style.display = "none";
-            document.getElementById('shop-block').style.display = "none";
-            document.getElementById("show-cart").style.display = "none";
-            document.getElementById('search-pagination').style.display = "none";
+            index++;
+        }
+    })
+    document.getElementById('wishlist').innerHTML = html;
+    if (html != '') {
+        document.getElementById('heart').style.color = "red";
+        document.getElementById("wishlist").style.display = "flex";
+        document.getElementById('section-hide').style.display = "none";
+        document.getElementById('main-hide').style.display = "none";
+        document.getElementById('shop-hide').style.display = "none";
+        document.getElementById('people-saying-hide').style.display = "none";
+        document.getElementById('feature-pro').style.display = "none";
+        document.getElementById('carousel-card-container').style.display = "none";
+        document.getElementById('feature-category-hide').style.display = "none";
+        document.getElementById('shop-block').style.display = "none";
+        document.getElementById("show-cart").style.display = "none";
+        document.getElementById('search-pagination').style.display = "none";
 
-        }
-        else {
-            alert('nothing to see in wishlist');
-            document.getElementById('section-hide').style.display = "block";
-            document.getElementById('main-hide').style.display = "block";
-            document.getElementById('shop-hide').style.display = "block";
-            document.getElementById('people-saying-hide').style.display = "block";
-            document.getElementById('feature-pro').style.display = "block";
-            document.getElementById('carousel-card-container').style.display = "block";
-            document.getElementById('feature-category-hide').style.display = "block";
-            document.getElementById('heart').style.color = "black";
-            document.getElementById('shop-block').style.display = "none";
-            document.getElementById('search-pagination').style.display = "none";
-        }
     }
-
-    //  remove from Wishlist section 
-    function removefromWishlist(id) {
-        alert('item is removed from wishlist');
-        let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
-        const index = wishlistItems.indexOf(id);
-        wishlistItems.splice(index, 1);
-        localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+    else {
+        alert('nothing to see in wishlist');
+        document.getElementById('section-hide').style.display = "block";
+        document.getElementById('main-hide').style.display = "block";
+        document.getElementById('shop-hide').style.display = "block";
+        document.getElementById('people-saying-hide').style.display = "block";
+        document.getElementById('feature-pro').style.display = "block";
+        document.getElementById('carousel-card-container').style.display = "block";
+        document.getElementById('feature-category-hide').style.display = "block";
+        document.getElementById('heart').style.color = "black";
+        document.getElementById('shop-block').style.display = "none";
+        document.getElementById('search-pagination').style.display = "none";
     }
+}
 
-    // on load function
-    function onload() {
-        // alert('page is loaded');
-        let items = JSON.parse(localStorage.getItem("item-counter"));
-        if (items) {
-            document.getElementById('items-counter').innerHTML = items;
-        }
-        let price= localStorage.getItem('item-price');
-        if(price){
-            document.getElementById('total-price').innerHTML= price;
-        }
-        if(localStorage.getItem('login')=='true'){
+//  remove from Wishlist section 
+function removefromWishlist(id) {
+    alert('item is removed from wishlist');
+    let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    const index = wishlistItems.indexOf(id);
+    wishlistItems.splice(index, 1);
+    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+}
+
+// on load function
+function onload() {
+    // alert('page is loaded');
+    let items = JSON.parse(localStorage.getItem("item-counter"));
+    if (items) {
+        document.getElementById('items-counter').innerHTML = items;
+    }
+    let price = localStorage.getItem('item-price');
+    if (price) {
+        document.getElementById('total-price').innerHTML = price;
+    }
+    if (localStorage.getItem('login') == 'true') {
         let a = document.getElementById('login-form');
-        a.innerHTML=(JSON.parse(localStorage.getItem('registerdata')).username);
-        let b = document.getElementById('register-form');
-        b.innerHTML = "Log-out";
-        }
+        a.innerHTML = (JSON.parse(localStorage.getItem('registerdata')).username);
+        let r = document.getElementById('journal-register');
+        r.innerHTML =
+        `<div class="journal-register-a">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+        <div class="journal-register-b" id="register-form" onclick="logout()">
+            Logout
+        </div>`
     }
+}
 
 
-    // handle click of  featured categories
-    async function handleclick(id) {
-        let currentActive = document.getElementById(id)
-        let categoriesListParent = document.getElementById("categoriesListParent")
+// handle click of  featured categories
+async function handleclick(id) {
+    let currentActive = document.getElementById(id)
+    let categoriesListParent = document.getElementById("categoriesListParent")
 
-        if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
-            categoriesListParent.firstElementChild.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("currentActiveElementId", id);
-        } else {
-            let recentActiveID = localStorage.getItem("currentActiveElementId")
-            let recentActiveElt = document.getElementById(recentActiveID)
-            recentActiveElt.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("currentActiveElementId", id);
-        }
-        const res10 = await fetch('./items.json');
-        const data10 = await res10.json();
-        let carouselcard = document.getElementById("carousel-card-container");
-        let carousel = `<div id="carousel-card" class="owl-carousel owl-theme">`;
-        data10.products.forEach((element) => {
-            if(element.category==id){
-                carousel += `  <div class="item">
+    if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
+        categoriesListParent.firstElementChild.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentActiveElementId", id);
+    } else {
+        let recentActiveID = localStorage.getItem("currentActiveElementId")
+        let recentActiveElt = document.getElementById(recentActiveID)
+        recentActiveElt.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentActiveElementId", id);
+    }
+    const res10 = await fetch('./items.json');
+    const data10 = await res10.json();
+    let carouselcard = document.getElementById("carousel-card-container");
+    let carousel = `<div id="carousel-card" class="owl-carousel owl-theme">`;
+    data10.products.forEach((element) => {
+        if (element.category == id) {
+            carousel += `  <div class="item">
                 <div class="card">
                     <div class="card-img-top">
                         <img src="${element.img}"
                             alt="Card image cap">
+                            <a class="card-line">CUSTOM LABEL</a>
+                            <a class="card-sticker">-70%</a>
                     </div>
                     <div class="card-grey-line">
                         <a id="ericson">Ericson</a>
@@ -835,107 +853,107 @@ async function showCart() {
                     </div>
                 </div>
             </div>`
-            }
-        })
-        carousel += `</div>`;
-        carouselcard.innerHTML = carousel;
-        $('#carousel-card').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            nav: true,
-            responsiveBaseElement: 'body',
-            responsive: {
-                0: {
-                    items: 1
-                },
-                700: {
-                    items: 2
-                },
-                980: {
-                    items: 3
-                },
-                1200: {
-                    items: 4
-                }
-            }
-        })
-    }
-    
-
-
-    // why buy from us handle click  
-     async function clickhandle(id){
-        let currentActive = document.getElementById(id);
-        let categoriesListParent = document.getElementById('why-buy-parent');
-        if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
-            categoriesListParent.firstElementChild.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("currentwhybuyid", id);
-        } else {
-            let recentActiveID = localStorage.getItem("currentwhybuyid")
-            let recentActiveElt = document.getElementById(recentActiveID)
-            recentActiveElt.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("currentwhybuyid", id);
         }
-        const res11 = await fetch('./carousel-collection.json');
-        const data11 = await res11.json();
-        let carouselcoll = document.getElementById("carous-coll");
-        let coll = `<div id="mid-owl" class="owl-carousel owl-theme">`;
-        data11.carousel_collection.forEach((element) => {
-            if(element.category == id){
-                coll += `<div class="item">
+    })
+    carousel += `</div>`;
+    carouselcard.innerHTML = carousel;
+    $('#carousel-card').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: true,
+        responsiveBaseElement: 'body',
+        responsive: {
+            0: {
+                items: 1
+            },
+            700: {
+                items: 2
+            },
+            980: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            }
+        }
+    })
+}
+
+
+
+// why buy from us handle click  
+async function clickhandle(id) {
+    let currentActive = document.getElementById(id);
+    let categoriesListParent = document.getElementById('why-buy-parent');
+    if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
+        categoriesListParent.firstElementChild.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentwhybuyid", id);
+    } else {
+        let recentActiveID = localStorage.getItem("currentwhybuyid")
+        let recentActiveElt = document.getElementById(recentActiveID)
+        recentActiveElt.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("currentwhybuyid", id);
+    }
+    const res11 = await fetch('./carousel-collection.json');
+    const data11 = await res11.json();
+    let carouselcoll = document.getElementById("carous-coll");
+    let coll = `<div id="mid-owl" class="owl-carousel owl-theme">`;
+    data11.carousel_collection.forEach((element) => {
+        if (element.category == id) {
+            coll += `<div class="item">
                 <img class="cm"
                     src="${element.img}">
             </div>`
+        }
+    });
+    coll += `</div>`;
+    carouselcoll.innerHTML = coll;
+    $('#mid-owl').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: true,
+        responsiveBaseElement: 'body',
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
             }
-        });
-        coll += `</div>`;
-        carouselcoll.innerHTML = coll;
-        $('#mid-owl').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            nav: true,
-            responsiveBaseElement: 'body',
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        })
-    }
+        }
+    })
+}
 
-    // blog click handle
-     async function blogclick(id){
-        let currentActive = document.getElementById(id);
-        let categoriesListParent = document.getElementById('blog-selector');
-        if(Array.from(categoriesListParent.firstElementChild.classList).includes("active")===true){
-            categoriesListParent.firstElementChild.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("blog-active", id);
-        }
-        else{
-            let recentActiveID = localStorage.getItem("blog-active")
-            let recentActiveElt = document.getElementById(recentActiveID)
-            recentActiveElt.classList.remove("active")
-            currentActive.classList.add("active")
-            localStorage.setItem("blog-active", id);
-        }
-        const res12 = await fetch('./blog-card.json');
-        const data12 = await res12.json();
-        let blogcard = document.getElementById("blog-card-container");
-        let blog = `<div id="blog-carousel-cards" class="owl-carousel owl-theme">`;
-        data12.blog_card.forEach((element) => {
-            if(element.category ==id){
-                blog += `<div class="item">
+// blog click handle
+async function blogclick(id) {
+    let currentActive = document.getElementById(id);
+    let categoriesListParent = document.getElementById('blog-selector');
+    if (Array.from(categoriesListParent.firstElementChild.classList).includes("active") === true) {
+        categoriesListParent.firstElementChild.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("blog-active", id);
+    }
+    else {
+        let recentActiveID = localStorage.getItem("blog-active")
+        let recentActiveElt = document.getElementById(recentActiveID)
+        recentActiveElt.classList.remove("active")
+        currentActive.classList.add("active")
+        localStorage.setItem("blog-active", id);
+    }
+    const res12 = await fetch('./blog-card.json');
+    const data12 = await res12.json();
+    let blogcard = document.getElementById("blog-card-container");
+    let blog = `<div id="blog-carousel-cards" class="owl-carousel owl-theme">`;
+    data12.blog_card.forEach((element) => {
+        if (element.category == id) {
+            blog += `<div class="item">
                 <div class="blog" style="width: 24rem;">
                     <img class="blog-card"
                         src="${element.img}"
@@ -947,31 +965,40 @@ async function showCart() {
                     </div>
                 </div>
             </div>`
+        }
+    })
+    blog += `</div>`;
+    blogcard.innerHTML = blog;
+    $('#blog-carousel-cards').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: true,
+        responsiveBaseElement: 'body',
+        responsive: {
+            0: {
+                items: 1
+            },
+            1390: {
+                items: 2
+            },
+            1440: {
+                items: 3
             }
-        })
-        blog += `</div>`;
-        blogcard.innerHTML = blog;
-        $('#blog-carousel-cards').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            nav: true,
-            responsiveBaseElement: 'body',
-            responsive: {
-                0: {
-                    items: 1
-                },
-                1390: {
-                    items: 2
-                },
-                1440: {
-                    items: 3
-                }
-            }
-        })
-    }
+        }
+    })
+}
 
-    // Log-out function
-    function logout(){
-        console.log("hello");
-    }
+// Log-out function
+function logout() {
+    document.getElementById('login-form').innerHTML= "Login";
+    localStorage.setItem('login', 'false');
+    let r = document.getElementById('journal-register');
+    r.innerHTML =
+    `<div class="journal-register-a">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    </div>
+    <div class="journal-register-b" id="register-form" onclick="register()">
+        Register
+    </div>`
+}
