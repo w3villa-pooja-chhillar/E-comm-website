@@ -55,22 +55,33 @@
                         </a>
                     </div>
                     <div class="faq">
-                        <a><i class="fa-regular fa-circle-question"></i>
-                            FAQ
-                            <i class="fa-solid fa-caret-down"></i>
+                        <a id="faq-drop-down">FAQ
+                            <select class="faq-drop-down">
+                                <option></option>
+                                <option>Create</option>
+                                <option>Unlimited</option>
+                                <option>Menus</option>
+                            </select>
                         </a>
                     </div>
                 </div>
                 <div class="nav-mid">
                     <div class="english">
+                          <a> 🇦🇺&nbspEnglish </a> <select class="faq-drop-down">
+                            <option></option>
+                            <option>English</option>
+                            <option>Arabic</option>
+                        </select>
                         <a>
-                            🇦🇺 English
-                            <i class="fa-solid fa-caret-down"></i>
-                        </a>
                     </div>
                     <div class="euro">
                         <a> $ Euro
-                            <i class="fa-solid fa-caret-down"></i>
+                            <select class="faq-drop-down">
+                                <option></option>
+                                <option>Euro</option>
+                                <option>Pound Sterling</option>
+                                <option>US dollar</option>
+                            </select>
                         </a>
                     </div>
                 </div>
@@ -78,7 +89,13 @@
                     <div class="menu">
                         <a> <i class="fa-regular fa-user"></i>
                             <i class="fa-solid fa-bars"></i> More Menus
-                            <i class="fa-solid fa-caret-down"></i>
+                            <select class="faq-drop-down">
+                                <option></option>
+                                <option>Best Menu</option>
+                                <option>Option you will</option>
+                                <option>Ever Find</option>
+                                <option>In a theme</option>
+                            </select>
                         </a>
                     </div>
                     <div class="delivery">
@@ -192,16 +209,21 @@
         <div class="container">
             <div class="department">
                 <div class="department-row-align">
-                    <span id="yellow"><i class="fa-regular fa-bars"></i>&nbspALL DEPARTMENTS
+                    <span id="yellow"><i class="fa-regular fa-bars"></i>&nbsp
+                        ALL DEPARTMENTS
                         <span id="sales">Sales
                         </span>
                     </span>
-                    &nbsp&nbsp MULTILEVEL &nbsp&nbsp MEGA MENU &nbsp&nbsp FULLWIDTH
+                    <a id="multilevel"> MULTILEVEL
+                        </a>
+                        <a id="megamenu">  MEGA MENU 
+                            </a>
+                            <a id="fullwidth">FULLWIDTH</a> 
                     <span id="new">New</span>
                 </div>
                 <div class="department-call">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span id="num">1.800.55.6625 &nbsp</span>
+                    <span id="num"> <i class="fa-solid fa-phone-volume"></i>
+                        1.800.55.6625 &nbsp</span>
                     <span id="yellow"><i class="fa-solid fa-message"></i>&nbsp&nbsp BLOG
                     </span>
                 </div>
@@ -425,7 +447,7 @@
                         </div>
                         <div class="cart-items" id="cart-items">
                             <div class="carts">
-                                <div class="cart-image">
+                                <div class="cart-image" onclick="showproduct()">
                                     <img
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMecTs8xdG_oE-szYsMG7aPIG5A_FcPvkQdms9o2PVMGUm8iUtYODX1wbRGkF1BokRuvw&usqp=CAU">
                                     <button id="carts-sticker-a">-10%</button>
@@ -529,7 +551,7 @@
                         <div class="list-items" id="list-items">
                             <hr>
                             <div class="list-cart">
-                                <div class="list-cart-img">
+                                <div class="list-cart-img" onclick="showproduct()">
                                     <img
                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMecTs8xdG_oE-szYsMG7aPIG5A_FcPvkQdms9o2PVMGUm8iUtYODX1wbRGkF1BokRuvw&usqp=CAU">
                                     <button id="a">-56%</button>
@@ -667,15 +689,77 @@
     <div class="most-view">
         <div class="container">
             <div class="most-view-content">
-                <a id="most-view-white">RECENTLY VIEWED</a>
-                <a id="most-view-grey">MOST-VIEWED</a>
+                <a id="most-view-white" onclick="recentview()">RECENTLY VIEWED</a>
+                <a id="most-view-grey" onclick="mostview()">MOST-VIEWED</a>
             </div>
-            <hr>
-            <div class="most-view-cards">
+            <hr id="most-view-line">
+            <div class="recent-view-cards" id="recent-view-cards">
                 <div class="view-card">
                     <div class="view-img">
                         <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekEsoRJObMAEhfXlLziOW45lwCQbUf-Dj7g&usqp=CAU">
+                            src="https://i.pinimg.com/236x/37/9b/9c/379b9ca997c177c66fe28f6e49a907ea.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera<br />
+                        1,717.49$<br />
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="most-view-cards" id="most-view-cards">
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/49/7b/5a/497b5adce223498b7d488fa380b4aff3.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera<br />
+                        1,717.49$<br />
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/46/25/80/46258054425f3f5c44ed1f046b084358.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera<br />
+                        1,717.49$<br />
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/aa/8c/78/aa8c789f0e6b2c0d0f7612fb411a9518.jpg">
+                    </div>
+                    <div class="view-img-content">
+                        Leica Digital Camera<br />
+                        1,717.49$<br />
+                        <a>
+                            <i class="fa-regular fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-thin fa-diamond-turn-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-card">
+                    <div class="view-img">
+                        <img
+                            src="https://i.pinimg.com/236x/1b/3d/7e/1b3d7eddebdb39fca285dbc9c5fb5657.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />

@@ -8,6 +8,9 @@
     width: 90vw;
     margin: auto;
 }
+header{
+    color:grey;
+}
 
 /* navbar section */
 /* phone navbar section */
@@ -44,20 +47,50 @@
     padding-bottom: 20px;
     font-size: 18px;
 }
+.navbar a{
+    cursor:pointer;
+}
+.navbar a:hover{
+    color:blue;
+}
 
 .nav-left {
     display: flex;
     justify-content: space-between;
     column-gap: 14px;
 }
+.faq-drop-down {
+    width: 16px;
+    cursor: pointer;
+    color: rgb(105, 105, 115);
+    background-color: white;
+    outline: unset;
+    border: unset;
+}
+.faq-drop-down option {
+    background-color: blue;
+    color: white;
+    font-family: roboto;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 30px;
+    border-radius: 20px;
+}
 .nav-left .home  span{
-    color:black;
+    color:grey;
     text-decoration:none;
+    cursor:pointer;
+}
+.nav-left .home  span:hover{
+    color:blue;
 }
 .nav-mid {
     display: flex;
     justify-content: space-between;
     column-gap: 14px;
+}
+.nav-left .home a{
+    text-decoration:none;
 }
 
 .nav-right {
@@ -108,6 +141,7 @@
     border: unset;
     width: 220px;
     height:32px;
+    padding-left:12px;
 }
 #search-page{
     background-color: #F5F5F5;
@@ -184,6 +218,27 @@
     padding: 20px;
     color: black;
 }
+.department #yellow:hover{
+    color:black;
+    background-color: white;
+    cursor:pointer;
+}
+.department #multilevel,#megamenu,#fullwidth{
+    padding:20px;
+    cursor:pointer;
+}
+.department #multilevel:hover{
+    color:black;
+    background-color: white;
+}
+.department #megamenu:hover{
+    color:black;
+    background-color: white;
+}
+.department #fullwidth:hover{
+    color:black;
+    background-color: white;
+}
 
 .department #new {
     background-color: yellow;
@@ -201,6 +256,14 @@
     padding: 2px;
     left: 8px;
     bottom: 25px;
+}
+.department #num{
+    padding:25px;
+    cursor:pointer;
+}
+.department #num:hover{
+    color:black;
+    background-color: white;
 }
 
 .search-emoji {
@@ -733,10 +796,16 @@ margin-bottom:20px;
     background-color: #e74a0a;
 }
 
-.most-view-cards {
+.recent-view-cards {
     display: flex;
     justify-content: space-between;
 }
+.most-view-cards {
+    display: flex;
+    justify-content: space-between;
+    display:none;
+}
+
 
 .view-card {
     display: flex;
@@ -791,10 +860,12 @@ margin-bottom:20px;
 
 #most-view-white {
     color: white;
+    cursor:pointer;
 }
 
 #most-view-grey {
     color: #C0C0C0;
+    cursor:pointer;
 }
 
 /* social icons */
@@ -854,6 +925,9 @@ margin-bottom:20px;
 
 .footer-last ul li a {
     text-decoration: none;
+}
+.footer-last ul li a:hover{
+    color:red;
 }
 
 .newsletter input {
