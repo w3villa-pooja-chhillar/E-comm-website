@@ -45,7 +45,7 @@ function showsearch_data(data) {
     let item = ``;
     data.items.forEach(element => {
         item += ` <div class="carts">
-      <div class="cart-image">
+      <div class="cart-image"  onclick="showproduct()">
           <img
               src="${element.img}">
           <button id="carts-sticker-a">-10%</button>
@@ -87,7 +87,7 @@ function showlist_data(data) {
     let view = ``;
     data.items.forEach(element => {
         view += ` <div class="list-cart">
-      <div class="list-cart-img">
+      <div class="list-cart-img" onclick="showproduct()">
           <img
               src="${element.img}">
               <button id="a">-56%</button>
@@ -141,7 +141,7 @@ async function search_data() {
         if (element.title.toLowerCase().match(a.toLocaleLowerCase())) {
             let cart_data = document.getElementById('cart-items');
             item += ` <div class="carts">
-           <div class="cart-image">
+           <div class="cart-image" onclick="showproduct()">
                <img
                    src="${element.img}">
                <button id="carts-sticker-a">-10%</button>
@@ -195,7 +195,7 @@ async function search_list(){
         if (element.title.toLowerCase().match(b.toLocaleLowerCase())){
             let list_data = document.getElementById('list-items');
             list+= ` <div class="list-cart">
-            <div class="list-cart-img">
+            <div class="list-cart-img" onclick="showproduct()">
                 <img
                     src="${element.img}">
                     <button id="a">-56%</button>
@@ -243,4 +243,35 @@ async function search_list(){
         document.getElementById('cart-items').style.display="none";
         document.getElementById('list-items').style.display="none";
     }
+}
+
+// recent view and most view section 
+function recentview(){
+    let recentcards = document.getElementById('recent-view-cards');
+    recentcards.style.display="flex";
+    let mostcards = document.getElementById('most-view-cards');
+    mostcards.style.display="none";
+    document.getElementById('most-view-line').style.marginLeft="unset";
+    document.getElementById('most-view-line').style.width="177px";
+    let mostview_content= document.getElementById('most-view-grey');
+    mostview_content.style.color="#C0C0C0";
+    let recentview_content= document.getElementById('most-view-white');
+    recentview_content.style.color="white";
+}
+
+function mostview(){
+    let recentcards = document.getElementById('recent-view-cards');
+    recentcards.style.display="none";
+    let mostcards = document.getElementById('most-view-cards');
+    mostcards.style.display="flex";
+    document.getElementById('most-view-line').style.marginLeft="185px";
+    document.getElementById('most-view-line').style.width="140px";
+    let mostview_content= document.getElementById('most-view-grey');
+    mostview_content.style.color="white";
+    let recentview_content= document.getElementById('most-view-white');
+    recentview_content.style.color="#C0C0C0";
+}
+// show product page after clicking on a product
+function showproduct(){
+    window.location = './product/product.html';
 }
