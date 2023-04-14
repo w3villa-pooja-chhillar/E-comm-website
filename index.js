@@ -1,3 +1,4 @@
+// fetching data from JSON file
 async function readdata() {
     const res1 = await fetch('./items.json');
     const data1 = await res1.json();
@@ -78,10 +79,6 @@ function showfeatureCard(Data) {
         }
     })
 };
-
-
-// <button onclick="addToCart(${element.id})">Add to Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-// <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
 
 // show blog card data on html file 
 function showblog(arrayOfData) {
@@ -234,7 +231,6 @@ function showquote(arrayOfData) {
         }
     })
 }
-// done quote  carousel card data shown in html 
 
 // show carousel-collection data on html file
 function showcollections(arrayOfData) {
@@ -267,18 +263,6 @@ function showcollections(arrayOfData) {
         }
     })
 }
-// show most view section on html page 
-// arrayOfData.forEach(element => {
-//     view += ` <div class="sl">
-//     <div class="view">
-//         <img
-//             src="${element.img}">
-//     </div>
-//     <h4>
-//         ${element.content}
-//     </h4>
-// </div>`
-// });
 
 
 
