@@ -27,11 +27,25 @@ header .container .nav {
     color: rgba(105, 105, 115, 1);;
 }
 .nav-mid a{
-    opacity: 0.5;
+    opacity: 0.7;
+    cursor:pointer;
+}
+.nav-mid a:hover{
+    color:blue;
+}
+.nav-right a{
+    cursor:pointer;
+}
+.nav-right a:hover{
+    color:blue;
 }
 .nav-left a{
+    cursor:pointer;
     text-decoration: none;
     color: rgba(105, 105, 115, 1);
+}
+.nav-left  a:hover{
+    color:blue;
 }
 .faq-drop-down{
     width:16px;
@@ -40,6 +54,15 @@ header .container .nav {
     cursor:pointer;
     color:rgba(105, 105, 115, 1);
     background-color:white;
+}
+.faq-drop-down option{
+    background-color: blue;
+    color:white;
+    font-family: roboto;
+    padding:30px;
+    font-size:20px;
+    line-height:1.6;
+    border-radius:20px;
 }
 
 /* End nav bar Section */
