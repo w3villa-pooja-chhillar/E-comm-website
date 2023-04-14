@@ -1334,10 +1334,8 @@ display:none;
 .search-container{
     position:relative;
 }
-.search-pagination{
-        left: 620px;
-        position: absolute;
-        bottom: -6px;
+.wishlist-pagination{
+       height:50px;
     
 }
 .shop-block{

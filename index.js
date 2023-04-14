@@ -292,42 +292,6 @@ function showmostview(arrayOfData) {
 // working search function 
 
 // show search items
-// async function searching() {
-//     const searchItems = []
-//     let searchdata = document.getElementById("search").value;
-//     if (searchdata) {
-//         let fetchsearch = await fetch('./items.json');
-//         let fetchres = await fetchsearch.json();
-//         fetchres.products.forEach((element) => {
-//             if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
-//                 searchItems.push(element)
-//             }
-//         }
-//         )
-//         let arr = []
-//         let paginationContainer = document.getElementById("search-pagination")
-//         let mypagei = `<div class="pagination">
-//     <a href="#">&laquo;</a>`
-//         const page = Math.ceil(searchItems.length / 4);
-//         localStorage.setItem("pages", page);
-//         for (let i = 1; i <= page; i++) {
-//             let pageProductPagination = {
-//                 page: i,
-//                 pageProduct: searchItems.slice(i * 4 - 4, i * 4)
-//             }
-//             arr.push(pageProductPagination)
-//             localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
-//             mypagei += `
-//         <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
-//         }
-//         mypagei += `<a href="#">&raquo;</a>
-//     </div>`;
-//         paginationContainer.innerHTML = mypagei
-//         showPaginationProduct("page-1")
-//     } else {
-//         location.reload()
-//     }
-// }
 async function searching() {
     let search_data = document.getElementById('search').value;
     if (!search_data.length) {
@@ -338,67 +302,18 @@ async function searching() {
         window.location = './search.html';
     }
 }
-function showPaginationProduct(id) {
-    let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
-    console.log(paginationProducts)
-    let html = ""
-    let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
-    console.log(itemsArr)
-    itemsArr.pageProduct.forEach((element) => {
-        html += `<div class="item">
-                       <div class="card" style="width: 15rem;">
-                            <div class="card-img-top">
-                               <img src="${element.img}"
-                                   alt="Card image cap">
-                         </div>
-                           <div class="card-body">
-                               <h2 class="card-title">${element.title}</h2>
-                                ${element.price}
-                                <p class="card-text">${element.content}</p><br />
-                               <button>Add to
-                                  Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                               <i class="fa-regular fa-heart"></i>
-                            <i class="fa-light fa-route-interstate"></i>
-                         </div>
-                        </div>
-               </div>`
-    })
-    document.getElementById("shop-block").innerHTML = html;
-    if (html != '') {
-        document.getElementById("shop-block").style.display = "flex";
-        document.getElementById('section-hide').style.display = "none";
-        document.getElementById('main-hide').style.display = "none";
-        document.getElementById('shop-hide').style.display = "none";
-        document.getElementById('people-saying-hide').style.display = "none";
-        document.getElementById('feature-pro').style.display = "none";
-        document.getElementById('carousel-card-container').style.display = "none";
-        document.getElementById('feature-category-hide').style.display = "none";
-        document.getElementById('show-cart').style.display = "none";
-        document.getElementById('wishlist').style.display = "none";
-    }
-    else {
-        document.getElementById('section-hide').style.display = "block";
-        document.getElementById('main-hide').style.display = "block";
-        document.getElementById('shop-hide').style.display = "block";
-        document.getElementById('people-saying-hide').style.display = "block";
-        document.getElementById('feature-pro').style.display = "block";
-        document.getElementById('carousel-card-container').style.display = "block";
-        document.getElementById('feature-category-hide').style.display = "block";
-    }
-
-}
 // ************Login-Register-Logout Section
 
 
 // ***************** show a new tab of login page 
 function login() {
-    if(!localStorage.getItem('login')){
+    if (!localStorage.getItem('login')) {
         alert("Please Register first")
     }
-   else if(localStorage.getItem('login')== "false"){
-    window.location = './Login/login.html';
+    else if (localStorage.getItem('login') == "false") {
+        window.location = './Login/login.html';
     }
-    else{
+    else {
         alert("you are already login");
     }
 }
@@ -623,6 +538,7 @@ async function showCart() {
         document.getElementById('carousel-card-container').style.display = "none";
         document.getElementById('feature-category-hide').style.display = "none";
         document.getElementById('wishlist').style.display = "none";
+         document.getElementById('wishlist-pagination').style.display = "none";
     }
     else {
         alert('nothing to see in cart');
@@ -664,26 +580,104 @@ async function removefromCart(id) {
 
     }
 }
-// Wishlist Section
-async function showWishlist() {
-    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
-    if (wishItems == null) {
-        alert('nothing to see in wishlist');
-    }
-    wishItems.sort((a, b) => {
-        if (a > b) {
-            return 1
-        } else {
-            return -1
-        }
-    })
+// async function searching() {
+//     const searchItems = []
+//     let searchdata = document.getElementById("search").value;
+//     if (searchdata) {
+//         let fetchsearch = await fetch('./items.json');
+//         let fetchres = await fetchsearch.json();
+//         fetchres.products.forEach((element) => {
+//             if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
+//                 searchItems.push(element)
+//             }
+//         }
+//         )
+//         let arr = []
+//         let paginationContainer = document.getElementById("search-pagination")
+//         let mypagei = `<div class="pagination">
+//     <a href="#">&laquo;</a>`
+//         const page = Math.ceil(searchItems.length / 4);
+//         localStorage.setItem("pages", page);
+//         for (let i = 1; i <= page; i++) {
+//             let pageProductPagination = {
+//                 page: i,
+//                 pageProduct: searchItems.slice(i * 4 - 4, i * 4)
+//             }
+//             arr.push(pageProductPagination)
+//             localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
+//             mypagei += `
+//         <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
+//         }
+//         mypagei += `<a href="#">&raquo;</a>
+//     </div>`;
+//         paginationContainer.innerHTML = mypagei
+//         showPaginationProduct("page-1")
+//     } else {
+//         location.reload()
+//     }
+// }
+
+
+// function showPaginationProduct(id) {
+//     let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
+//     console.log(paginationProducts)
+//     let html = ""
+//     let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
+//     console.log(itemsArr)
+//     itemsArr.pageProduct.forEach((element) => {
+//         html += `<div class="item">
+//                        <div class="card" style="width: 15rem;">
+//                             <div class="card-img-top">
+//                                <img src="${element.img}"
+//                                    alt="Card image cap">
+//                          </div>
+//                            <div class="card-body">
+//                                <h2 class="card-title">${element.title}</h2>
+//                                 ${element.price}
+//                                 <p class="card-text">${element.content}</p><br />
+//                                <button>Add to
+//                                   Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+//                                <i class="fa-regular fa-heart"></i>
+//                             <i class="fa-light fa-route-interstate"></i>
+//                          </div>
+//                         </div>
+//                </div>`
+//     })
+//     document.getElementById("shop-block").innerHTML = html;
+//     if (html != '') {
+//         document.getElementById("shop-block").style.display = "flex";
+//         document.getElementById('section-hide').style.display = "none";
+//         document.getElementById('main-hide').style.display = "none";
+//         document.getElementById('shop-hide').style.display = "none";
+//         document.getElementById('people-saying-hide').style.display = "none";
+//         document.getElementById('feature-pro').style.display = "none";
+//         document.getElementById('carousel-card-container').style.display = "none";
+//         document.getElementById('feature-category-hide').style.display = "none";
+//         document.getElementById('show-cart').style.display = "none";
+//         document.getElementById('wishlist').style.display = "none";
+//     }
+//     else {
+//         document.getElementById('section-hide').style.display = "block";
+//         document.getElementById('main-hide').style.display = "block";
+//         document.getElementById('shop-hide').style.display = "block";
+//         document.getElementById('people-saying-hide').style.display = "block";
+//         document.getElementById('feature-pro').style.display = "block";
+//         document.getElementById('carousel-card-container').style.display = "block";
+//         document.getElementById('feature-category-hide').style.display = "block";
+//     }
+
+// }
+async function showWishlistPagination(id) {
+    let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
+    let html = ""
+    let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
     let index = 0;
     const data8 = await fetch('./items.json');
     const res8 = await data8.json();
-    let html = ""
-    res8.products.forEach((element) => {
-        if (element.id == wishItems[index]) {
-            html += ` <div class="item">
+    itemsArr.pageProduct.forEach((item) => {
+        res8.products.forEach((element) => {
+            if (element.id == item) {
+                html += ` <div class="item">
                 <div class="card">
                     <div class="card-img-top">
                         <img src="${element.img}"
@@ -712,10 +706,10 @@ async function showWishlist() {
                         </div>
                     </div>
                 </div>
-            </div>
-       `
-            index++;
-        }
+            </div>`
+            }
+        })
+        // res8.products.forEach(())
     })
     document.getElementById('wishlist').innerHTML = html;
     if (html != '') {
@@ -730,7 +724,7 @@ async function showWishlist() {
         document.getElementById('feature-category-hide').style.display = "none";
         document.getElementById('shop-block').style.display = "none";
         document.getElementById("show-cart").style.display = "none";
-        document.getElementById('search-pagination').style.display = "none";
+        document.getElementById('wishlist-pagination').style.display = "flex";
 
     }
     else {
@@ -747,6 +741,124 @@ async function showWishlist() {
         document.getElementById('search-pagination').style.display = "none";
     }
 }
+async function showWishlist() {
+    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    if (wishItems == null) {
+        alert('nothing to see in wishlist');
+    }
+    wishItems.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+    let arr = []
+    let paginationContainer = document.getElementById("wishlist-pagination")
+    let mypagei = `<div class="pagination">
+    <a href="#">&laquo;</a>`
+    const page = Math.ceil(wishItems.length / 4);
+    localStorage.setItem("wishlist-pages", page);
+    for (let i = 1; i <= page; i++) {
+        let pageProductPagination = {
+            page: i,
+            pageProduct: wishItems.slice(i * 4 - 4, i * 4)
+        }
+        arr.push(pageProductPagination)
+        localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
+        mypagei += `
+                    <a id="page-${i}" onclick="showWishlistPagination(this.id)"href="#">${i}</a>`
+    }
+    mypagei += `<a href="#">&raquo;</a>
+                     </div>`;
+    paginationContainer.innerHTML = mypagei
+    showWishlistPagination("page-1");
+}
+
+
+// Wishlist Section
+// async function showWishlist() {
+//     let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+//     if (wishItems == null) {
+//         alert('nothing to see in wishlist');
+//     }
+//     wishItems.sort((a, b) => {
+//         if (a > b) {
+//             return 1
+//         } else {
+//             return -1
+//         }
+//     })
+//     let index = 0;
+//     const data8 = await fetch('./items.json');
+//     const res8 = await data8.json();
+//     let html = ""
+//     res8.products.forEach((element) => {
+//         if (element.id == wishItems[index]) {
+//             html += ` <div class="item">
+//                 <div class="card">
+//                     <div class="card-img-top">
+//                         <img src="${element.img}"
+//                             alt="Card image cap">
+//                     </div>
+//                     <div class="card-grey-line">
+//                         <a id="ericson">Ericson</a>
+//                         <a id="model">Model 15</a>
+//                     </div>
+//                     <div class="card-body">
+//                         <h2 class="card-title">${element.title}</h2>
+//                         <a id="carousel-price">${element.price}</a><br />
+//                         <div class="carousel-addcart">
+//                             <div>
+//                                 <input type="number" value="2">
+//                                 <button id="1"  onclick="addToCart(${element.id})">ADD TO CART</button>
+//                             </div>
+//                             <div id="carousel-heart">
+//                                 <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
+//                                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
+//                             </div>
+//                         </div>
+//                         <div class="last-carousel-greyline">
+//                             <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+//                             <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//        `
+//             index++;
+//         }
+//     })
+//     document.getElementById('wishlist').innerHTML = html;
+//     if (html != '') {
+//         document.getElementById('heart').style.color = "red";
+//         document.getElementById("wishlist").style.display = "flex";
+//         document.getElementById('section-hide').style.display = "none";
+//         document.getElementById('main-hide').style.display = "none";
+//         document.getElementById('shop-hide').style.display = "none";
+//         document.getElementById('people-saying-hide').style.display = "none";
+//         document.getElementById('feature-pro').style.display = "none";
+//         document.getElementById('carousel-card-container').style.display = "none";
+//         document.getElementById('feature-category-hide').style.display = "none";
+//         document.getElementById('shop-block').style.display = "none";
+//         document.getElementById("show-cart").style.display = "none";
+//         document.getElementById('search-pagination').style.display = "none";
+
+//     }
+//     else {
+//         alert('nothing to see in wishlist');
+//         document.getElementById('section-hide').style.display = "block";
+//         document.getElementById('main-hide').style.display = "block";
+//         document.getElementById('shop-hide').style.display = "block";
+//         document.getElementById('people-saying-hide').style.display = "block";
+//         document.getElementById('feature-pro').style.display = "block";
+//         document.getElementById('carousel-card-container').style.display = "block";
+//         document.getElementById('feature-category-hide').style.display = "block";
+//         document.getElementById('heart').style.color = "black";
+//         document.getElementById('shop-block').style.display = "none";
+//         document.getElementById('search-pagination').style.display = "none";
+//     }
+// }
 
 //  remove from Wishlist section 
 function removefromWishlist(id) {
@@ -773,7 +885,7 @@ function onload() {
         a.innerHTML = (JSON.parse(localStorage.getItem('registerdata')).username);
         let r = document.getElementById('journal-register');
         r.innerHTML =
-        `<div class="journal-register-a">
+            `<div class="journal-register-a">
         <i class="fa-solid fa-right-from-bracket"></i>
         </div>
         <div class="journal-register-b" id="register-form" onclick="logout()">
@@ -975,11 +1087,11 @@ async function blogclick(id) {
 
 // Log-out function
 function logout() {
-    document.getElementById('login-form').innerHTML= "Login";
+    document.getElementById('login-form').innerHTML = "Login";
     localStorage.setItem('login', 'false');
     let r = document.getElementById('journal-register');
     r.innerHTML =
-    `<div class="journal-register-a">
+        `<div class="journal-register-a">
     <i class="fa-solid fa-right-from-bracket"></i>
     </div>
     <div class="journal-register-b" id="register-form" onclick="register()">
