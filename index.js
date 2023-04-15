@@ -469,183 +469,63 @@ function addtoWishlist(id) {
 
     }
 }
-
-
-
-
 // Show Cart Section here
-async function showCart() {
-    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    if (cartItems == null) {
-        alert('nothing to see in cart');
-    }
-    //  Sort the  store id of cartitems
-    cartItems.sort((a, b) => {
-        if (a > b) {
-            return 1
-        } else {
-            return -1
-        }
-    })
-    let z = 0;
-    const data7 = await fetch('./items.json');
-    const res7 = await data7.json();
-    let html = "";
-    res7.products.forEach((element) => {
-        if (element.id == cartItems[z]) {
-            html += `
-            <div class="item">
-            <div class="card">
-                <div class="card-img-top">
-                    <img src="${element.img}"
-                        alt="Card image cap">
-                </div>
-                <div class="card-grey-line">
-                    <a id="ericson">Ericson</a>
-                    <a id="model">Model 15</a>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">${element.title}</h2>
-                    <a id="carousel-price">${element.price}</a><br />
-                    <div class="carousel-addcart">
-                        <div>
-                            <input type="number" value="2">
-                            <button id="1" onclick="removefromCart(${element.id})">REMOVE FROM CART</button>
-                        </div>
-                        <div id="carousel-heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        </div>
-                    </div>
-                    <div class="last-carousel-greyline">
-                        <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
-                        <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
-                    </div>
-                </div>
-            </div>
-        </div>`
-            z++;
-        }
-    })
-    document.getElementById('show-cart').innerHTML = html;
-    if (html != '') {
-        document.getElementById("show-cart").style.display = "flex";
-        document.getElementById('section-hide').style.display = "none";
-        document.getElementById('main-hide').style.display = "none";
-        document.getElementById('shop-hide').style.display = "none";
-        document.getElementById('people-saying-hide').style.display = "none";
-        document.getElementById('feature-pro').style.display = "none";
-        document.getElementById('carousel-card-container').style.display = "none";
-        document.getElementById('feature-category-hide').style.display = "none";
-        document.getElementById('wishlist').style.display = "none";
-         document.getElementById('wishlist-pagination').style.display = "none";
-    }
-    else {
-        alert('nothing to see in cart');
-        document.getElementById('section-hide').style.display = "block";
-        document.getElementById('main-hide').style.display = "block";
-        document.getElementById('shop-hide').style.display = "block";
-        document.getElementById('people-saying-hide').style.display = "block";
-        document.getElementById('feature-pro').style.display = "block";
-        document.getElementById('carousel-card-container').style.display = "block";
-        document.getElementById('feature-category-hide').style.display = "block";
-    }
-
-}
-// remove from cart section here
-async function removefromCart(id) {
-    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    const index = cartItems.indexOf(id);
-    if (index >= 0) {
-        cartItems.splice(index, 1);
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
-    alert('item is removed from cart');
-    if (JSON.parse(localStorage.getItem('item-counter')) > 0) {
-        let totalItem = JSON.parse(localStorage.getItem('item-counter')) - 1;
-        localStorage.setItem('item-counter', JSON.stringify(totalItem));
-        document.getElementById('items-counter').innerText = totalItem;
-    }
-    if ((localStorage.getItem('item-price')) > 0) {
-        const res9 = await fetch('./items.json');
-        const data9 = await res9.json();
-        data9.products.forEach(element => {
-            if (element.id == id) {
-                let current_price = localStorage.getItem('item-price');
-                current_price -= Number(element.price.split("$")[1]);
-                localStorage.setItem('item-price', current_price);
-                document.getElementById('total-price').innerText = current_price;
-            }
-        })
-
-    }
-}
-// async function searching() {
-//     const searchItems = []
-//     let searchdata = document.getElementById("search").value;
-//     if (searchdata) {
-//         let fetchsearch = await fetch('./items.json');
-//         let fetchres = await fetchsearch.json();
-//         fetchres.products.forEach((element) => {
-//             if ((element.title.toLowerCase().match(searchdata.toLowerCase())) && (searchdata)) {
-//                 searchItems.push(element)
-//             }
-//         }
-//         )
-//         let arr = []
-//         let paginationContainer = document.getElementById("search-pagination")
-//         let mypagei = `<div class="pagination">
-//     <a href="#">&laquo;</a>`
-//         const page = Math.ceil(searchItems.length / 4);
-//         localStorage.setItem("pages", page);
-//         for (let i = 1; i <= page; i++) {
-//             let pageProductPagination = {
-//                 page: i,
-//                 pageProduct: searchItems.slice(i * 4 - 4, i * 4)
-//             }
-//             arr.push(pageProductPagination)
-//             localStorage.setItem("myPaginationProducts", JSON.stringify(arr))
-//             mypagei += `
-//         <a id="page-${i}" onclick="showPaginationProduct(this.id)" href="#">${i}</a> `
-//         }
-//         mypagei += `<a href="#">&raquo;</a>
-//     </div>`;
-//         paginationContainer.innerHTML = mypagei
-//         showPaginationProduct("page-1")
-//     } else {
-//         location.reload()
+// async function showCart() {
+//     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+//     if (cartItems == null) {
+//         alert('nothing to see in cart');
 //     }
-// }
-
-
-// function showPaginationProduct(id) {
-//     let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
-//     console.log(paginationProducts)
-//     let html = ""
-//     let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
-//     console.log(itemsArr)
-//     itemsArr.pageProduct.forEach((element) => {
-//         html += `<div class="item">
-//                        <div class="card" style="width: 15rem;">
-//                             <div class="card-img-top">
-//                                <img src="${element.img}"
-//                                    alt="Card image cap">
-//                          </div>
-//                            <div class="card-body">
-//                                <h2 class="card-title">${element.title}</h2>
-//                                 ${element.price}
-//                                 <p class="card-text">${element.content}</p><br />
-//                                <button>Add to
-//                                   Cart</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-//                                <i class="fa-regular fa-heart"></i>
-//                             <i class="fa-light fa-route-interstate"></i>
-//                          </div>
-//                         </div>
-//                </div>`
+//     //  Sort the  store id of cartitems
+//     cartItems.sort((a, b) => {
+//         if (a > b) {
+//             return 1
+//         } else {
+//             return -1
+//         }
 //     })
-//     document.getElementById("shop-block").innerHTML = html;
+//     let z = 0;
+//     const data7 = await fetch('./items.json');
+//     const res7 = await data7.json();
+//     let html = "";
+//     res7.products.forEach((element) => {
+//         if (element.id == cartItems[z]) {
+//             html += `
+//             <div class="item">
+//             <div class="card">
+//                 <div class="card-img-top">
+//                     <img src="${element.img}"
+//                         alt="Card image cap">
+//                 </div>
+//                 <div class="card-grey-line">
+//                     <a id="ericson">Ericson</a>
+//                     <a id="model">Model 15</a>
+//                 </div>
+//                 <div class="card-body">
+//                     <h2 class="card-title">${element.title}</h2>
+//                     <a id="carousel-price">${element.price}</a><br />
+//                     <div class="carousel-addcart">
+//                         <div>
+//                             <input type="number" value="2">
+//                             <button id="1" onclick="removefromCart(${element.id})">REMOVE FROM CART</button>
+//                         </div>
+//                         <div id="carousel-heart">
+//                             <i class="fa-regular fa-heart"></i>
+//                             <i class="fa-solid fa-arrow-right-arrow-left"></i>
+//                         </div>
+//                     </div>
+//                     <div class="last-carousel-greyline">
+//                         <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+//                         <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>`
+//             z++;
+//         }
+//     })
+//     document.getElementById('show-cart').innerHTML = html;
 //     if (html != '') {
-//         document.getElementById("shop-block").style.display = "flex";
+//         document.getElementById("show-cart").style.display = "flex";
 //         document.getElementById('section-hide').style.display = "none";
 //         document.getElementById('main-hide').style.display = "none";
 //         document.getElementById('shop-hide').style.display = "none";
@@ -653,10 +533,11 @@ async function removefromCart(id) {
 //         document.getElementById('feature-pro').style.display = "none";
 //         document.getElementById('carousel-card-container').style.display = "none";
 //         document.getElementById('feature-category-hide').style.display = "none";
-//         document.getElementById('show-cart').style.display = "none";
 //         document.getElementById('wishlist').style.display = "none";
+//          document.getElementById('wishlist-pagination').style.display = "none";
 //     }
 //     else {
+//         alert('nothing to see in cart');
 //         document.getElementById('section-hide').style.display = "block";
 //         document.getElementById('main-hide').style.display = "block";
 //         document.getElementById('shop-hide').style.display = "block";
@@ -667,6 +548,74 @@ async function removefromCart(id) {
 //     }
 
 // }
+async function showCartPagination(id) {
+    let paginationProducts = JSON.parse(localStorage.getItem("showPaginationProducts"));
+    let html = ""
+    let itemsArr = paginationProducts.find((item) => Number(item.page) === Number(id.split("-")[1]))
+    let index = 0;
+    const data9 = await fetch('./items.json');
+    const res9 = await data9.json();
+    itemsArr.pageProduct.forEach((item) => {
+        res9.products.forEach((element) => {
+            if (element.id == item) {
+                html += `<div class="item">
+                            <div class="card">
+                                <div class="card-img-top">
+                                    <img src="${element.img}"
+                                        alt="Card image cap">
+                                </div>
+                                <div class="card-grey-line">
+                                    <a id="ericson">Ericson</a>
+                                    <a id="model">Model 15</a>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title">${element.title}</h2>
+                                    <a id="carousel-price">${element.price}</a><br />
+                                    <div class="carousel-addcart">
+                                        <div>
+                                            <input type="number" value="2">
+                                            <button id="1" onclick="removefromCart(${element.id})">REMOVE FROM CART</button>
+                                        </div>
+                                        <div id="carousel-heart">
+                                            <i class="fa-regular fa-heart" onclick="addtoWishlist(${element.id})"></i>
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </div>
+                                    </div>
+                                    <div class="last-carousel-greyline">
+                                        <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
+                                        <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+            }
+        })
+    })
+    document.getElementById('show-cart').innerHTML = html;
+    if (html != '') {
+                document.getElementById("show-cart").style.display = "flex";
+                document.getElementById('section-hide').style.display = "none";
+                document.getElementById('main-hide').style.display = "none";
+                document.getElementById('shop-hide').style.display = "none";
+                document.getElementById('people-saying-hide').style.display = "none";
+                document.getElementById('feature-pro').style.display = "none";
+                document.getElementById('carousel-card-container').style.display = "none";
+                document.getElementById('feature-category-hide').style.display = "none";
+                document.getElementById('wishlist').style.display = "none";
+                 document.getElementById('wishlist-pagination').style.display = "none";
+                 document.getElementById('show-cart-pagination').style.display="flex";
+            }
+            else {
+                alert('nothing to see in cart');
+                document.getElementById('section-hide').style.display = "block";
+                document.getElementById('main-hide').style.display = "block";
+                document.getElementById('shop-hide').style.display = "block";
+                document.getElementById('people-saying-hide').style.display = "block";
+                document.getElementById('feature-pro').style.display = "block";
+                document.getElementById('carousel-card-container').style.display = "block";
+                document.getElementById('feature-category-hide').style.display = "block";
+            }
+}
 async function showWishlistPagination(id) {
     let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
     let html = ""
@@ -725,6 +674,7 @@ async function showWishlistPagination(id) {
         document.getElementById('shop-block').style.display = "none";
         document.getElementById("show-cart").style.display = "none";
         document.getElementById('wishlist-pagination').style.display = "flex";
+        document.getElementById('show-cart-pagination').style.display="none";
 
     }
     else {
@@ -740,6 +690,42 @@ async function showWishlistPagination(id) {
         document.getElementById('shop-block').style.display = "none";
         document.getElementById('search-pagination').style.display = "none";
     }
+}
+
+// show cart items 
+async function showCart() {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    if (cartItems == null) {
+        alert('nothing to see in cart');
+    }
+    //  Sort the  store id of cartitems
+    cartItems.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+    let arr = []
+    let paginationContainer = document.getElementById("show-cart-pagination");
+    let mypagei = `<div class="pagination">
+    <a href="#">&laquo;</a>`
+    const page = Math.ceil(cartItems.length / 4);
+    localStorage.setItem("show-cart-pages", page);
+    for (let i = 1; i <= page; i++) {
+        let show_cart_Pagination = {
+            page: i,
+            pageProduct: cartItems.slice(i * 4 - 4, i * 4)
+        }
+        arr.push(show_cart_Pagination)
+        localStorage.setItem("showPaginationProducts", JSON.stringify(arr))
+        mypagei += `
+                    <a id="page-${i}" onclick="showCartPagination(this.id)"href="#">${i}</a>`
+    }
+    mypagei += `<a href="#">&raquo;</a>
+    </div>`;
+    paginationContainer.innerHTML = mypagei
+    showCartPagination("page-1");
 }
 async function showWishlist() {
     let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
@@ -776,90 +762,6 @@ async function showWishlist() {
 }
 
 
-// Wishlist Section
-// async function showWishlist() {
-//     let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
-//     if (wishItems == null) {
-//         alert('nothing to see in wishlist');
-//     }
-//     wishItems.sort((a, b) => {
-//         if (a > b) {
-//             return 1
-//         } else {
-//             return -1
-//         }
-//     })
-//     let index = 0;
-//     const data8 = await fetch('./items.json');
-//     const res8 = await data8.json();
-//     let html = ""
-//     res8.products.forEach((element) => {
-//         if (element.id == wishItems[index]) {
-//             html += ` <div class="item">
-//                 <div class="card">
-//                     <div class="card-img-top">
-//                         <img src="${element.img}"
-//                             alt="Card image cap">
-//                     </div>
-//                     <div class="card-grey-line">
-//                         <a id="ericson">Ericson</a>
-//                         <a id="model">Model 15</a>
-//                     </div>
-//                     <div class="card-body">
-//                         <h2 class="card-title">${element.title}</h2>
-//                         <a id="carousel-price">${element.price}</a><br />
-//                         <div class="carousel-addcart">
-//                             <div>
-//                                 <input type="number" value="2">
-//                                 <button id="1"  onclick="addToCart(${element.id})">ADD TO CART</button>
-//                             </div>
-//                             <div id="carousel-heart">
-//                                 <i class="fa-regular fa-heart" onclick="removefromWishlist(${element.id})"></i>
-//                                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
-//                             </div>
-//                         </div>
-//                         <div class="last-carousel-greyline">
-//                             <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
-//                             <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//        `
-//             index++;
-//         }
-//     })
-//     document.getElementById('wishlist').innerHTML = html;
-//     if (html != '') {
-//         document.getElementById('heart').style.color = "red";
-//         document.getElementById("wishlist").style.display = "flex";
-//         document.getElementById('section-hide').style.display = "none";
-//         document.getElementById('main-hide').style.display = "none";
-//         document.getElementById('shop-hide').style.display = "none";
-//         document.getElementById('people-saying-hide').style.display = "none";
-//         document.getElementById('feature-pro').style.display = "none";
-//         document.getElementById('carousel-card-container').style.display = "none";
-//         document.getElementById('feature-category-hide').style.display = "none";
-//         document.getElementById('shop-block').style.display = "none";
-//         document.getElementById("show-cart").style.display = "none";
-//         document.getElementById('search-pagination').style.display = "none";
-
-//     }
-//     else {
-//         alert('nothing to see in wishlist');
-//         document.getElementById('section-hide').style.display = "block";
-//         document.getElementById('main-hide').style.display = "block";
-//         document.getElementById('shop-hide').style.display = "block";
-//         document.getElementById('people-saying-hide').style.display = "block";
-//         document.getElementById('feature-pro').style.display = "block";
-//         document.getElementById('carousel-card-container').style.display = "block";
-//         document.getElementById('feature-category-hide').style.display = "block";
-//         document.getElementById('heart').style.color = "black";
-//         document.getElementById('shop-block').style.display = "none";
-//         document.getElementById('search-pagination').style.display = "none";
-//     }
-// }
-
 //  remove from Wishlist section 
 function removefromWishlist(id) {
     alert('item is removed from wishlist');
@@ -869,6 +771,34 @@ function removefromWishlist(id) {
     localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
 }
 
+// remove from cart section here
+async function removefromCart(id) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    const index = cartItems.indexOf(id);
+    if (index >= 0) {
+        cartItems.splice(index, 1);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+    alert('item is removed from cart');
+    if (JSON.parse(localStorage.getItem('item-counter')) > 0) {
+        let totalItem = JSON.parse(localStorage.getItem('item-counter')) - 1;
+        localStorage.setItem('item-counter', JSON.stringify(totalItem));
+        document.getElementById('items-counter').innerText = totalItem;
+    }
+    if ((localStorage.getItem('item-price')) > 0) {
+        const res9 = await fetch('./items.json');
+        const data9 = await res9.json();
+        data9.products.forEach(element => {
+            if (element.id == id) {
+                let current_price = localStorage.getItem('item-price');
+                current_price -= Number(element.price.split("$")[1]);
+                localStorage.setItem('item-price', current_price);
+                document.getElementById('total-price').innerText = current_price;
+            }
+        })
+
+    }
+}
 // on load function
 function onload() {
     // alert('page is loaded');
