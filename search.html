@@ -67,7 +67,7 @@
                 </div>
                 <div class="nav-mid">
                     <div class="english">
-                          <a> 🇦🇺&nbspEnglish </a> <select class="faq-drop-down">
+                        <a> 🇦🇺&nbspEnglish </a> <select class="faq-drop-down">
                             <option></option>
                             <option>English</option>
                             <option>Arabic</option>
@@ -160,8 +160,8 @@
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                     </div>
-                    <input id="search" type="text" placeholder="Search here...">
-                    <i id="mag-glass" class="fa-solid fa-magnifying-glass"></i>
+                    <input id="search" type="text" id="search" placeholder="Search here...">
+                    <i id="mag-glass" class="fa-solid fa-magnifying-glass" onclick="search_items()"></i>
                 </div>
                 <div class="journal-icon">
                     <div class="journal-login">
@@ -215,10 +215,10 @@
                         </span>
                     </span>
                     <a id="multilevel"> MULTILEVEL
-                        </a>
-                        <a id="megamenu">  MEGA MENU 
-                            </a>
-                            <a id="fullwidth">FULLWIDTH</a> 
+                    </a>
+                    <a id="megamenu"> MEGA MENU
+                    </a>
+                    <a id="fullwidth">FULLWIDTH</a>
                     <span id="new">New</span>
                 </div>
                 <div class="department-call">
@@ -259,11 +259,11 @@
                             <div class="price">
                                 Price
                             </div>
-                            <div class="avail-add" onclick="addpart_price()">
+                            <div class="avail-add" id="price-add" onclick="addpart_price()">
                                 +
                             </div>
                         </div>
-                        <div class="add-part-slider">
+                        <div class="add-part-slider" id="add-part-slider">
                             <input type="range" class="min" min="0" max="1000" value="300" step="10">
                             <input type="range" class="max" min="0" max="1000" value="700" step="10">
                         </div>
@@ -696,8 +696,7 @@
             <div class="recent-view-cards" id="recent-view-cards">
                 <div class="view-card">
                     <div class="view-img">
-                        <img
-                            src="https://i.pinimg.com/236x/37/9b/9c/379b9ca997c177c66fe28f6e49a907ea.jpg">
+                        <img src="https://i.pinimg.com/236x/37/9b/9c/379b9ca997c177c66fe28f6e49a907ea.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />
@@ -713,8 +712,7 @@
             <div class="most-view-cards" id="most-view-cards">
                 <div class="view-card">
                     <div class="view-img">
-                        <img
-                            src="https://i.pinimg.com/236x/49/7b/5a/497b5adce223498b7d488fa380b4aff3.jpg">
+                        <img src="https://i.pinimg.com/236x/49/7b/5a/497b5adce223498b7d488fa380b4aff3.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />
@@ -728,8 +726,7 @@
                 </div>
                 <div class="view-card">
                     <div class="view-img">
-                        <img
-                            src="https://i.pinimg.com/236x/46/25/80/46258054425f3f5c44ed1f046b084358.jpg">
+                        <img src="https://i.pinimg.com/236x/46/25/80/46258054425f3f5c44ed1f046b084358.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />
@@ -743,8 +740,7 @@
                 </div>
                 <div class="view-card">
                     <div class="view-img">
-                        <img
-                            src="https://i.pinimg.com/236x/aa/8c/78/aa8c789f0e6b2c0d0f7612fb411a9518.jpg">
+                        <img src="https://i.pinimg.com/236x/aa/8c/78/aa8c789f0e6b2c0d0f7612fb411a9518.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />
@@ -758,8 +754,7 @@
                 </div>
                 <div class="view-card">
                     <div class="view-img">
-                        <img
-                            src="https://i.pinimg.com/236x/1b/3d/7e/1b3d7eddebdb39fca285dbc9c5fb5657.jpg">
+                        <img src="https://i.pinimg.com/236x/1b/3d/7e/1b3d7eddebdb39fca285dbc9c5fb5657.jpg">
                     </div>
                     <div class="view-img-content">
                         Leica Digital Camera<br />

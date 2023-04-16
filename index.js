@@ -290,7 +290,6 @@ function showmostview(arrayOfData) {
     mostview.innerHTML = view;
 }
 // working search function 
-
 // show search items
 async function searching() {
     let search_data = document.getElementById('search').value;
@@ -695,6 +694,12 @@ async function showWishlistPagination(id) {
 // show cart items 
 async function showCart() {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    let item=(localStorage.getItem('item-counter'))
+    console.log(item);
+    if(item==0){
+        alert("nothing to see in cart")
+        window.location='./index.html';
+    }
     if (cartItems == null) {
         alert('nothing to see in cart');
     }
@@ -729,8 +734,9 @@ async function showCart() {
 }
 async function showWishlist() {
     let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
-    if (wishItems == null) {
+    if (wishItems.length == 0) {
         alert('nothing to see in wishlist');
+        window.location='./index.html';
     }
     wishItems.sort((a, b) => {
         if (a > b) {
