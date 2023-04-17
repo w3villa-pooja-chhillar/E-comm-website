@@ -865,7 +865,11 @@
     border: none;
     background-color: #e74a0a;
 }
-
+.most-view-item{
+    display:flex;
+    column-gap:30px;
+    display:none;
+}
 .most-view-cards {
     display: flex;
     column-gap:30px;
@@ -927,10 +931,12 @@
 
 #most-view-white {
     color: white;
+    cursor:pointer;
 }
 
 #most-view-grey {
     color: #C0C0C0;
+    cursor:pointer;
 }
 
 /* social icons */
