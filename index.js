@@ -159,7 +159,7 @@ function showcarousel(arrayOfData) {
                     </div>
                     <div class="last-carousel-greyline">
                         <a id="buy-carous"><i id="green" class="fa-solid fa-dollar-sign"></i>&nbspBuy Now</a>
-                        <a id="question-carous"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
+                        <a id="question-carous" onclick="showmodal()"> <i id="red" class="fa-solid fa-question"></i>&nbspQuestions</a>
                     </div>
                 </div>
             </div>
@@ -1044,3 +1044,22 @@ function logout() {
         Register
     </div>`
 }
+
+
+// modal javacsript
+
+var modal = document.getElementById('modal');
+
+function showmodal(){
+    modal.style.display="block"
+}
+function closemodal(){
+    modal.style.display="none"
+}
+// window.onclick = function(event) {
+//     if(event.target == "a#question-carous" && event.target != "div#modal.modal"){
+//         return
+//     }else{
+//         modal.style.display="none"
+//     }
+// }
