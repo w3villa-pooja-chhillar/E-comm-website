@@ -84,3 +84,21 @@ function peoplebought(){
    document.getElementById('people-bought-line').style.marginLeft="230px"
    document.getElementById('related-product-item').style.color="grey"
 }
+
+// recently view and mostly view
+function mostview(){
+document.getElementById('most-view-cards').style.display="none"
+document.getElementById('most-view-item').style.display="flex"
+document.getElementById('most-view-grey').style.color="white"
+document.getElementById('most-view-white').style.color="grey"
+document.getElementById('most-view-line').style.marginLeft="190px"
+document.getElementById('most-view-line').style.width="118px"
+}
+function recentview(){
+   document.getElementById('most-view-cards').style.display="flex"
+   document.getElementById('most-view-item').style.display="none"
+   document.getElementById('most-view-grey').style.color="grey"
+   document.getElementById('most-view-white').style.color="white"
+   document.getElementById('most-view-line').style.marginLeft="6px"
+   document.getElementById('most-view-line').style.width="140px" 
+}
