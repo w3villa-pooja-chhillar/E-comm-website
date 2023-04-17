@@ -729,15 +729,29 @@
     padding: 10px;
     border-radius: 4px;
 }
-
+/* prople-bought section start here */
+.people-bought-images{
+      display: flex;
+      column-gap: 70px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display:none;
+}
 /* related product section start here */
 .related-images{
     display:flex;
     column-gap: 50px;
+    /* display:none; */
 }
 #related-products{
     background-color: #DCDCDC;
     padding-top: 30px;
+}
+#related-product-item{
+    cursor:pointer
+}
+#people-bought{
+    cursor:pointer;
 }
 .related-text{
     font-size:20px;
@@ -979,6 +993,9 @@
 
 .footer-last ul li a {
     text-decoration: none;
+}
+.footer-last ul li a:hover{
+    color:red;
 }
 
 .newsletter input {

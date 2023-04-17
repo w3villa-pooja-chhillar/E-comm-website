@@ -68,3 +68,19 @@ function custom_tab(){
    document.getElementById('specification').style.color="grey"
    document.getElementById('description').style.color="grey"
 }
+
+// related product aand people also bought product
+function relatedproduct(){
+   document.getElementById('related-images').style.display="flex"
+   document.getElementById('people-bought-images').style.display="none"
+   document.getElementById('people-bought').style.color="grey"
+   document.getElementById('people-bought-line').style.marginLeft="10px"
+   document.getElementById('related-product-item').style.color="black"
+}
+function peoplebought(){
+   document.getElementById('related-images').style.display="none"
+   document.getElementById('people-bought-images').style.display="flex"
+   document.getElementById('people-bought').style.color="black"
+   document.getElementById('people-bought-line').style.marginLeft="230px"
+   document.getElementById('related-product-item').style.color="grey"
+}
