@@ -311,6 +311,7 @@ header .container .journal {
     display: flex;
     justify-content: space-between;
     margin-top: 14px;
+    cursor:pointer;
 }
 
 .watch-pic {
@@ -318,7 +319,22 @@ header .container .journal {
     height: 220px;
     width: 360px;
 }
-
+.watch-pic:hover::after{
+    content: "";
+    position: absolute;
+    width:360px;
+    height:220px;
+    left:0px;
+    background-color: #20305930;
+}
+.com-pic:hover::after{
+    content: "";
+    position: absolute;
+    width:360px;
+    height:220px;
+    left:0px;
+    background-color: #20305930;
+}
 #text-over-watch {
     position: absolute;
     bottom: 62px;
