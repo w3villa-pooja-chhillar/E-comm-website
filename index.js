@@ -59,6 +59,8 @@ function showfeatureCard(Data) {
         margin: 10,
         responsiveClass: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -105,6 +107,8 @@ function showblog(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -169,6 +173,8 @@ function showcarousel(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -217,6 +223,8 @@ function showquote(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -249,6 +257,8 @@ function showcollections(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
+        autoplay:true,
+        autoplayTimeout:3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
