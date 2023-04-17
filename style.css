@@ -201,7 +201,7 @@ header .container .journal {
     background-color: white;
     color: black;
 }
-.department #multilevel,#megamenu,#fullwidth{
+.department #multilevel,#megamenu,#full-width{
     padding:15px;
 }
 .department #multilevel:hover{

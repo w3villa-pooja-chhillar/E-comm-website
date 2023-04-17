@@ -246,13 +246,13 @@
                     </div>
                     <div class="product-content">
                         <div class="description-line">
-                            <a id="description">DESCRIPTIONS</a>
-                            <a id="specification">SPECIFICATIONS</a>
-                            <a id="review">REVIEWS</a>
-                            <a id="custom">CUSTOM TABS</a>
-                            <hr>
+                            <a id="description" onclick="description()">DESCRIPTIONS</a>
+                            <a id="specification" onclick="specification()">SPECIFICATIONS</a>
+                            <a id="review" onclick="reviews()">REVIEWS</a>
+                            <a id="custom" onclick="custom_tab()">CUSTOM TABS</a>
+                            <hr id="description-line">
                         </div>
-                        <div class="product-description">
+                        <div class="product-description"  id="product-description">
                             <a>This product has been professionally inspected and tested to be fully functional by the
                                 Sellers.
                                 Product may be packed in a non-branded box.Accessories may not be original but have
@@ -274,6 +274,53 @@
                                     class="fa-regular fa-chevron-down"></i>&nbsp&nbspShow more</button>
                             <button id="show-less" onclick="showless()"> <i
                                     class="fa-regular fa-chevron-down"></i>&nbsp&nbspShow Less</button>
+                        </div>
+                        <div class="specification-description" id="specification-description">
+                            <div class="style">STYLE</div>
+                            <div class="style-seek">
+                                <a>Style</a>
+                                <a id="sleek">Sleek</a>
+                            </div>
+                            <div class="style">COMPOSITION </div>
+                            <div class="style-seek">
+                                <a>Ingredients</a>
+                                <a class="specific right-text">Aluminium</a>
+                            </div>
+                            <div class="style-seek">
+                                <a>Test 1</a>
+                                <a class="specific right-text">30 GB</a>
+                            </div>
+                            <div class="style">PROCESSOR </div>
+                            <div class="style-seek">
+                                <a>Clockspeed</a>
+                                <a id="sleek">100mhz</a>
+                            </div>
+                        </div>
+                        <div class="reviews-description" id="reviews-description">
+                            <div class="demo-demo">
+                                <a id="demo">Demo Demo</a>
+                                <a>09/03/2021</a>
+                            </div>
+                            <div class="review-content"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat".
+                                <div id="star-line">
+                                    <i class="fa-solid fa-star yellow-star"></i>
+                                    <i class="fa-solid fa-star yellow-star"></i>
+                                    <i class="fa-solid fa-star yellow-star"></i>
+                                    <i class="fa-solid fa-star yellow-star"></i>
+                                    <i class="fa-thin fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-description" id="custom-description">
+                            People just ignore them if they are the only highlighting features of the
+                            product description.
+                            Product Descriptions is where you can include the
+                            benefits of using the product. Since most of the benefits will be buyer search
+                            terms they strengthen your listing value.
                         </div>
                         <div id="star-line">
                             <i class="fa-solid fa-star yellow-star"></i>
