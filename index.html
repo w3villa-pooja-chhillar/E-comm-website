@@ -112,20 +112,14 @@
                 </div>
             </div>
             <!-- End  nav bar Section for laptop view -->
-
-
-
-
-
             <!-- Start journal Section of laptop view -->
-
             <div class="journal">
                 <div class="con">
                     <div class="journal-logo">
                         <h1>JOURNAL</h1>
                     </div>
                     <div class="jounal-search">
-                        <div class="search-all">All
+                        <div class="search-all">All&nbsp
                             <i class="fa-solid fa-caret-down"></i>
                         </div>
                         <input id="search" type="text" placeholder="Search here...">
@@ -1634,14 +1628,7 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- End about us section here -->
-
-
-
-
-
             <!-- Start copyright Section here -->
             <div class="copyright">
                 <div class="con">
@@ -1653,9 +1640,46 @@
             </div>
     </div>
     </section>
-
-
-
+    <div class="modal" id="modal">
+        <div class="ask-modal">
+            Ask a question about the product
+            <span class="close" onclick="closemodal()">&times;</span>
+            <hr id="modal-line">
+        </div>
+        <div class="modal-name">
+            <div class="name"> Your Name <a id="star">*</a>
+            </div>
+            <div class="name-input">
+                <input type="text" placeholder="Your name">
+            </div>
+        </div>
+        <div class="modal-mail">
+            <div class="mail"> Your E-mail <a id="star">*</a>
+            </div>
+            <div class="mail-input">
+                <input type="text" placeholder="Your E-mail">
+            </div>
+        </div>
+        <div class="modal-topic">
+            <div class="topic"> Topic <a id="star">*</a>
+            </div>
+            <div class="topic-select">
+                <select>
+                    <option>--Please Select--</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Beauty</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-message">
+            <div class="msg">Message</div>
+            <input type="text" placeholder="Message">
+        </div>
+        <div class="submit">
+            <button>Submit</button>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1736,8 +1760,8 @@
             loop: true,
             margin: 10,
             responsiveClass: true,
-            autoplay:true,
-            autoplayTimeout:3000,
+            autoplay: true,
+            autoplayTimeout: 3000,
             nav: true,
             responsiveBaseElement: 'body',
             responsive: {
@@ -1783,8 +1807,8 @@
             loop: true,
             margin: 10,
             responsiveClass: true,
-            autoplay:true,
-            autoplayTimeout:3000,
+            autoplay: true,
+            autoplayTimeout: 3000,
             nav: true,
 
             responsiveBaseElement: 'body',
