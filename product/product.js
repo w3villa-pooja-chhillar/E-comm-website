@@ -92,7 +92,7 @@ document.getElementById('most-view-item').style.display="flex"
 document.getElementById('most-view-grey').style.color="white"
 document.getElementById('most-view-white').style.color="grey"
 document.getElementById('most-view-line').style.marginLeft="190px"
-document.getElementById('most-view-line').style.width="120px"
+document.getElementById('most-view-line').style.width="118px"
 }
 function recentview(){
    document.getElementById('most-view-cards').style.display="flex"
