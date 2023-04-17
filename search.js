@@ -1,6 +1,3 @@
-// function gridview(){
-//    alert("grid-view");
-// }
 
 function addpart_price() {
     document.getElementsByClassName('add-part-slider')[0].style.display = "block";
