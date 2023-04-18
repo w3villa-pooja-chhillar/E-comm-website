@@ -267,7 +267,6 @@ header .container .journal {
     border-radius: 3px;
 }
 
-
 /* Department Section next to journal Section  */
 .department {
     font-family: 'Source Sans Pro', sans-serif;
@@ -276,6 +275,54 @@ header .container .journal {
     justify-content: space-between;
     background-color: rgba(13, 82, 214, 1);
     padding: 15px;
+}
+.department.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.all-department {
+    position: relative;
+}
+
+.depart-drop-down {
+    position: absolute;
+    z-index: 10;
+    background-color: #F5F5F5;
+    color: grey;
+    width: 255px;
+    height: 290px;
+    font-size: 20px;
+    line-height: 2;
+    font-family: 'roboto';
+    border-radius: 5px;
+    top: 49px;
+    left: -2px;
+    display:none;
+}
+.depart-drop-down li:hover .dep-shop-drop-down{
+    display:flex;
+}
+.shop-img-content {
+    display: flex;
+    width: 600px;
+}
+
+.all-department:hover .depart-drop-down {
+    display: block;
+}
+
+.depart-drop-down li {
+    list-style: none;
+    padding: 4px 4px 4px 30px;
+}
+
+.depart-drop-down li:hover {
+    color: black;
+    background-color: white;
 }
 
 .department #num {
@@ -294,6 +341,65 @@ header .container .journal {
     cursor: pointer;
 }
 
+#shop-by-category {
+    position: relative;
+}
+
+.depart-shop-drop-down {
+    width: 75%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dep-shop-drop-down {
+    position: absolute;
+    left: 255px;
+    top: 0px;
+    display: flex;
+    width: 1080px;
+    background-color: white;
+    height: 570px;
+    display:none;
+}
+
+.dep-shop-img {
+    margin:60px;
+    width: 300px;
+    height: 415px;
+}
+
+.dep-shop-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.depart-shop-drop-down .shop-el {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.depart-shop-drop-down .see-all {
+    font-size: 18px;
+    color: black;
+}
+
+.depart-shop-drop-down .shop-health {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.depart-drop-down a {
+    font-weight: bold;
+    font-size: 26px;
+    padding-left: 20px;
+    color:black;
+}
+
 .department #yellow:hover {
     background-color: white;
     color: black;
@@ -304,7 +410,84 @@ header .container .journal {
 #full-width {
     padding: 15px;
 }
-
+#megamenu{
+    position:relative;
+}
+#multilevel{
+    position:relative;
+}
+#megamenu .dep-mega-drop-down{
+    position:absolute;
+    background-color: #F5F5F5;
+    color: grey;
+    padding:10px;
+    z-index:9;
+    width:89vw;
+    font-size:22px;
+    border-radius:5px;
+    height:480px;
+    /* left:0px; */
+    top:50px;
+    line-height:2;
+    display:flex;
+    justify-content: space-between;
+    display:none;
+}
+.dep-mega-drop-down .dp-mg-a,.dp-mg-b,.dp-mg-c,.dp-mg-d{
+    border-right:0.3px solid grey;
+    padding-right:60px;
+}
+.dep-mega-drop-down div :hover{
+    color:black;
+}
+.dp-mg-e{
+    height:420px;
+    width:270px;
+    margin-top:30px;
+    margin-right:40px;
+}
+.dp-mg-e img:hover{
+    transform:scale(1.1);
+}
+.dp-mg-e img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:10px;
+}
+#multilevel .dep-multi-drop-down{
+    position:absolute;
+    background-color: #F5F5F5;
+    color: grey;
+    padding:10px;
+    z-index:9;
+    width:120px;
+    border-radius:5px;
+    height:170px;
+    left:0px;
+    top:50px;
+    line-height:1.8;
+    display:none;
+}
+#multilevel:hover .dep-multi-drop-down{
+    display:block;
+}
+#megamenu:hover .dep-mega-drop-down{
+    display:flex;
+    justify-content:space-between;
+}
+#megamenu .dep-mega-drop-down li{
+    list-style:none;
+    font-size:19px;
+}
+#multilevel:hover .dep-multi-drop-down li:hover{
+    color:black;
+    background-color: white;
+}
+#multilevel .dep-multi-drop-down li{
+    list-style:none;
+    font-size:19px;
+}
 .department #multilevel:hover {
     background-color: white;
     color: black;

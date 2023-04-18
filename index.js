@@ -59,8 +59,8 @@ function showfeatureCard(Data) {
         margin: 10,
         responsiveClass: true,
         nav: true,
-        autoplay:true,
-        autoplayTimeout:3000,
+        autoplay: true,
+        autoplayTimeout: 3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -107,8 +107,8 @@ function showblog(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
-        autoplay:true,
-        autoplayTimeout:3000,
+        autoplay: true,
+        autoplayTimeout: 3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -173,8 +173,8 @@ function showcarousel(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
-        autoplay:true,
-        autoplayTimeout:3000,
+        autoplay: true,
+        autoplayTimeout: 3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -223,8 +223,8 @@ function showquote(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
-        autoplay:true,
-        autoplayTimeout:3000,
+        autoplay: true,
+        autoplayTimeout: 3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -257,8 +257,8 @@ function showcollections(arrayOfData) {
         margin: 10,
         responsiveClass: true,
         nav: true,
-        autoplay:true,
-        autoplayTimeout:3000,
+        autoplay: true,
+        autoplayTimeout: 3000,
         responsiveBaseElement: 'body',
         responsive: {
             0: {
@@ -602,28 +602,28 @@ async function showCartPagination(id) {
     })
     document.getElementById('show-cart').innerHTML = html;
     if (html != '') {
-                document.getElementById("show-cart").style.display = "flex";
-                document.getElementById('section-hide').style.display = "none";
-                document.getElementById('main-hide').style.display = "none";
-                document.getElementById('shop-hide').style.display = "none";
-                document.getElementById('people-saying-hide').style.display = "none";
-                document.getElementById('feature-pro').style.display = "none";
-                document.getElementById('carousel-card-container').style.display = "none";
-                document.getElementById('feature-category-hide').style.display = "none";
-                document.getElementById('wishlist').style.display = "none";
-                 document.getElementById('wishlist-pagination').style.display = "none";
-                 document.getElementById('show-cart-pagination').style.display="flex";
-            }
-            else {
-                alert('nothing to see in cart');
-                document.getElementById('section-hide').style.display = "block";
-                document.getElementById('main-hide').style.display = "block";
-                document.getElementById('shop-hide').style.display = "block";
-                document.getElementById('people-saying-hide').style.display = "block";
-                document.getElementById('feature-pro').style.display = "block";
-                document.getElementById('carousel-card-container').style.display = "block";
-                document.getElementById('feature-category-hide').style.display = "block";
-            }
+        document.getElementById("show-cart").style.display = "flex";
+        document.getElementById('section-hide').style.display = "none";
+        document.getElementById('main-hide').style.display = "none";
+        document.getElementById('shop-hide').style.display = "none";
+        document.getElementById('people-saying-hide').style.display = "none";
+        document.getElementById('feature-pro').style.display = "none";
+        document.getElementById('carousel-card-container').style.display = "none";
+        document.getElementById('feature-category-hide').style.display = "none";
+        document.getElementById('wishlist').style.display = "none";
+        document.getElementById('wishlist-pagination').style.display = "none";
+        document.getElementById('show-cart-pagination').style.display = "flex";
+    }
+    else {
+        alert('nothing to see in cart');
+        document.getElementById('section-hide').style.display = "block";
+        document.getElementById('main-hide').style.display = "block";
+        document.getElementById('shop-hide').style.display = "block";
+        document.getElementById('people-saying-hide').style.display = "block";
+        document.getElementById('feature-pro').style.display = "block";
+        document.getElementById('carousel-card-container').style.display = "block";
+        document.getElementById('feature-category-hide').style.display = "block";
+    }
 }
 async function showWishlistPagination(id) {
     let paginationProducts = JSON.parse(localStorage.getItem("myPaginationProducts"));
@@ -683,7 +683,7 @@ async function showWishlistPagination(id) {
         document.getElementById('shop-block').style.display = "none";
         document.getElementById("show-cart").style.display = "none";
         document.getElementById('wishlist-pagination').style.display = "flex";
-        document.getElementById('show-cart-pagination').style.display="none";
+        document.getElementById('show-cart-pagination').style.display = "none";
 
     }
     else {
@@ -704,11 +704,11 @@ async function showWishlistPagination(id) {
 // show cart items 
 async function showCart() {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    let item=(localStorage.getItem('item-counter'))
+    let item = (localStorage.getItem('item-counter'))
     console.log(item);
-    if(item==0){
+    if (item == 0) {
         alert("nothing to see in cart")
-        window.location='./index.html';
+        window.location = './index.html';
     }
     if (cartItems == null) {
         alert('nothing to see in cart');
@@ -743,10 +743,10 @@ async function showCart() {
     showCartPagination("page-1");
 }
 async function showWishlist() {
-    let wishItems = JSON.parse(localStorage.getItem("wishlistItems"));
+    let wishItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
     if (wishItems.length == 0) {
         alert('nothing to see in wishlist');
-        window.location='./index.html';
+        window.location = './index.html';
     }
     wishItems.sort((a, b) => {
         if (a > b) {
@@ -921,9 +921,6 @@ async function handleclick(id) {
         }
     })
 }
-
-
-
 // why buy from us handle click  
 async function clickhandle(id) {
     let currentActive = document.getElementById(id);
@@ -1050,11 +1047,11 @@ function logout() {
 
 var modal = document.getElementById('modal');
 
-function showmodal(){
-    modal.style.display="block"
+function showmodal() {
+    modal.style.display = "block"
 }
-function closemodal(){
-    modal.style.display="none"
+function closemodal() {
+    modal.style.display = "none"
 }
 // window.onclick = function(event) {
 //     if(event.target == "a#question-carous" && event.target != "div#modal.modal"){
@@ -1063,3 +1060,15 @@ function closemodal(){
 //         modal.style.display="none"
 //     }
 // }
+// making department section sticky to the screen
+function offset() {
+    let a = document.getElementsByClassName('department')[0];
+    if (window.pageYOffset > a.offsetTop) {
+        a.classList.add("fixed")
+        document.getElementById('sales').style.display="none"
+        document.getElementById('new').style.display="none"
+    }else{
+        a.classList.remove("fixed")
+    }
+}
+window.addEventListener("scroll",offset)
