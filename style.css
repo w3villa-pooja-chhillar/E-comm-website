@@ -130,9 +130,11 @@ header .container .nav {
 .vh:hover ul {
     display: block;
 }
-.vh:hover .nav-mid a{
-    opacity:1;
+
+.vh:hover .nav-mid a {
+    opacity: 1;
 }
+
 .vh,
 .hv {
     cursor: pointer;
@@ -423,9 +425,11 @@ header .container .journal {
     height: 220px;
     width: 360px;
 }
+
 .watch-pic:hover {
     transform: scale(1.007);
 }
+
 .com-pic:hover {
     transform: scale(1.007);
 }
@@ -481,7 +485,6 @@ header .container .journal {
     font-family: 'Source Sans Pro', sans-serif;
     margin-top: 5px;
 }
-
 
 /* Start top-right second computer section */
 .com-pic {
