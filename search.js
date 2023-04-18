@@ -1,18 +1,58 @@
 
 function addpart_price() {
     document.getElementsByClassName('add-part-slider')[0].style.display = "block";
+    plus_sign = (document.getElementById('price-add'))
+    plus_sign.innerHTML =
+        `<i class="fa-solid fa-minus" id="price-toggle-icon" onclick="removepart_price()"></i>`
+}
+function removepart_price() {
+    document.getElementById('add-part-slider').style.display = "none";
+    minus_sign = document.getElementById('price-add')
+    minus_sign.innerHTML = `<i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_price()"></i>`
 }
 function addpart_availbility() {
     document.getElementsByClassName('add-part-avail')[0].style.display = "block";
+    plus_sign = (document.getElementById('avail-add'))
+    plus_sign.innerHTML =
+        `<i class="fa-solid fa-minus" id="price-toggle-icon" onclick="removepart_avail()"></i>`
 }
+function removepart_avail() {
+    document.getElementById('add-part-avail').style.display = "none";
+    minus_sign = document.getElementById('avail-add')
+    minus_sign.innerHTML = `<i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_availbility()"></i>`
+}
+
 function addpart_subcategory() {
     document.getElementsByClassName('add-part-subcat')[0].style.display = "block";
+    plus_sign = (document.getElementById('sub-cat-add'))
+    plus_sign.innerHTML =
+        `<i class="fa-solid fa-minus" id="price-toggle-icon" onclick="removepart_subcategory()"></i>`
 }
-function addpart_color() {
-    document.getElementsByClassName('add-part-color')[0].style.display = "block";
+function removepart_subcategory() {
+    document.getElementById('add-part-subcat').style.display = "none";
+    minus_sign = document.getElementById('sub-cat-add')
+    minus_sign.innerHTML = `<i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_subcategory()"></i>`
 }
 function addpart_brand() {
     document.getElementsByClassName('add-part-brand')[0].style.display = "block";
+    plus_sign = (document.getElementById('brand-add-part'))
+    plus_sign.innerHTML =
+        `<i class="fa-solid fa-minus" id="price-toggle-icon" onclick="removepart_brand()"></i>`
+}
+function removepart_brand() {
+    document.getElementById('add-part-brand').style.display = "none";
+    minus_sign = document.getElementById('brand-add-part')
+    minus_sign.innerHTML = `<i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_brand()"></i>`
+}
+function addpart_color() {
+    document.getElementsByClassName('add-part-color')[0].style.display = "block";
+    minus_sign = document.getElementById('color-add-part')
+    minus_sign.innerHTML = `<i class="fa-solid fa-minus" id="price-toggle-icon" onclick="removepart_color()"></i>`
+}
+function removepart_color() {
+    document.getElementById('add-part-color').style.display = "none";
+    minus_sign = document.getElementById('color-add-part')
+    minus_sign.innerHTML = `<i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_color()"></i>`
 }
 function listview() {
     search_list();
@@ -28,8 +68,6 @@ function gridview() {
     document.getElementsByClassName('cart-items')[0].style.display = "grid";
     document.getElementById('end-list').style.display = "flex";
 }
-
-
 // fetch grid items from json
 async function readsearch_data() {
     const res1 = await fetch('./search-item.json');

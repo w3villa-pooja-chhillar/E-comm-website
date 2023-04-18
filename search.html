@@ -259,24 +259,30 @@
                             <div class="price">
                                 Price
                             </div>
-                            <div class="avail-add" id="price-add" onclick="addpart_price()">
-                                +
+                            <div class="avail-add" id="price-add">
+                                <i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_price()"></i>
                             </div>
                         </div>
                         <div class="add-part-slider" id="add-part-slider">
                             <input type="range" class="min" min="0" max="1000" value="300" step="10">
                             <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                            <div class="input-range">
+                                <button>180</button>
+                                <a>$</a>
+                                <button>3600</button>
+                                <a>$</a>
+                            </div>
                         </div>
                         <hr>
                         <div class="price-section">
                             <div class="avail">
                                 Avaialbility
                             </div>
-                            <div class="avail-add" onclick="addpart_availbility()">
-                                +
+                            <div class="avail-add" id="avail-add">
+                                <i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_availbility()"></i>
                             </div>
                         </div>
-                        <div class="add-part-avail">
+                        <div class="add-part-avail" id="add-part-avail">
                             <div id="stock"> <input type="checkbox"> In Stock
                                 &nbsp&nbsp&nbsp&nbsp&nbsp
                                 <input type="checkbox"> Out of stock
@@ -287,11 +293,11 @@
                             <div class="avail">
                                 Sub category
                             </div>
-                            <div class="avail-add" onclick="addpart_subcategory()">
-                                +
+                            <div class="avail-add" id="sub-cat-add">
+                                <i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_subcategory()"></i>
                             </div>
                         </div>
-                        <div class="add-part-subcat">
+                        <div class="add-part-subcat" id="add-part-subcat">
                             <div class="sub-img">
                                 <img src="https://i.pinimg.com/236x/f2/25/dc/f225dcadb6f08f49e6246d94bf0e1572.jpg">
                                 <a>Electronics</a>
@@ -302,11 +308,11 @@
                             <div class="avail">
                                 Brands
                             </div>
-                            <div class="avail-add" onclick="addpart_brand()">
-                                +
+                            <div class="avail-add" id="brand-add-part">
+                                <i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_brand()"></i>
                             </div>
                         </div>
-                        <div class="add-part-brand">
+                        <div class="add-part-brand" id="add-part-brand">
                             <div class="brand-img">
                                 <div class="brand-img-a">
                                     <img src="https://i.pinimg.com/236x/b1/61/7d/b1617dde668db5f425a27c16f29a035e.jpg">
@@ -327,7 +333,7 @@
                                 Select
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -336,7 +342,7 @@
                                 Radio
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -344,11 +350,11 @@
                             <div class="avail">
                                 Color
                             </div>
-                            <div class="avail-add" onclick="addpart_color()">
-                                +
+                            <div class="avail-add" id="color-add-part">
+                                <i class="fa-solid fa-plus" id="price-toggle-icon" onclick="addpart_color()"></i>
                             </div>
                         </div>
-                        <div class="add-part-color">
+                        <div class="add-part-color" id="add-part-color">
                             <div class="color-img">
                                 <div class="color-a"></div>
                                 <div class="color-b"></div>
@@ -362,7 +368,7 @@
                                 Clockspeed
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -371,7 +377,7 @@
                                 Test-1
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -380,7 +386,7 @@
                                 No. of Cores
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -389,7 +395,7 @@
                                 Style
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -398,7 +404,7 @@
                                 Features
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                         <hr>
@@ -407,7 +413,7 @@
                                 Test-2
                             </div>
                             <div class="avail-add">
-                                +
+                                <i class="fa-solid fa-plus"></i>
                             </div>
                         </div>
                     </div>
