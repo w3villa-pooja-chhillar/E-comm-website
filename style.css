@@ -19,7 +19,6 @@
 header .container .nav {
     /* display: flex; */
     font-size: 18px;
-    /* justify-content: space-between; */
     padding: 20px;
     background-color: white;
 }
@@ -30,8 +29,11 @@ header .container .nav {
 }
 
 .nav-mid a {
-    opacity: 0.7;
     cursor: pointer;
+}
+
+.nav-mid {
+    position: relative;
 }
 
 .nav-mid a:hover {
@@ -42,8 +44,16 @@ header .container .nav {
     cursor: pointer;
 }
 
+.nav-right {
+    position: relative;
+}
+
 .nav-right a:hover {
     color: blue;
+}
+
+.nav-left {
+    position: relative;
 }
 
 .nav-left a {
@@ -63,6 +73,69 @@ header .container .nav {
     cursor: pointer;
     color: rgba(105, 105, 115, 1);
     background-color: white;
+}
+
+.fq-drop-down ul {
+    position: absolute;
+    right: -27px;
+    top: 21px;
+    list-style: none;
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: roboto;
+    border-radius: 5px;
+    z-index: 9;
+    width: 95px;
+}
+
+.vh {
+    display: inline-block;
+}
+
+.eng-drop-down ul {
+    display: none;
+}
+
+.eng-drop-down ul {
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    list-style: none;
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: roboto;
+    border-radius: 5px;
+    z-index: 9;
+    width: 95px;
+}
+
+.hv {
+    display: inline-block;
+}
+
+.hv ul {
+    display: none;
+}
+
+.hv:hover ul {
+    display: block;
+}
+
+.vh:hover ul {
+    display: block;
+}
+.vh:hover .nav-mid a{
+    opacity:1;
+}
+.vh,
+.hv {
+    cursor: pointer;
 }
 
 .faq-drop-down option {
@@ -349,6 +422,12 @@ header .container .journal {
     position: relative;
     height: 220px;
     width: 360px;
+}
+.watch-pic:hover {
+    transform: scale(1.007);
+}
+.com-pic:hover {
+    transform: scale(1.007);
 }
 
 .watch-pic:hover::after {
@@ -1675,20 +1754,22 @@ header .container .journal {
 }
 
 /* modal styling */
-.modal{
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     overflow: auto;
-    font-family:'roboto';
-    margin-left:555px;
-    margin-top:200px;
+    font-family: 'roboto';
+    margin-left: 555px;
+    margin-top: 200px;
 }
-#question-carous:hover{
-    color:red;
+
+#question-carous:hover {
+    color: red;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -1696,78 +1777,94 @@ header .container .journal {
     border: 1px solid #888;
     width: 80%;
 }
-.close{
-    cursor:pointer;
-     font-size:25px;
-     padding-left: 120px;
+
+.close {
+    cursor: pointer;
+    font-size: 25px;
+    padding-left: 120px;
 }
-.modal{
+
+.modal {
     height: 440px;
     width: 500px;
     background-color: white;
     border-radius: 8px;
 }
-.ask-modal{
-    font-size:20px;
-    font-weight:bold;
-    padding:20px;
-    position:relative;
+
+.ask-modal {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
 }
-#modal-line{
-    width:70px;
-    position:absolute;
-    left:30px;
+
+#modal-line {
+    width: 70px;
+    position: absolute;
+    left: 30px;
     background-color: red;
-    padding:0.75px;
-    border:unset;
-    margin-top:10px;
+    padding: 0.75px;
+    border: unset;
+    margin-top: 10px;
 }
-.modal-name,.modal-mail,.modal-topic,.modal-message{
-    margin-top:20px;
+
+.modal-name,
+.modal-mail,
+.modal-topic,
+.modal-message {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    margin-left:30px;
+    margin-left: 30px;
 }
-#star{
-    color:red
+
+#star {
+    color: red
 }
-.name-input input{
-    width:200px;
-    height:25px;
-    margin-right:60px;
-    font-size:16px;
+
+.name-input input {
+    width: 200px;
+    height: 25px;
+    margin-right: 60px;
+    font-size: 16px;
 }
-.mail-input input{
-    width:200px;
-    height:25px;
-    font-size:16px;
-    margin-right:60px;
+
+.mail-input input {
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+    margin-right: 60px;
 }
-.modal-message input{
-    width:250px;
-    height:110px;
-    font-size:18px;
-    margin-right:20px;
+
+.modal-message input {
+    width: 250px;
+    height: 110px;
+    font-size: 18px;
+    margin-right: 20px;
 }
-.topic-select select{
-    width:200px;
-    height:25px;
-    margin-right:65px;
+
+.topic-select select {
+    width: 200px;
+    height: 25px;
+    margin-right: 65px;
 }
-.topic-select select{
-    font-size:16px;
+
+.topic-select select {
+    font-size: 16px;
 }
-.submit button{
-    background-color:blue;
-    color:white;
-    font-size:20px;
-    padding:7px;
-    border-radius:3px;
-    width:450px;
-    margin-top:30px;
-    margin-left:20px;
+
+.submit button {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 3px;
+    width: 450px;
+    margin-top: 30px;
+    margin-left: 20px;
 }
+
 /* Break points section here */
 
 
