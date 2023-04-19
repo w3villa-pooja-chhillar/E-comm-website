@@ -29,8 +29,12 @@
     justify-content: space-between;
     column-gap: 14px;
 }
-.nav-left .home  span{
+/* .nav-left .home  span{
     text-decoration:none;
+} */
+.nav-left #home{
+    color:grey;
+    text-decoration: none;
 }
 .nav-mid {
     display: flex;
