@@ -113,7 +113,9 @@ let price = document.getElementById('red-price');
 data1.items.forEach(element => {
    if(element.id==a){
    product_img.innerHTML =`
-   <img src="${element.img}">`
+   <img src="${element.img}">
+   <div class="img-sticker">-10%</div>
+   <div class="img-hot-sticker">HOT</div>`
    small_img.innerHTML =`<img src= ${element.img}>`
    price.innerHTML =`${element.price}`
    }
