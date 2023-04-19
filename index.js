@@ -1069,6 +1069,8 @@ function offset() {
         document.getElementById('new').style.display="none"
     }else{
         a.classList.remove("fixed")
+        document.getElementById('sales').style.display="unset"
+        document.getElementById('new').style.display="unset"
     }
 }
-window.addEventListener("scroll",offset)
+window.addEventListener("scroll",offset);
