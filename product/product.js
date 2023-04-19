@@ -102,3 +102,21 @@ function recentview(){
    document.getElementById('most-view-line').style.marginLeft="6px"
    document.getElementById('most-view-line').style.width="140px" 
 }
+// show corresponding product on product page after clicking on search page
+ async function showproduct(){
+let a = localStorage.getItem('search-product')
+const res1 = await fetch('../search-item.json');
+const data1 = await res1.json();
+let product_img = document.getElementById('product-img');
+let small_img = document.getElementById('main_img');
+let price = document.getElementById('red-price');
+data1.items.forEach(element => {
+   if(element.id==a){
+   product_img.innerHTML =`
+   <img src="${element.img}">`
+   small_img.innerHTML =`<img src= ${element.img}>`
+   price.innerHTML =`${element.price}`
+   }
+});
+}
+showproduct();

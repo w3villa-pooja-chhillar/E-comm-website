@@ -82,7 +82,7 @@ function showsearch_data(data) {
     let item = ``;
     data.items.forEach(element => {
         item += ` <div class="carts">
-      <div class="cart-image"  onclick="showproduct()">
+      <div class="cart-image"  onclick="showproduct(${element.id})">
           <img
               src="${element.img}">
           <button id="carts-sticker-a">-10%</button>
@@ -124,7 +124,7 @@ function showlist_data(data) {
     let view = ``;
     data.items.forEach(element => {
         view += ` <div class="list-cart">
-      <div class="list-cart-img" onclick="showproduct()">
+      <div class="list-cart-img" onclick="showproduct(${element.id})">
           <img
               src="${element.img}">
               <button id="a">-56%</button>
@@ -177,7 +177,7 @@ async function search_items() {
         if (element.title.toLowerCase().match(a.toLocaleLowerCase())) {
             let cart_data = document.getElementById('cart-items');
             item += ` <div class="carts">
-           <div class="cart-image" onclick="showproduct()">
+           <div class="cart-image" onclick="showproduct(${element.id})">
                <img
                    src="${element.img}">
                <button id="carts-sticker-a">-10%</button>
@@ -292,7 +292,7 @@ async function search_data() {
         if (element.title.toLowerCase().match(a.toLocaleLowerCase())) {
             let cart_data = document.getElementById('cart-items');
             item += ` <div class="carts">
-           <div class="cart-image" onclick="showproduct()">
+           <div class="cart-image" onclick="showproduct(${element.id})">
                <img
                    src="${element.img}">
                <button id="carts-sticker-a">-10%</button>
@@ -336,7 +336,7 @@ async function search_data() {
 }
 search_data();
 
-
+// show list item on search page  when searhcing is on main page 
 async function search_list() {
     let b = localStorage.getItem("search_data");
     const res3 = await fetch('./search-item.json');
@@ -346,7 +346,7 @@ async function search_list() {
         if (element.title.toLowerCase().match(b.toLocaleLowerCase())) {
             let list_data = document.getElementById('list-items');
             list += ` <div class="list-cart">
-            <div class="list-cart-img" onclick="showproduct()">
+            <div class="list-cart-img" onclick="showproduct(${element.id})">
                 <img
                     src="${element.img}">
                     <button id="a">-56%</button>
@@ -423,6 +423,7 @@ function mostview() {
     recentview_content.style.color = "#C0C0C0";
 }
 // show product page after clicking on a product
-function showproduct() {
+function showproduct(id) {
     window.location = './product/product.html';
+    localStorage.setItem('search-product',id); 
 }
