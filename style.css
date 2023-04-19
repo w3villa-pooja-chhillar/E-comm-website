@@ -1288,6 +1288,34 @@ header .container .journal {
     height: 100%;
     width: 100%;
 }
+.bw:hover {
+    transform:scale(1.04);
+}
+/* .bw:hover ~.bw-line{
+    display: block;
+} */
+.bw:hover ~.bw-line{
+    height:30px;
+}
+.bw-img{
+    position:relative;
+}
+.bw-line{
+    position:absolute;
+        bottom: 4px;
+        /* left: 56px; */
+        background-color: blue;
+        color: white;
+        width: 178px;
+        height: 0px;
+        transition: height 1s;
+        font-family: roboto;
+        text-align: center;
+        font-size: 18px;
+        /* display:none; */
+        border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
+}
 
 .bw-images {
     display: flex;
