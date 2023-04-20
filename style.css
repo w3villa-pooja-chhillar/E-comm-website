@@ -1034,6 +1034,19 @@ header .container .journal {
     width: 288px;
     position: relative;
 }
+.plus-sign{
+    position:absolute;
+        /* align-items: center; */
+        text-align: center;
+        left: 140px;
+        top: 120px;
+        background-color:rgba(13, 82, 214, 1);
+        color: white;
+        padding: 10px;
+        font-size: 25px;
+        border-radius: 50%;
+        display:none;
+}
 
 .card-line {
     position: absolute;
@@ -1071,7 +1084,9 @@ header .container .journal {
 .card-img-top img:hover {
     transform: scale(1.1);
 }
-
+.card-img-top:hover .plus-sign{
+    display:block;
+}
 .features-card .card {
     padding: 30px;
     border: solid grey 1px;
