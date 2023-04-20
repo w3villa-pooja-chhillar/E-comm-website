@@ -139,6 +139,7 @@ function showcarousel(arrayOfData) {
                         alt="Card image cap">
                         <a class="card-line">CUSTOM LABEL</a>
                         <a class="card-sticker">-70%</a>
+                        <div class="plus-sign"><i class="fa-light fa-magnifying-glass-plus"></i></div>
                 </div>
                 <div class="card-grey-line">
                     <a id="ericson">Ericson</a>
@@ -1035,7 +1036,7 @@ function logout() {
     let r = document.getElementById('journal-register');
     r.innerHTML =
         `<div class="journal-register-a">
-    <i class="fa-solid fa-right-from-bracket"></i>
+        <i class="fa-regular fa-pen-circle"></i>
     </div>
     <div class="journal-register-b" id="register-form" onclick="register()">
         Register

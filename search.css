@@ -203,7 +203,24 @@ header{
 .department-section {
     background-color: #2b3cf8;
 }
-
+.all-department{
+    position:relative;
+}
+.depart-drop-down {
+    position: absolute;
+    z-index: 10;
+    background-color: #F5F5F5;
+    color: grey;
+    width: 255px;
+    height: 290px;
+    font-size: 20px;
+    line-height: 2;
+    font-family: 'roboto';
+    border-radius: 5px;
+    top: 49px;
+    left: -2px;
+    display:none;
+}
 .department {
     color: white;
     display: flex;
@@ -212,6 +229,70 @@ header{
     padding-bottom: 20px;
     font-size: 18px;
 }
+.all-department:hover .depart-drop-down {
+    display: block;
+}
+
+.depart-drop-down li {
+    list-style: none;
+    padding: 4px 4px 4px 30px;
+}
+
+.depart-drop-down li:hover {
+    color: black;
+    background-color: white;
+}
+.dep-shop-drop-down {
+    position: absolute;
+    left: 255px;
+    top: 0px;
+    display: flex;
+    width: 1080px;
+    background-color: white;
+    height: 570px;
+    display:none;
+}
+
+.dep-shop-img {
+    margin:60px;
+    width: 300px;
+    height: 415px;
+}
+
+.dep-shop-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+.depart-shop-drop-down .shop-el {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.depart-shop-drop-down .see-all {
+    font-size: 18px;
+    color: black;
+}
+.depart-drop-down li:hover .dep-shop-drop-down{
+    display:flex;
+}
+
+.depart-shop-drop-down .shop-health {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.depart-drop-down a {
+    font-weight: bold;
+    font-size: 26px;
+    padding-left: 20px;
+    color:black;
+}
+
 
 .department #yellow {
     background-color: yellow;
@@ -239,7 +320,85 @@ header{
     color:black;
     background-color: white;
 }
+#multilevel{
+    position:relative;
+}
+#megamenu{
+    position:relative;
+}
 
+#megamenu .dep-mega-drop-down{
+    position:absolute;
+    background-color: #F5F5F5;
+    color: grey;
+    padding:10px;
+    z-index:9;
+    width:89vw;
+    font-size:22px;
+    border-radius:5px;
+    height:480px;
+    /* left:0px; */
+    top:50px;
+    line-height:2;
+    display:flex;
+    justify-content: space-between;
+    display:none;
+}
+.dep-mega-drop-down .dp-mg-a,.dp-mg-b,.dp-mg-c,.dp-mg-d{
+    border-right:0.3px solid grey;
+    padding-right:60px;
+}
+.dep-mega-drop-down div :hover{
+    color:black;
+}
+.dp-mg-e{
+    height:420px;
+    width:270px;
+    margin-top:30px;
+    margin-right:40px;
+}
+.dp-mg-e img:hover{
+    transform:scale(1.1);
+}
+.dp-mg-e img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:10px;
+}
+#multilevel .dep-multi-drop-down{
+    position:absolute;
+    background-color: #F5F5F5;
+    color: grey;
+    padding:10px;
+    z-index:9;
+    width:120px;
+    border-radius:5px;
+    height:170px;
+    left:0px;
+    top:50px;
+    line-height:1.8;
+    display:none;
+}
+#multilevel:hover .dep-multi-drop-down{
+    display:block;
+}
+#multilevel:hover .dep-multi-drop-down li:hover{
+    color:black;
+    background-color: white;
+}
+#multilevel .dep-multi-drop-down li{
+    list-style:none;
+    font-size:19px;
+}
+#megamenu:hover .dep-mega-drop-down{
+    display:flex;
+    justify-content:space-between;
+}
+#megamenu .dep-mega-drop-down li{
+    list-style:none;
+    font-size:19px;
+}
 .department #new {
     background-color: yellow;
     position: relative;
@@ -321,6 +480,9 @@ header{
     padding:6px;
     /* padding-top:12px;
     padding-bottom:20px; */
+}
+.cart-image:hover {
+    transform:scale(1.04)
 }
 .red-line{
     overflow: hidden;
